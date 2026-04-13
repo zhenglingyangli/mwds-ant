@@ -48,10 +48,10 @@ GO_TIMEOUT = CUTOFF + 60 # goSolver process-level safety timeout
 
 SLURM_HEADER = """#!/bin/sh
 #SBATCH --job-name={job_name}
-#SBATCH --partition=normal
-#SBATCH --time=2-00:00:00
+#SBATCH --partition=hfacnormal01
+#SBATCH --time=0-06:00:00
 #SBATCH --output=slurm-%j.out
-#SBATCH --mem=64G
+#SBATCH --mem=8G
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task={cpus}
 echo "-----------------------------------------------------------"

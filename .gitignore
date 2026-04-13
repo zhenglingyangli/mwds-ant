@@ -1,0 +1,26 @@
+# Binaries
+*.o
+*.exe
+exp-1/codes/*/dual-fast*
+exp-1/codes/*/dual-deep*
+exp-1/codes/*/exp[0-9]*
+exp-1/codes/*/bio-dmela
+exp-1/codes/*/v3
+!exp-1/codes/*/Makefile
+
+# Results
+exp-1/jobs/result/
+exp-1/jobs/slurm-*.out
+exp-1/jobs/jobslurm-*
+exp-1/jobs/submit_all.sh
+
+# macOS
+.DS_Store
+
+# Editor
+*~
+*.swp
+
+# Python
+__pycache__/
+*.pyc

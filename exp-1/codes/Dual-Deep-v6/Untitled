@@ -1,0 +1,15 @@
+main.cpp: while 循环（DBS rounds）
+  └── ibmwds_init_bounds(round_k)         // 每个 round 调用一次
+        ├── (round_k > 0) Beta[v] *= ALPHA   // γ 增长
+        └── compute_bounds(round_k, cutoff)    // IT-LBS 核心
+              │
+              do-while 循环（迭代，最多 MaxIteration 次无改善）：
+              │
+              ├── [重置] memcpy DeltaCost/Node_Delta/MinNeibor，清 status
+              ├── [建堆] build_node_domcost_heap_comb()
+              ├── [构造排序] while 循环：堆顶取 HEUR 最高顶点
+              │     └── 每步：取顶点 → 记录 PairList → 更新 delta
+              ├── [评估] lb = Σdelta，更新 BEST_LOWER_BOUND
+              ├── [副作用] compute_loss_and_upper_bound()
+              │     └── 计算 replaced（violated）→ 更新 Loss/Subs → 计算 UB
+              └── [终止] 检查 OPTIMAL / timeout

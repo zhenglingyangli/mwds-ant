@@ -1,36 +1,35 @@
-> 20260413
+> 20260414
 
-## Dual-Fast v19 全量实验 (复现论文配置)
+## Dual-Fast v19 vs Baseline 全量实验 (复现论文配置)
 
 ### 实验设置
-- **求解器**: Dual-Fast-v19 (单一版本，与论文 Table 3 的 Dual-Fast 原版对比)
+- **求解器**: Dual-Fast (baseline) + Dual-Fast-v19
 - **cutoff**: 3600s (与论文一致)
 - **seeds**: 10 (seed 1..10，与论文一致)
 - **并行**: 10 核/job
 - **alpha**: 1
+- **内存**: 64G/job
 
-### 数据集选择
+### 数据集
 
-| 数据集 | 实例数 | 超算路径 | 选择理由 |
-|--------|--------|----------|----------|
-| T1 | 540 | `standard_wclq/T1_wclq` | 最难基准，原版仅 26.7% gap≤0.1，改进空间大 |
-| T2 | 540 | `standard_wclq/T2_wclq` | 中等难度，展示收敛速度优势 |
-| UDG | 120 | `standard_wclq/UDG_wclq` | 简单基准，验证"无退化"，运行成本极低 |
-
-> 如果超算上有 Real-World 数据 (NDR/65, DIMACS10/31)，强烈建议加入：
-> NDR 的 LB 改进潜力最大 (6.2%→80%)，最能体现 v19 的核心优势。
+| 数据集 | 实例数 | 超算路径 |
+|--------|--------|----------|
+| T1 | 540 | `/public/home/acs4vb4pqv/benchmarks/mwds/standard_wclq/T1_wclq` |
+| T2 | 540 | `/public/home/acs4vb4pqv/benchmarks/mwds/standard_wclq/T2_wclq` |
 
 ### SLURM 分块策略
-- 大数据集 (T1/T2) 按 ~55 实例分块，每块 × 1 seed = 1 个 SLURM job
-- T1: 10 chunks × 10 seeds = 100 jobs (~5.5h/job)
-- T2: 10 chunks × 10 seeds = 100 jobs (~5.5h/job)
-- UDG: 2 chunks × 10 seeds = 20 jobs (~2.2h/job)
-- 总计: ~220 SLURM jobs
-- 使用 goSolver.py --name_list 选择实例子集
+- 按 55 实例/块分割，每块 × 1 seed × 1 solver = 1 个 SLURM job
+- 2 solvers × 2 datasets × 10 chunks × 10 seeds = **400 SLURM jobs**
+- 单个 job 最长 ~5.5h walltime
 
-### 结果对比
-- 使用与论文 Table 3 完全相同的指标：
-  - gap* = 每个实例在所有 seed 中的最佳 gap (min)
-  - gap_0 = 每个实例在所有 seed 中的平均 gap (mean)
-  - 阈值: #opt, ≤10⁻⁴, ≤10⁻³, ≤10⁻², ≤10⁻¹
-- gap 定义: (UB - LB) / LB (统一)
+### 分析报告 (sumup.py)
+1. Gap Distribution (论文 Table 3 格式，含 paper baseline)
+2. v19 vs Baseline 逐实例对比
+   - 2.1 Gap / 2.2 LB / 2.3 UB 对比 (Win/Loss/Tie)
+   - 2.4 Gap 改进因果分解 (LB-driven / UB-driven / Both)
+   - 2.5 按实例规模分组
+   - 2.6 Seed 稳定性
+   - 2.7 新增最优实例
+3. 详细 Gap 统计
+4. Gap 收敛曲线
+5. 实例难度分布

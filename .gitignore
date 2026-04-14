@@ -1,18 +1,19 @@
-# Binaries
+# Binaries (all experiments)
 *.o
 *.exe
-exp-1/codes/*/dual-fast*
-exp-1/codes/*/dual-deep*
-exp-1/codes/*/exp[0-9]*
-exp-1/codes/*/bio-dmela
-exp-1/codes/*/v3
-!exp-1/codes/*/Makefile
+exp-*/codes/*/dual-fast*
+exp-*/codes/*/dual-deep*
+exp-*/codes/*/exp[0-9]*
+exp-*/codes/*/bio-dmela
+exp-*/codes/*/v3
+!exp-*/codes/*/Makefile
 
-# Results
-exp-1/jobs/result/
-exp-1/jobs/slurm-*.out
-exp-1/jobs/jobslurm-*
-exp-1/jobs/submit_all.sh
+# Results & SLURM artifacts
+exp-*/jobs/result/
+exp-*/jobs/slurm-*.out
+exp-*/jobs/jobslurm-*
+exp-*/jobs/submit_all.sh
+exp-*/jobs/namelist-*.txt
 
 # macOS
 .DS_Store

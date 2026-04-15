@@ -23,13 +23,10 @@
 - 单个 job 最长 ~5.5h walltime
 
 ### 分析报告 (sumup.py)
-1. Gap Distribution (论文 Table 3 格式，含 paper baseline)
-2. v19 vs Baseline 逐实例对比
-   - 2.1 Gap / 2.2 LB / 2.3 UB 对比 (Win/Loss/Tie)
-   - 2.4 Gap 改进因果分解 (LB-driven / UB-driven / Both)
-   - 2.5 按实例规模分组
-   - 2.6 Seed 稳定性
-   - 2.7 新增最优实例
-3. 详细 Gap 统计
-4. Gap 收敛曲线
-5. 实例难度分布
+
+
+【20260414 21：05 发送】
+【4.15收dual-fast-v19结果】
+【不好，一次200个有点害怕， auto_submit.sh，现在改成每次最多 50 个。估计要个两三天...】
+
+【最好今天能把dual-deep的版本测试完】

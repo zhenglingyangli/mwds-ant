@@ -759,9 +759,19 @@ def main():
         print("No results found.")
         return
 
+    pre_dedup = len(rows)
+    best = {}
+    for r in rows:
+        key = (r["solver"], r["dataset"], r["seed"], r["instance"])
+        if key not in best or (r["gap"] >= 0 and
+                (best[key]["gap"] < 0 or r["gap"] < best[key]["gap"])):
+            best[key] = r
+    rows = list(best.values())
+
     solvers = sorted(set(r["solver"] for r in rows))
     datasets = sorted(set(r["dataset"] for r in rows))
-    print(f"Found {len(rows)} records: {solvers} × {datasets}")
+    print(f"Found {pre_dedup} records, {pre_dedup - len(rows)} duplicates removed, "
+          f"{len(rows)} unique: {solvers} × {datasets}")
 
     csv_path = os.path.join(args.output_dir, "exp2_results.csv")
     report_path = os.path.join(args.output_dir, "exp2_report.md")

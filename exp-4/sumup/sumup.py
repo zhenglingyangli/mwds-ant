@@ -133,6 +133,23 @@ def parse_out_file(filepath):
                 "ub_plus": 0, "ub_best": 0, "time_ub": 0, "total_time": 0,
             })
 
+    if summary and summary["status"] in ("TIMEOUT", "MEMOUT") and rounds:
+        best_lb = max(r["lb_best"] for r in rounds)
+        best_ub_candidates = [r["ub_best"] for r in rounds if r["ub_best"] > 0]
+        if not best_ub_candidates:
+            best_ub_candidates = [r["ub_lb"] for r in rounds if r["ub_lb"] > 0]
+        best_ub = min(best_ub_candidates) if best_ub_candidates else 0
+        first_lb = rounds[0]["lb"] if rounds else 0
+        first_ub = rounds[0].get("ub_lb", 0) if rounds else 0
+        gap = compute_gap(best_ub, best_lb)
+        summary["best_lb"] = best_lb
+        summary["best_ub"] = best_ub
+        summary["first_lb"] = first_lb
+        summary["first_ub"] = first_ub
+        summary["final_gap"] = gap
+        if gap >= 0:
+            summary["status"] = "OK"
+
     return summary, rounds
 
 

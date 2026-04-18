@@ -132,7 +132,7 @@ def main():
                 bad_count = 0
 
                 for inst_file in all_inst:
-                    inst = inst_file.replace(".wclq", "")
+                    inst = inst_file
                     key = (slv["name"], ds_name, seed, inst)
                     if key in existing and existing[key][1]:
                         good_count += 1

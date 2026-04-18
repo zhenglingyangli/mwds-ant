@@ -196,6 +196,9 @@ def extract_solver_dataset_seed(dirname):
     Format: result-<bin>-<ds_dir>-<solver>-<DS>-c<chunk>-s<seed>-<timestamp>
     Example: result-dual-fast-v19-T1_wclq-fast-v19-T1-c0-s1-20260413120000
     """
+    ts_match = re.search(r"-(\d{14})$", dirname)
+    timestamp = ts_match.group(1) if ts_match else "00000000000000"
+
     m = re.search(r"-c(\d+)-s(\d+)-\d{14}$", dirname)
     if not m:
         m = re.search(r"-seed(\d+)-\d{14}$", dirname)
@@ -219,7 +222,7 @@ def extract_solver_dataset_seed(dirname):
             solver = sv
             break
 
-    return solver, dataset, seed
+    return solver, dataset, seed, timestamp
 
 
 def scan_results(result_root):
@@ -233,7 +236,7 @@ def scan_results(result_root):
     for entry in sorted(root.iterdir()):
         if not entry.is_dir() or not entry.name.startswith("result-"):
             continue
-        solver, dataset, seed = extract_solver_dataset_seed(entry.name)
+        solver, dataset, seed, timestamp = extract_solver_dataset_seed(entry.name)
         key = (solver, dataset)
 
         for out_file in sorted(entry.glob("*.out")):
@@ -276,6 +279,7 @@ def scan_results(result_root):
                 "solver": solver,
                 "dataset": dataset,
                 "seed": seed,
+                "timestamp": timestamp,
                 "instance": summary["instance"],
                 "V": summary["V"],
                 "E": summary["E"],
@@ -829,13 +833,12 @@ def main():
               if st['total'] else f"  {sv}/{ds}: 0 files")
 
     pre_dedup = len(rows)
-    best = {}
+    first_seen = {}
     for r in rows:
         key = (r["solver"], r["dataset"], r["seed"], r["instance"])
-        if key not in best or (r["gap"] >= 0 and
-                (best[key]["gap"] < 0 or r["gap"] < best[key]["gap"])):
-            best[key] = r
-    rows = list(best.values())
+        if key not in first_seen or r["timestamp"] < first_seen[key]["timestamp"]:
+            first_seen[key] = r
+    rows = list(first_seen.values())
 
     solvers = sorted(set(r["solver"] for r in rows))
     datasets = sorted(set(r["dataset"] for r in rows))

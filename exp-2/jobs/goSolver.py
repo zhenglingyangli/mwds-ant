@@ -93,26 +93,22 @@ def output_monitor(process, output_file, stop_event):
     with open(output_file, 'w', buffering=1) as f:
         try:
             for line in iter(process.stdout.readline, ''):
-                if stop_event.is_set() and process.poll() is not None:
+                if line == '':
                     break
                 f.write(line)
-
-            remaining_output, _ = process.communicate(timeout=0.5)
-            if remaining_output:
-                sys.stdout.write(remaining_output)
-                sys.stdout.flush()
-                f.write(remaining_output)
-
-        except subprocess.TimeoutExpired:
-            process.kill()
-            remaining_output, _ = process.communicate()
-            if remaining_output:
-                sys.stdout.write(remaining_output)
-                sys.stdout.flush()
-                f.write(remaining_output)
+                f.flush()
 
         except Exception as e:
             print(f"Error in output monitor: {str(e)}")
+
+        finally:
+            try:
+                remaining_output = process.stdout.read()
+                if remaining_output:
+                    f.write(remaining_output)
+                    f.flush()
+            except Exception:
+                pass
 
 
 def terminate_process_tree(parent_pid):
@@ -196,7 +192,6 @@ def worker(id, solver, instance, output_dir, cutoff_time, cutoff_mem, additional
             process.wait()
         finally:
             signal.alarm(0)
-            stop_event.set()
 
             if process and process.poll() is None:
                 terminate_process_tree(process.pid)
@@ -205,8 +200,9 @@ def worker(id, solver, instance, output_dir, cutoff_time, cutoff_mem, additional
                 except:
                     pass
 
+            output_thread.join(timeout=5)
+            stop_event.set()
             monitor_thread.join()
-            output_thread.join(timeout=1)
 
     except Exception as e:
         print(f"Error in worker: {str(e)}")

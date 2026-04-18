@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-# Auto-submit SLURM jobs in batches for exp-4 (Dual-Deep v6 vs baseline).
+# Auto-submit SLURM jobs in batches for exp-5 (Dual-Fast v19 vs baseline, paper config).
 # Usage: nohup bash auto_submit.sh > auto_submit.log 2>&1 &
 #
 # Cluster hard limit (AssocGrpSubmitJobsLimit) is 200 concurrent jobs for
 # account acs4vb4pqv. We keep BATCH_SIZE=180 so there's room for adhoc jobs.
-# If submitter runs AssocGrpSubmitJobsLimit, it aborts that batch and retries
+# If submitter hits AssocGrpSubmitJobsLimit, it aborts that batch and retries
 # on the next cycle.
 
 BATCH_SIZE=180
@@ -16,8 +16,8 @@ cd "$SUBMIT_DIR" || exit 1
 
 # Collect all jobslurm scripts in a stable order (solver -> dataset -> seed -> chunk)
 # Stage-1 (patch) scripts jobslurm-patch-* are NOT included here; submit them via submit_patch.sh.
-ALL_SCRIPTS=($(ls jobslurm-dual-deep-T1-* jobslurm-deep-v6-T1-* \
-                 jobslurm-dual-deep-T2-* jobslurm-deep-v6-T2-* \
+ALL_SCRIPTS=($(ls jobslurm-dual-fast-T1-* jobslurm-fast-v19-T1-* \
+                 jobslurm-dual-fast-T2-* jobslurm-fast-v19-T2-* \
                  2>/dev/null | sort))
 
 TOTAL=${#ALL_SCRIPTS[@]}
@@ -27,7 +27,7 @@ if [ "$TOTAL" -eq 0 ]; then
 fi
 
 echo "$(date): Found $TOTAL scripts to submit (batch size: $BATCH_SIZE)"
-echo "Order: dual-deep-T1 -> deep-v6-T1 -> dual-deep-T2 -> deep-v6-T2"
+echo "Order: dual-fast-T1 -> fast-v19-T1 -> dual-fast-T2 -> fast-v19-T2"
 echo "========================================================"
 
 SUBMITTED=0

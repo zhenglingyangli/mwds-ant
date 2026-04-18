@@ -33,7 +33,8 @@ DATASETS = {
 
 SEEDS     = [1, 2]
 CUTOFF    = 300
-ALPHA     = 1
+# Paper/original all use alpha=90 (internal ALPHA=1.90). NOT 1.
+ALPHA     = 90
 PARALLEL  = 10
 GO_TIMEOUT = CUTOFF + 60
 

@@ -38,7 +38,8 @@ DATASETS = {
 
 SEEDS     = [1, 2, 3, 4, 5]
 CUTOFF    = 300          # solver-level cutoff (seconds)
-ALPHA     = 1            # passed as argv[4]; solver computes 1 + ALPHA/100
+# alpha CLI arg: internal ALPHA = 1 + alpha/100. Paper/original all use 90 -> 1.90.
+ALPHA     = 90
 PARALLEL  = 10           # concurrent solver processes inside one job
 GO_TIMEOUT = CUTOFF + 60 # goSolver process-level safety timeout
 

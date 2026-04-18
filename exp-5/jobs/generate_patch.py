@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 """
-Scan existing exp-2 results, identify missing/empty instances,
+Scan existing exp-5 results, identify missing/empty instances,
 and generate SLURM scripts to re-run ONLY those gaps.
 
 Strategy:
   1. For each (solver, dataset, seed), find all expected instances (540)
-  2. Among existing .out files, identify: empty (0B), header-only, good
-  3. Generate patch jobs for empty + header-only instances only
-  4. For dual-fast duplicates: keep first-submitted, skip re-running
+  2. Among existing .out files, classify as:
+       - good      : has >>> summary OR at least one round line
+       - empty     : 0 bytes (stdout was never flushed -> old goSolver bug)
+       - header-only: only contains |V| |E| header, no rounds
+  3. Generate patch jobs ONLY for empty + header-only instances
+  4. Dedup rule: if multiple result-* dirs exist for the same (solver,seed,inst),
+     keep the EARLIEST timestamp (matches sumup.py dedup rule).
 
 Usage:
     python3 generate_patch.py <result_root>
+    # then: bash submit_patch.sh
 """
 
 import os
@@ -25,23 +30,26 @@ SOLVERS = [
     {"name": "dual-fast", "dir": "Dual-Fast",     "bin": "dual-fast"},
     {"name": "fast-v19",  "dir": "Dual-Fast-v19", "bin": "dual-fast-v19"},
 ]
+# exp-5 reuses exp-2's built binaries (same source; the wclq bug was already fixed there).
+SOLVER_CODES_DIR = "../../exp-2/codes"
 
 DATASETS = {
     "T1": {"path": f"{WCLQ_ROOT}/T1_wclq", "n": 540},
     "T2": {"path": f"{WCLQ_ROOT}/T2_wclq", "n": 540},
 }
 
-SEEDS      = list(range(1, 11))
-CUTOFF     = 3600
+SEEDS       = list(range(1, 11))
+CUTOFF      = 3600
 # MUST match generate_scripts.py -- paper uses alpha=90 (internal ALPHA=1.90).
-ALPHA      = 90
-PARALLEL   = 10
-GO_TIMEOUT = CUTOFF + 120
+ALPHA       = 90
+PARALLEL    = 10
+GO_TIMEOUT  = CUTOFF + 120
 PATCH_CHUNK = 55
-CUTOFF_MEM = 16
+CUTOFF_MEM  = 16                      # per-instance memory cap in GB (match generate_scripts.py)
 
 SLURM_PARTITION = "hfacnormal01"
 SLURM_MEM       = "64G"
+SLURM_TIME      = "0-08:00:00"
 
 RE_SUMMARY = re.compile(r">>>\s+\S+\s+\|V\|")
 RE_OPTIMAL = re.compile(r"====")
@@ -69,6 +77,10 @@ def scan_existing(result_root):
     """Build dict: (solver, dataset, seed, instance) -> (timestamp, is_good)"""
     existing = {}
     root = Path(result_root)
+    if not root.exists():
+        print(f"WARNING: {result_root} does not exist, treating as fresh run.")
+        return existing
+
     for entry in sorted(root.iterdir()):
         if not entry.is_dir() or not entry.name.startswith("result-"):
             continue
@@ -79,6 +91,9 @@ def scan_existing(result_root):
         seed_match = re.search(r"-c\d+-s(\d+)-\d{14}$", entry.name)
         if not seed_match:
             seed_match = re.search(r"-seed(\d+)-\d{14}$", entry.name)
+        if not seed_match:
+            # patch runs: jobslurm-patch-<solver>-<DS>-s<seed>-p<chunk>-<timestamp>
+            seed_match = re.search(r"-s(\d+)-p\d+-\d{14}$", entry.name)
         seed = int(seed_match.group(1)) if seed_match else 0
 
         dataset = "unknown"
@@ -88,6 +103,7 @@ def scan_existing(result_root):
                 break
 
         solver = "unknown"
+        # Order matters: longer names first to avoid 'fast' matching inside 'dual-fast'
         for sv in ["fast-v19", "dual-fast"]:
             if sv in entry.name:
                 solver = sv
@@ -105,7 +121,6 @@ def scan_existing(result_root):
 
 
 def get_all_instances(ds_path):
-    """List all .wclq files in a dataset directory."""
     p = Path(ds_path)
     return sorted(f.name for f in p.glob("*.wclq"))
 
@@ -114,17 +129,22 @@ def main():
     import sys
     if len(sys.argv) < 2:
         print("Usage: python3 generate_patch.py <result_root>")
+        print("Example: python3 generate_patch.py ./result")
         sys.exit(1)
 
     result_root = sys.argv[1]
     print(f"Scanning {result_root} ...")
     existing = scan_existing(result_root)
+    print(f"  Found {len(existing)} (solver, dataset, seed, inst) keys in existing results")
 
     total_missing = 0
     patch_jobs = []
 
     for ds_name, ds_info in DATASETS.items():
         all_inst = get_all_instances(ds_info["path"])
+        if not all_inst:
+            print(f"\n{ds_name}: dataset dir empty or unreachable ({ds_info['path']})")
+            continue
         print(f"\n{ds_name}: {len(all_inst)} instances")
 
         for slv in SOLVERS:
@@ -134,8 +154,7 @@ def main():
                 bad_count = 0
 
                 for inst_file in all_inst:
-                    inst = inst_file
-                    key = (slv["name"], ds_name, seed, inst)
+                    key = (slv["name"], ds_name, seed, inst_file)
                     if key in existing and existing[key][1]:
                         good_count += 1
                     else:
@@ -168,7 +187,7 @@ def main():
         ds_name = job["dataset"]
         seed = job["seed"]
         missing = job["missing"]
-        solver_bin = f"../codes/{slv['dir']}/{slv['bin']}"
+        solver_bin = f"{SOLVER_CODES_DIR}/{slv['dir']}/{slv['bin']}"
 
         n_chunks = math.ceil(len(missing) / PATCH_CHUNK)
         for c in range(n_chunks):
@@ -184,7 +203,7 @@ def main():
             content = f"""#!/bin/sh
 #SBATCH --job-name={job_name}
 #SBATCH --partition={SLURM_PARTITION}
-#SBATCH --time=0-08:00:00
+#SBATCH --time={SLURM_TIME}
 #SBATCH --output=slurm-%j.out
 #SBATCH --mem={SLURM_MEM}
 #SBATCH --nodes=1
@@ -209,7 +228,8 @@ echo "=== DONE: {tag} ({len(chunk_insts)} instances) ==="
 
     with open("submit_patch.sh", "w") as f:
         f.write("#!/bin/bash\n")
-        f.write(f"# Patch run: {script_count} jobs for {total_missing} missing instances\n\n")
+        f.write(f"# Patch run: {script_count} jobs for {total_missing} missing instances\n")
+        f.write(f"# If this exceeds 200 concurrent jobs, use auto_submit.sh instead.\n\n")
         for s in sorted(all_scripts):
             f.write(f"sbatch {s}\nsleep 0.5\n")
         f.write(f"\necho '=== {script_count} patch jobs submitted ==='\n")
@@ -218,7 +238,7 @@ echo "=== DONE: {tag} ({len(chunk_insts)} instances) ==="
     est_hours = total_missing * CUTOFF / PARALLEL / 3600
     print(f"\nGenerated: {script_count} SLURM scripts")
     print(f"Estimated: {est_hours:.0f} CPU-hours")
-    print(f"Submit with: bash submit_patch.sh  (or use auto_submit.sh)")
+    print(f"Submit with: bash submit_patch.sh  (or via auto_submit.sh if >200 jobs)")
 
 
 if __name__ == "__main__":

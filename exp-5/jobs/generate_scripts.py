@@ -1,24 +1,47 @@
 #!/usr/bin/env python3
 """
-Generate SLURM job scripts for MWDS Dual-Fast v19 full experiment (exp-2).
+Generate SLURM job scripts for MWDS Dual-Fast v19 vs baseline experiment (exp-5).
+
+Re-run of exp-2 with the correct paper configuration:
+  - alpha=90 (internal ALPHA=1.90)        -- exp-2 wrongly used alpha=1 (ALPHA=1.01)
+  - --cutoff_mem 16 (GB per instance)     -- matches Ant-QO/experiment-1
 
 Matches the paper's setup: 3600s cutoff, 10 seeds.
 Large datasets are split into chunks (~55 instances each) for efficient scheduling.
 Each SLURM job = 1 chunk × 1 seed, using goSolver.py --name_list for instance selection.
+
+Usage:
+    # Full run (all 10 seeds):
+    python3 generate_scripts.py
+
+    # Stage 1: pilot run with only 2 seeds (recommended first)
+    python3 generate_scripts.py --seeds 1,2
+
+    # Stage 2: fill in the remaining 8 seeds
+    python3 generate_scripts.py --seeds 3-10
+
+    # Only T1 (skip T2)
+    python3 generate_scripts.py --datasets T1
 """
 
 import os
 import math
+import argparse
 from pathlib import Path
 
 # ============================================================
-# Configuration
+# Configuration (DO NOT change between incremental runs!)
+# Any change invalidates cross-seed comparability.
 # ============================================================
 
+# Solver binaries live under exp-2/codes/ (already fixed for the wclq-weight bug);
+# exp-5 reuses them instead of duplicating source. Build once there (`make`),
+# exp-5 just runs them with the correct CLI config (alpha=90, --cutoff_mem 16GB).
 SOLVERS = [
     {"name": "dual-fast", "dir": "Dual-Fast",     "bin": "dual-fast"},
     {"name": "fast-v19",  "dir": "Dual-Fast-v19", "bin": "dual-fast-v19"},
 ]
+SOLVER_CODES_DIR = "../../exp-2/codes"
 
 WCLQ_ROOT = "/public/home/acs4vb4pqv/benchmarks/mwds/standard_wclq"
 
@@ -27,7 +50,7 @@ DATASETS = {
     "T2": {"path": f"{WCLQ_ROOT}/T2_wclq", "n": 540},
 }
 
-SEEDS      = list(range(1, 11))      # 10 seeds: 1..10
+DEFAULT_SEEDS = list(range(1, 11))   # 10 seeds: 1..10 (paper setting)
 CUTOFF     = 3600                     # seconds (paper setting)
 # alpha is the CLI arg (argv[4]); solver converts to internal ALPHA = 1 + alpha/100.
 # Paper / all original run_goSolver.sh use alpha=90 -> internal ALPHA=1.90.
@@ -36,12 +59,13 @@ CUTOFF     = 3600                     # seconds (paper setting)
 # and will NOT reproduce the paper's baseline numbers.
 ALPHA      = 90
 PARALLEL   = 10
-GO_TIMEOUT = CUTOFF + 120            # goSolver safety timeout
+GO_TIMEOUT = CUTOFF + 120             # goSolver safety timeout
 CHUNK_SIZE = 55                       # instances per SLURM job
 CUTOFF_MEM = 16                       # per-instance memory cap in GB (matches paper's exp-1)
 
 SLURM_PARTITION = "hfacnormal01"
-SLURM_MEM       = "64G"
+SLURM_MEM       = "64G"                # SLURM job-level cap; T1/T2 instances use <2GB each in practice
+SLURM_TIME      = "0-08:00:00"
 
 # ============================================================
 # SLURM Template
@@ -50,7 +74,7 @@ SLURM_MEM       = "64G"
 SLURM_HEADER = """#!/bin/sh
 #SBATCH --job-name={job_name}
 #SBATCH --partition={partition}
-#SBATCH --time=0-08:00:00
+#SBATCH --time={time}
 #SBATCH --output=slurm-%j.out
 #SBATCH --mem={mem}
 #SBATCH --nodes=1
@@ -65,7 +89,6 @@ cd "$SLURM_SUBMIT_DIR"
 
 """
 
-# Template for runtime chunk creation via name_list
 CHUNK_BLOCK = """
 # --- Build name_list for chunk {chunk_id} of {dataset} ---
 DATASET_DIR="{ds_path}"
@@ -99,21 +122,59 @@ echo "=== DONE: {suffix} ==="
 """
 
 
+def parse_seeds(s):
+    """Parse comma-separated seeds: '1,2' -> [1, 2]; '3-5' -> [3,4,5]"""
+    seeds = []
+    for part in s.split(","):
+        part = part.strip()
+        if "-" in part:
+            a, b = part.split("-")
+            seeds.extend(range(int(a), int(b) + 1))
+        else:
+            seeds.append(int(part))
+    return sorted(set(seeds))
+
+
+def parse_datasets(s):
+    names = [x.strip() for x in s.split(",") if x.strip()]
+    for n in names:
+        if n not in DATASETS:
+            raise SystemExit(f"Unknown dataset: {n}. Available: {list(DATASETS.keys())}")
+    return names
+
+
 def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--seeds", type=parse_seeds, default=DEFAULT_SEEDS,
+                    help="Seeds to generate scripts for (e.g. '1,2' or '3-10'). Default: 1..10")
+    ap.add_argument("--datasets", type=parse_datasets, default=list(DATASETS.keys()),
+                    help=f"Datasets to include (comma-separated). Default: all ({list(DATASETS.keys())})")
+    ap.add_argument("--solvers", type=lambda s: [x.strip() for x in s.split(",")],
+                    default=[s["name"] for s in SOLVERS],
+                    help=f"Solvers to include. Default: all ({[s['name'] for s in SOLVERS]})")
+    args = ap.parse_args()
+
+    seeds = args.seeds
+    active_solvers = [s for s in SOLVERS if s["name"] in args.solvers]
+    if not active_solvers:
+        raise SystemExit(f"No solvers matched. Known: {[s['name'] for s in SOLVERS]}")
+
     out_dir = Path(".")
     generated = []
     job_infos = []
 
-    print("Generating SLURM scripts for MWDS exp-2 (full v19 experiment)")
-    print(f"  Solvers:  {[s['name'] for s in SOLVERS]}")
-    print(f"  Datasets: {list(DATASETS.keys())}")
-    print(f"  Seeds:    {SEEDS}")
-    print(f"  Cutoff:   {CUTOFF}s   Chunk size: {CHUNK_SIZE}")
+    print("Generating SLURM scripts for MWDS exp-5 (Dual-Fast v19 vs baseline, paper config)")
+    print(f"  Solvers:  {[s['name'] for s in active_solvers]}")
+    print(f"  Datasets: {args.datasets}")
+    print(f"  Seeds:    {seeds}  (={len(seeds)} seeds)")
+    print(f"  Cutoff:   {CUTOFF}s   Alpha: {ALPHA} (->ALPHA=1.{ALPHA:02d})   "
+          f"Mem cap: {CUTOFF_MEM}GB/inst   Parallel: {PARALLEL}")
     print("-" * 70)
 
     total_hours = 0
 
-    for ds_name, ds_info in DATASETS.items():
+    for ds_name in args.datasets:
+        ds_info = DATASETS[ds_name]
         ds_path = ds_info["path"]
         n_inst = ds_info["n"]
         if n_inst <= 0:
@@ -121,14 +182,14 @@ def main():
             continue
         n_chunks = math.ceil(n_inst / CHUNK_SIZE)
 
-        for slv in SOLVERS:
-            solver_bin = f"../codes/{slv['dir']}/{slv['bin']}"
+        for slv in active_solvers:
+            solver_bin = f"{SOLVER_CODES_DIR}/{slv['dir']}/{slv['bin']}"
 
-            for seed in SEEDS:
+            for seed in seeds:
                 for chunk_id in range(n_chunks):
                     actual_size = min(CHUNK_SIZE, n_inst - chunk_id * CHUNK_SIZE)
                     tag = f"{slv['name']}-{ds_name}-c{chunk_id}-s{seed}"
-                    job_name = f"m_{ds_name[:2]}_c{chunk_id}_s{seed}"
+                    job_name = f"f_{ds_name[:2]}_c{chunk_id}_s{seed}"
                     script_file = f"jobslurm-{tag}"
 
                     chunk_cmd = CHUNK_BLOCK.format(
@@ -150,6 +211,7 @@ def main():
                     content = SLURM_HEADER.format(
                         job_name=job_name,
                         partition=SLURM_PARTITION,
+                        time=SLURM_TIME,
                         mem=SLURM_MEM,
                         cpus=PARALLEL,
                     ) + chunk_cmd
@@ -164,35 +226,26 @@ def main():
                     total_hours += est_h
                     job_infos.append((ds_name, slv['name'], seed, chunk_id, actual_size, est_h))
 
-        ds_jobs = n_chunks * len(SEEDS) * len(SOLVERS)
-        ds_hours = n_inst * len(SEEDS) * CUTOFF / PARALLEL / 3600
-        print(f"  {ds_name}: {n_chunks} chunks × {len(SEEDS)} seeds = {ds_jobs} jobs "
-              f"(~{ds_hours:.0f} CPU-hours, ~{n_inst * CUTOFF / PARALLEL / 3600:.1f}h per seed)")
+        ds_jobs = n_chunks * len(seeds) * len(active_solvers)
+        ds_hours = n_inst * len(seeds) * CUTOFF / PARALLEL / 3600
+        print(f"  {ds_name}: {n_chunks} chunks × {len(seeds)} seeds × {len(active_solvers)} solvers "
+              f"= {ds_jobs} jobs  (~{ds_hours:.0f} CPU-hours, ~{n_inst * CUTOFF / PARALLEL / 3600:.1f}h per seed)")
 
-    # ---- submit_all.sh ----
+    # Write submit_all.sh that submits every generated script
     with open(out_dir / "submit_all.sh", "w") as f:
         f.write("#!/bin/bash\n")
-        f.write(f"# exp-2: {len(generated)} SLURM jobs\n")
-        f.write(f"# {len(SOLVERS)} solver × {len(DATASETS)} datasets × {len(SEEDS)} seeds × chunks\n")
-        f.write(f"# Estimated total: {total_hours:.0f} CPU-hours\n\n")
-
-        for ds_name in DATASETS:
-            f.write(f"echo '=== {ds_name} ==='\n")
-            ds_scripts = [s for s in generated if f"-{ds_name}-" in s]
-            for s in sorted(ds_scripts):
-                f.write(f"sbatch {s}\nsleep 0.5\n")
-            f.write(f"echo '  {len(ds_scripts)} jobs submitted for {ds_name}'\n\n")
-
-        f.write(f"echo '=== Total: {len(generated)} jobs submitted ==='\n")
+        f.write(f"# Submits {len(generated)} jobs. WARNING: cluster limit is 200 concurrent jobs.\n")
+        f.write("# For full run, use auto_submit.sh instead (batched submission).\n\n")
+        for s in sorted(generated):
+            f.write(f"sbatch {s}\nsleep 0.5\n")
+        f.write(f"\necho '=== {len(generated)} jobs submitted ==='\n")
     os.chmod(out_dir / "submit_all.sh", 0o755)
 
     print("-" * 70)
     print(f"Total: {len(generated)} SLURM scripts")
     print(f"Estimated CPU-hours: {total_hours:.0f}")
     print(f"Max wall time per job: ~{CHUNK_SIZE * CUTOFF / PARALLEL / 3600:.1f}h")
-    print(f"\nCreated: submit_all.sh")
-    print(f"\nTip: To submit a subset, e.g. only T1:")
-    print(f"  for f in jobslurm-fast-v19-T1-*; do sbatch $f; sleep 0.5; done")
+    print(f"Submit: bash submit_all.sh  (or nohup bash auto_submit.sh > auto_submit.log 2>&1 &)")
 
 
 if __name__ == "__main__":

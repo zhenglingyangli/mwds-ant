@@ -175,6 +175,18 @@ def parse_out_file(filepath):
         if gap >= 0:
             summary["status"] = "OK"
 
+    if summary is None and not rounds:
+        re_ibm = re.search(r">>IBM:\s+\|V\|=(\d+)\s+\|E\|=(\d+)", text)
+        if re_ibm:
+            inst_name = Path(filepath).name.replace(".out", "")
+            summary = {
+                "instance": inst_name, "V": int(re_ibm.group(1)),
+                "E": int(re_ibm.group(2)),
+                "lgap": 0, "first_lb": 0, "best_lb": 0,
+                "final_gap": -1, "best_ub": 0, "first_ub": 0,
+                "ugap": 0, "status": "NO_OUTPUT",
+            }
+
     return summary, rounds
 
 
@@ -212,19 +224,31 @@ def extract_solver_dataset_seed(dirname):
 
 def scan_results(result_root):
     rows = []
+    stats = defaultdict(lambda: {"total": 0, "empty": 0, "no_output": 0, "parsed": 0})
     root = Path(result_root)
     if not root.is_dir():
         print(f"ERROR: {result_root} is not a directory", file=sys.stderr)
-        return rows
+        return rows, stats
 
     for entry in sorted(root.iterdir()):
         if not entry.is_dir() or not entry.name.startswith("result-"):
             continue
         solver, dataset, seed = extract_solver_dataset_seed(entry.name)
+        key = (solver, dataset)
 
         for out_file in sorted(entry.glob("*.out")):
+            stats[key]["total"] += 1
+            fsize = out_file.stat().st_size
+            if fsize == 0:
+                stats[key]["empty"] += 1
+                continue
+
             summary, rounds = parse_out_file(out_file)
             if summary is None:
+                continue
+
+            if summary["status"] == "NO_OUTPUT":
+                stats[key]["no_output"] += 1
                 continue
 
             gap = compute_gap(summary["best_ub"], summary["best_lb"])
@@ -247,6 +271,7 @@ def scan_results(result_root):
                                 )
                                 checkpoints[cp] = g
 
+            stats[key]["parsed"] += 1
             rows.append({
                 "solver": solver,
                 "dataset": dataset,
@@ -268,7 +293,7 @@ def scan_results(result_root):
                 "gap_3600s": round(checkpoints.get(3600, -1), 6),
                 "n_rounds":  len(rounds),
             })
-    return rows
+    return rows, stats
 
 
 def write_csv(rows, filepath):
@@ -313,7 +338,7 @@ def get_inst_gaps(rows, solver, dataset):
     return inst
 
 
-def generate_report(rows, filepath):
+def generate_report(rows, filepath, scan_stats=None):
     solvers = sorted(set(r["solver"] for r in rows))
     datasets = sorted(set(r["dataset"] for r in rows))
 
@@ -324,14 +349,47 @@ def generate_report(rows, filepath):
         f.write(f"- Total rows: {len(rows)}\n\n")
 
         # ==============================================================
-        # Section 1: Table 3 format — per solver per dataset
+        # Section 0: Data Quality / Coverage
+        # ==============================================================
+        if scan_stats:
+            f.write("## 0. Data Quality & Coverage\n\n")
+            f.write("Files lost due to fast-solving instances whose stdout "
+                    "was not flushed before process exit.\n\n")
+            f.write("| Solver | Dataset | .out files | empty (0B) "
+                    "| header-only | parsed | lost% |\n")
+            f.write("|--------|---------|-----------|------------|"
+                    "-------------|--------|-------|\n")
+            for (sv, ds), st in sorted(scan_stats.items()):
+                lost = st["empty"] + st["no_output"]
+                pct = lost / st["total"] * 100 if st["total"] else 0
+                f.write(f"| {sv} | {ds} | {st['total']} | {st['empty']} "
+                        f"| {st['no_output']} | {st['parsed']} | {pct:.1f}% |\n")
+            f.write("\n> **Note**: Lost files are overwhelmingly small/easy "
+                    "instances (e.g. V≤100) that solve in milliseconds. "
+                    "These would almost certainly be optimal (gap=0). "
+                    "Table 1 below uses only the **common instance set** "
+                    "(both solvers have valid data) for fair comparison.\n\n")
+
+        # ==============================================================
+        # Section 1: Table 3 format — using COMMON instances for fairness
         # ==============================================================
         f.write("## 1. Gap Distribution (Table 3 Format)\n\n")
         f.write("- **gap\\*** = per-instance best gap (min across seeds)\n")
-        f.write("- **gap₀** = per-instance average gap (mean across seeds)\n\n")
+        f.write("- **gap₀** = per-instance average gap (mean across seeds)\n")
+        f.write("- Statistics computed on **common instances** only "
+                "(where both solvers have valid data)\n\n")
 
         for ds in datasets:
             f.write(f"### {ds}\n\n")
+
+            all_inst = {}
+            for sv in solvers:
+                all_inst[sv] = get_inst_gaps(rows, sv, ds)
+            common = set.intersection(*(set(all_inst[sv].keys()) for sv in solvers)) \
+                if len(solvers) > 1 else set()
+            n_common = len(common)
+
+            f.write(f"*Common instances: {n_common}*\n\n")
             f.write("| Solver | metric | #opt | ≤10⁻⁴ | ≤10⁻³ | ≤10⁻² | ≤10⁻¹ |\n")
             f.write("|--------|--------|------|--------|--------|--------|--------|\n")
 
@@ -341,10 +399,14 @@ def generate_report(rows, filepath):
                 f.write(f"| Paper Dual-Fast | gap₀ | {fmt_dist(pb['gap_0'])} |\n")
 
             for sv in solvers:
-                inst_gaps = get_inst_gaps(rows, sv, ds)
+                if not common:
+                    inst_gaps = all_inst[sv]
+                    n = len(inst_gaps)
+                else:
+                    inst_gaps = {k: v for k, v in all_inst[sv].items() if k in common}
+                    n = n_common
                 if not inst_gaps:
                     continue
-                n = len(inst_gaps)
                 star = gap_distribution([min(v) for v in inst_gaps.values()], n)
                 avg = gap_distribution([sum(v)/len(v) for v in inst_gaps.values()], n)
                 bold = "**" if sv == "fast-v19" else ""
@@ -354,16 +416,16 @@ def generate_report(rows, filepath):
             f.write("\n")
 
             for sv in solvers:
-                inst_gaps = get_inst_gaps(rows, sv, ds)
+                inst_all = all_inst[sv]
                 seeds_seen = sorted(set(
                     r["seed"] for r in rows
                     if r["solver"] == sv and r["dataset"] == ds and r["gap"] >= 0
                 ))
-                n = len(inst_gaps)
+                n = len(inst_all)
                 if n > 0:
-                    avg_runs = sum(len(v) for v in inst_gaps.values()) / n
-                    f.write(f"> {sv}: {n} instances, seeds {seeds_seen} "
-                            f"(avg {avg_runs:.1f} runs/inst)\n")
+                    avg_runs = sum(len(v) for v in inst_all.values()) / n
+                    f.write(f"> {sv}: {n} total instances ({n_common} in common), "
+                            f"seeds {seeds_seen} (avg {avg_runs:.1f} runs/inst)\n")
             f.write("\n")
 
         # ==============================================================
@@ -754,10 +816,17 @@ def main():
     os.makedirs(args.output_dir, exist_ok=True)
 
     print(f"Scanning {args.result_root} ...")
-    rows = scan_results(args.result_root)
+    rows, scan_stats = scan_results(args.result_root)
     if not rows:
         print("No results found.")
         return
+
+    for (sv, ds), st in sorted(scan_stats.items()):
+        lost = st["empty"] + st["no_output"]
+        print(f"  {sv}/{ds}: {st['total']} files, "
+              f"{st['empty']} empty, {st['no_output']} header-only, "
+              f"{st['parsed']} parsed, {lost} lost ({lost/st['total']*100:.1f}%)"
+              if st['total'] else f"  {sv}/{ds}: 0 files")
 
     pre_dedup = len(rows)
     best = {}
@@ -777,7 +846,7 @@ def main():
     report_path = os.path.join(args.output_dir, "exp2_report.md")
 
     write_csv(rows, csv_path)
-    generate_report(rows, report_path)
+    generate_report(rows, report_path, scan_stats)
     print("Done.")
 
 

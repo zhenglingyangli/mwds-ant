@@ -38,7 +38,7 @@ DATASETS = {
     "T2": {"path": f"{WCLQ_ROOT}/T2_wclq", "n": 540},
 }
 
-SEEDS       = list(range(1, 11))
+SEEDS       = [1, 2]                   # MUST match generate_scripts.py DEFAULT_SEEDS
 CUTOFF      = 3600
 # MUST match generate_scripts.py -- paper uses alpha=90 (internal ALPHA=1.90).
 ALPHA       = 90

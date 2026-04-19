@@ -1,12 +1,7 @@
-# exp-5: Dual-Fast v19 vs Baseline 全量重跑（对齐论文配置）
+# exp-5: Dual-Fast v19 vs Baseline（论文配置 / 2 seeds）
 
-> **⚠ PAUSED 2026-04-18**: 先跑 `exp-6` 在 alpha=90 下验证 fast 家族的 winner。
-> 当时 exp-1 选出的 v19 只以噪声级差距领先 v28/poolrelink，alpha=90 下很可能翻盘。
-> 拿到 `exp-6/sumup/analysis/selection_report.md` 后再决定 SOLVERS 是保留 `fast-v19`
-> 还是换成新的赢家（v28/poolrelink/pool/freqscore 任一）。
-> 在此之前**不要**跑 `submit_all.sh` / `auto_submit.sh`。
-
-> 2026-04-18 — exp-2 用错 alpha 参数（`1` 而非 `90`），结果不可用；exp-5 用论文设置重跑。
+> **状态**：READY TO RUN（exp-6 已确认 v19 仍是 fast 家族合适代表——虽然 5 个改进版在 alpha=90 下几乎等价，v19 avg gap 0.4651 略低，和 exp-1 结论一致）
+> 20260419 — alpha=90 + cutoff=3600s 对齐论文，seeds=1,2 轻量化（替代 exp-2 的错误 alpha=1 run）
 
 ---
 
@@ -18,8 +13,8 @@ exp-2 做的事情完全正确，除了一个**关键参数**：
 |---|---|---|---|
 | alpha (argv[4]) | `90` → 内部 ALPHA=1.90 | `1` → 1.01 | **90** → 1.90 |
 | --cutoff_mem | 16 GB (见 `Ant-QO/experiment-1/exp-1/run_goSolver.sh`) | 未传 | **16** GB |
-| cutoff | 3600 s | 3600 s | 3600 s |
-| seeds | 10 | 10 | 10（推荐先 2 后 8） |
+| cutoff | 3600 s | 3600 s | **3600 s** |
+| seeds | 10 | 10 | **2**（为控制 wall-time；exp-6 + exp-1 数据已给出方向）|
 
 `ALPHA` 控制每轮搜索的"扩张倍率"：1.01 = 每轮 +1%，1.90 = 每轮 +90%。两种设置下算法行为完全不同，所以 exp-2 的 22480 个 `.out` 文件和论文 Table 3 没法比，也不能作为 v19 改进的有效基线。exp-5 是用对配置重跑一次。
 
@@ -28,13 +23,13 @@ exp-2 做的事情完全正确，除了一个**关键参数**：
 ## 实验设置
 
 - **求解器**: `dual-fast` (baseline) + `dual-fast-v19`（二进制复用 `exp-2/codes/`，源码已修 wclq 权重 bug）
-- **cutoff**: 3600 s（论文一致）
+- **cutoff**: **3600 s**（论文一致）
+- **seeds**: **`1, 2`**（论文用 10；这里为控制 wall-time 改 2；exp-6 + exp-1 已给出选型方向）
 - **alpha**: **90**（**不要写 1**）
 - **每实例内存上限**: **16 GB**（`goSolver.py --cutoff_mem 16`）
 - **SLURM job 级内存**: 64 G（10 个 solver 并行，每个 T1/T2 实例实际 <2 GB，16 GB cap 只是防失控）
 - **SLURM job 级 CPU**: 10 核，`PARALLEL=10`
 - **partition**: `hfacnormal01`
-- **seeds**: 10（1..10），**建议先跑 2 seeds 看方向再补 8**
 
 ## 数据集
 
@@ -43,68 +38,60 @@ exp-2 做的事情完全正确，除了一个**关键参数**：
 | T1 | 540 | `/public/home/acs4vb4pqv/benchmarks/mwds/standard_wclq/T1_wclq` |
 | T2 | 540 | `/public/home/acs4vb4pqv/benchmarks/mwds/standard_wclq/T2_wclq` |
 
+## 规模与资源
+
+| 项 | 数值 |
+|---|---|
+| 实例数 | 540 (T1) + 540 (T2) = **1080** |
+| 组合 | 2 solvers × 1080 inst × 2 seeds = **4320 runs** |
+| Jobs | 2 solvers × 2 datasets × 10 chunks × 2 seeds = **80 jobs** |
+| 单 job walltime 上限 | 55 × 3600 / 10 = **5.5 h**（小图 <1s OPT 实际更快） |
+| CPU-hours 总计 | 4320 × 3600 / 10 / 3600 ≈ **432** |
+| SLURM `--time` | `0-08:00:00` |
+| 并发节流 | 队列最多 **50 个**同时在跑（`auto_submit.sh` 的 `BATCH_SIZE=50`）|
+
 ---
 
-## 两阶段跑法（推荐）
+## 跑法（分批提交，每次最多 50 个在队列）
 
-### 阶段 0：在超算上先编译（只需一次）
-
-exp-5 复用 `exp-2/codes/` 下的两个 solver，先 make 出二进制：
+### 1) 在超算上编译（只需一次）
 
 ```bash
-cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-2/codes/Dual-Fast     && make
-cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-2/codes/Dual-Fast-v19 && make
-# 确认
-ls -la /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-2/codes/Dual-Fast/dual-fast
-ls -la /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-2/codes/Dual-Fast-v19/dual-fast-v19
+cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant
+git pull origin main
+
+cd exp-2/codes/Dual-Fast     && make && [ -x dual-fast ]     || { echo "baseline 编译失败"; exit 1; }
+cd ../Dual-Fast-v19          && make && [ -x dual-fast-v19 ] || { echo "v19 编译失败";      exit 1; }
 ```
 
-**验证 baseline 的 wclq 权重读取正确**（exp-2 已修复，但再确认一次不亏）：
-
-```bash
-cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-2/codes/Dual-Fast
-./dual-fast /public/home/acs4vb4pqv/benchmarks/mwds/standard_wclq/T1_wclq/T1_50_50_0.wclq 3 1 90 | head -3
-# 必须出现 "The maximum node weight is 49"；如果是 200 就是 wclq bug 没修
-```
-
-### 阶段 1：2 seeds 试跑（80 个 job，约 5-8h）
+### 2) 生成 80 个 jobslurm-*
 
 ```bash
 cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-5/jobs
-python3 generate_scripts.py --seeds 1,2
-# 生成 2 solver × 2 dataset × 10 chunks × 2 seeds = 80 个 jobslurm-* + submit_all.sh
-bash submit_all.sh   # 80 < 200 上限，直接全提也不会触发 AssocGrpSubmitJobsLimit
-squeue -u $USER | wc -l     # 观察队列
+python3 generate_scripts.py         # 默认 seeds=[1,2]
 ```
 
-跑完后：
+### 3) 后台分批提交：队列里最多常驻 50，每 5 分钟补到 50
 
 ```bash
-cd ../sumup
-bash run_sumup.sh
-# 或后台：nohup bash run_sumup.sh > sumup_run.log 2>&1 &
-less analysis/exp2_report.md
-```
-
-看 v19 vs dual-fast 在 Gap / LB / UB 上是不是**明显优于** dual-fast（2 seeds 就应该看到方向了）。
-
-### 阶段 2：补齐剩余 8 seeds
-
-**代码/alpha/cutoff/mem 都不许改**，否则新老数据不可比。
-
-```bash
-cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-5/jobs
-
-# 清掉旧的 jobslurm-*（不动 result/，sumup 会自动合并）
-rm -f jobslurm-* submit_all.sh namelist-*.txt
-
-python3 generate_scripts.py --seeds 3-10
-# 2 × 2 × 10 × 8 = 320 个 job，超过 200 上限，必须用 auto_submit
 nohup bash auto_submit.sh > auto_submit.log 2>&1 &
-tail -f auto_submit.log
+tail -f auto_submit.log             # Ctrl-C 不会中断后台任务
+
+# 监控
+squeue -u $USER -h | wc -l          # 应 ≤ 50
+squeue -u $USER -h -o "%T" | sort | uniq -c
 ```
 
-### 阶段 3：补跑丢的实例（应该极少发生）
+### 3) 跑完后分析
+
+```bash
+cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-5/sumup
+nohup bash run_sumup.sh > sumup_run.log 2>&1 &
+tail -f sumup_run.log
+less analysis/exp2_report.md       # 用的是 exp-2 的 sumup.py 模板
+```
+
+### 4) 补跑丢的实例（应该极少发生）
 
 ```bash
 cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-5/jobs
@@ -199,10 +186,11 @@ exp-5/
 | | exp-4 | exp-5 |
 |---|---|---|
 | 目标 | Dual-Deep v6 vs 原版 | Dual-Fast v19 vs 原版 |
-| 状态 | 刚改好 alpha，开跑 | 刚建好，开跑 |
 | alpha | 90 | 90 |
+| cutoff | 3600 s | 3600 s |
+| seeds | 1, 2 | 1, 2 |
 | --cutoff_mem | 16 GB | 16 GB |
-| 跑法 | 2 + 8 seeds 分阶段 | 2 + 8 seeds 分阶段 |
+| Jobs | 80 | 80 |
 | 依赖其他目录 | 无（codes 自带）| 复用 exp-2/codes |
 
-两个实验互相独立，可以同时跑（排队时共享 200 job 上限）。
+两个实验互相独立，一起提交共 **160 job < 200 上限**，可以并行跑完。

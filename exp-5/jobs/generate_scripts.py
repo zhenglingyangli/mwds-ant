@@ -50,7 +50,7 @@ DATASETS = {
     "T2": {"path": f"{WCLQ_ROOT}/T2_wclq", "n": 540},
 }
 
-DEFAULT_SEEDS = list(range(1, 11))   # 10 seeds: 1..10 (paper setting)
+DEFAULT_SEEDS = [1, 2]                # 2 seeds (paper used 10; deliberate deviation for wall-time)
 CUTOFF     = 3600                     # seconds (paper setting)
 # alpha is the CLI arg (argv[4]); solver converts to internal ALPHA = 1 + alpha/100.
 # Paper / all original run_goSolver.sh use alpha=90 -> internal ALPHA=1.90.

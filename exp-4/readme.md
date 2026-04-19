@@ -1,20 +1,16 @@
-# exp-4: Dual-Deep v6 vs Baseline 全量实验
+# exp-4: Dual-Deep v6 vs Baseline（论文配置 / 2 seeds）
 
-> **⚠ PAUSED 2026-04-18**: 先跑 `exp-6` 在 alpha=90 下验证 deep 家族 winner（v6 vs v10 vs baseline）。
-> 当时 exp-3 的结论（"v6 略优于 v10"）是在错误的 alpha=1 下做的，alpha=90 下排序可能翻。
-> 拿到 exp-6 的 `selection_report.md` 后再决定 SOLVERS 是保留 `deep-v6` 还是换成 `deep-v10`。
-> 在此之前**不要**跑 `submit_all.sh` / `auto_submit.sh`。
-
-> 20260418 — 采纳 exp-2 踩坑后的修复版本
+> **状态**：READY TO RUN（exp-6 + 本地 300s 补测已确认 v6/v10 等价，沿用 exp-3 选型的 v6）
+> 20260419 — alpha=90 + cutoff=3600s 对齐论文，seeds=1,2 轻量化
 
 ## 实验设置
 
 - **求解器**: `dual-deep` (baseline) + `dual-deep-v6`
-- **cutoff**: 3600s（与论文 ECAI-2025 Table 3 一致）
-- **seeds**: 10 (seed 1..10)；**支持分阶段跑**（见下）
-- **alpha**: **90** （solver 内部转成 ALPHA=1.90；和 `Ant-QO/code/Dual-*/README` 示例、所有 `Ant-QO/experiment-*/exp-*/run_goSolver.sh` 一致。**不要写 1**——那会变成 ALPHA=1.01 完全不同的算法行为，且和论文对不上。）
-- **并行**: 10 核/job，`PARALLEL=10`
-- **内存**: 64G/job
+- **cutoff**: **3600 s**（论文 ECAI-2025 Table 3 设置）
+- **seeds**: **`1, 2`**（论文用 10，这里为控制 wall-time 改 2；数据已够支撑 pairwise 判优劣）
+- **alpha**: **90** （solver 内部 ALPHA=1.90；**千万不要写 1**——那是 ALPHA=1.01 完全不同的算法）
+- **并行**: `PARALLEL=10` 核/job，`--cutoff_mem 16GB/实例`
+- **内存**: SLURM `--mem=64G`/job
 - **partition**: `hfacnormal01`
 
 ## 数据集
@@ -24,68 +20,53 @@
 | T1 | 540 | `/public/home/acs4vb4pqv/benchmarks/mwds/standard_wclq/T1_wclq` |
 | T2 | 540 | `/public/home/acs4vb4pqv/benchmarks/mwds/standard_wclq/T2_wclq` |
 
+## 规模与资源
+
+| 项 | 数值 |
+|---|---|
+| 实例数 | 540 (T1) + 540 (T2) = **1080** |
+| 组合 | 2 solvers × 1080 inst × 2 seeds = **4320 runs** |
+| Jobs | 2 solvers × 2 datasets × 10 chunks × 2 seeds = **80 jobs** |
+| 单 job walltime 上限 | 55 × 3600 / 10 = **5.5 h**（小图 <1s OPT 实际更快）|
+| CPU-hours 总计 | 4320 × 3600 / 10 / 3600 ≈ **432** |
+| 单 job SLURM `--time` | `0-08:00:00` |
+| 并发节流 | 队列最多 **50 个**同时在跑（`auto_submit.sh` 的 `BATCH_SIZE=50`）|
+
 ---
 
-## 两阶段跑法（推荐）
-
-集群上限 `AssocGrpSubmitJobsLimit=200`，一次性提交 400 个会被拒。
-即便用 `auto_submit.sh` 分批，也建议先跑少量 seed 验证结果方向。
-
-### 阶段 1：2 seeds 试跑
+## 跑法（分批提交，每次最多 50 个在队列）
 
 ```bash
-# 只生成 seed 1, 2 的 SLURM 脚本（2 solver × 2 dataset × 10 chunks × 2 seeds = 80 个）
-python3 generate_scripts.py --seeds 1,2
-bash submit_all.sh     # 80 个，一次提交即可（不超 200 上限）
-```
+# 在超算 /public/home/acs4vb4pqv/ylzl/MWDS-Ant 下
+git pull origin main
 
-这 80 个 job 预计 ~5~8 小时跑完。看一下 v6 vs baseline 在 Gap/LB/UB 上的方向是否符合预期：
+# 1) 编译（exp-4 自带 codes/）
+cd exp-4/codes/Dual-Deep    && make && [ -x dual-deep ]    || { echo "baseline 编译失败"; exit 1; }
+cd ../Dual-Deep-v6          && make && [ -x dual-deep-v6 ] || { echo "v6 编译失败";      exit 1; }
 
-```bash
-cd ../sumup
-python3 sumup.py ../jobs/result --output_dir ./analysis
-```
+# 2) 生成 80 个 jobslurm-*
+cd ../../jobs
+python3 generate_scripts.py         # 默认 seeds=[1,2]
 
-### 阶段 2：补齐剩余 8 seeds
-
-**代码、ALPHA、CUTOFF、PARALLEL 都不能改**，否则新老数据不可比。
-
-```bash
-cd ../jobs
-# 清掉旧的 jobslurm-* 和 submit_all.sh（不会动 result/ 目录）
-rm -f jobslurm-* submit_all.sh namelist-*.txt
-
-# 只生成 seed 3..10 的脚本
-python3 generate_scripts.py --seeds 3-10
+# 3) 后台分批提交：队列里最多常驻 50，每 5 分钟补到 50
 nohup bash auto_submit.sh > auto_submit.log 2>&1 &
-tail -f auto_submit.log
+tail -f auto_submit.log             # Ctrl-C 不会中断后台任务
+
+# 监控
+squeue -u $USER -h | wc -l          # 应 ≤ 50
+squeue -u $USER -h -o "%T" | sort | uniq -c
 ```
 
-新结果保存在 `result/` 下新的 `result-*-s3-*` ~ `result-*-s10-*` 子目录里，`sumup.py` 扫到后会自动和阶段 1 合并。
+---
 
-### 阶段 3：补跑丢的实例（如有）
-
-如果发现 `.out` 文件有空文件/只含 header（理论上 goSolver 修过之后不再发生，但保险起见）：
+## 补跑丢的实例（如有）
 
 ```bash
 python3 generate_patch.py ./result
 bash submit_patch.sh
 ```
 
-只会为**缺失或不完整**的 `(solver, dataset, seed, instance)` 生成脚本，已完成的实例不会重跑。
-
----
-
-## 全量一次跑（不推荐）
-
-如果你确信 2 seeds 的试跑已经没问题，可以直接：
-
-```bash
-python3 generate_scripts.py                # 生成 400 个
-nohup bash auto_submit.sh > auto_submit.log 2>&1 &
-```
-
-`auto_submit.sh` 的 `BATCH_SIZE=180`，每 5 分钟检查一次队列，队列少于 180 时补齐，不会触发 200 上限。
+只会为**缺失或不完整**的 `(solver, dataset, seed, instance)` 生成脚本，已完成的不会重跑。
 
 ---
 

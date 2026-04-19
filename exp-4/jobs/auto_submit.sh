@@ -4,11 +4,13 @@
 # Usage: nohup bash auto_submit.sh > auto_submit.log 2>&1 &
 #
 # Cluster hard limit (AssocGrpSubmitJobsLimit) is 200 concurrent jobs for
-# account acs4vb4pqv. We keep BATCH_SIZE=180 so there's room for adhoc jobs.
-# If submitter runs AssocGrpSubmitJobsLimit, it aborts that batch and retries
+# account acs4vb4pqv. Here we intentionally throttle to BATCH_SIZE=50 so the
+# queue never holds more than 50 of our jobs at once — more courteous to the
+# shared cluster and leaves ample slack for other users / adhoc runs.
+# If submitter hits AssocGrpSubmitJobsLimit, it aborts that batch and retries
 # on the next cycle.
 
-BATCH_SIZE=180
+BATCH_SIZE=50
 POLL_INTERVAL=300  # seconds between checks (5 min)
 SUBMIT_DIR="$(cd "$(dirname "$0")" && pwd)"
 

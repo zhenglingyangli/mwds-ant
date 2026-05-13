@@ -1,0 +1,10 @@
+#!/bin/sh
+#SBATCH --job-name=p8_deep_DI_s4
+#SBATCH --partition=hfacnormal01
+#SBATCH --time=0-04:00:00
+#SBATCH --output=slurm-%j.out
+#SBATCH --mem=64G
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=5
+cd "$SLURM_SUBMIT_DIR"
+python3 ./goSolver.py 5 3720     ../codes/Dual-Deep-v6/dual-deep-v6 "/public/home/acs4vb4pqv/benchmarks/MWDS2026/DIMACS10" ./result     --cutoff_mem 16     --name_list "namelist-patch-deep-v6-DIMACS10-s4.txt"     --suffix patch-deep-v6-DIMACS10-s4     3600 4 90

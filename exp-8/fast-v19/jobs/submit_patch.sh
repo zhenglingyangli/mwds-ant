@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+sbatch jobslurm-patch-fast-v19-DIMACS10-s1
+sleep 0.5
+sbatch jobslurm-patch-fast-v19-DIMACS10-s2
+sleep 0.5
+sbatch jobslurm-patch-fast-v19-DIMACS10-s3
+sleep 0.5
+sbatch jobslurm-patch-fast-v19-DIMACS10-s4
+sleep 0.5
+sbatch jobslurm-patch-fast-v19-DIMACS10-s5
+sleep 0.5
+sbatch jobslurm-patch-fast-v19-NDR-s1
+sleep 0.5
+sbatch jobslurm-patch-fast-v19-NDR-s2
+sleep 0.5
+sbatch jobslurm-patch-fast-v19-NDR-s3
+sleep 0.5
+sbatch jobslurm-patch-fast-v19-NDR-s4
+sleep 0.5
+sbatch jobslurm-patch-fast-v19-NDR-s5
+sleep 0.5

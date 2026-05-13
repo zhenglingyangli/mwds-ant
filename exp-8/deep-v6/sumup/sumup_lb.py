@@ -4,8 +4,8 @@ from collections import defaultdict
 from pathlib import Path
 CONFIGS={'deep-v6':{'solvers':{'deep-v6'},'family':'deep','prefix':'exp8_deep'},'fast-v19':{'solvers':{'fast-v19'},'family':'fast','prefix':'exp8_v19'}}
 SUB=Path(__file__).resolve().parents[1].name; CFG=CONFIGS[SUB]; EXP8_ROOT=Path(__file__).resolve().parents[2]; BASELINE_INDEX=EXP8_ROOT/'baseline_index.csv'
-RE_SUMMARY=re.compile(r">>>\s+(\S+)\s+\|V\|\s+(\d+)\s+\|E\|\s+(\d+)\s+\(#LB\s+([\d.]+)\s+(\d+)\s+--->\s+(\d+)\s+([\d.]+)\s+(\d+)\s+<---\s+(\d+)\s+([\d.]+)\s+#UB\)")
-RE_OPTIMAL=re.compile(r">>>\s+(\S+)\s+\|V\|\s+(\d+)\s+\|E\|\s+(\d+)\s+\(#LB\s+([\d.]+)\s+(\d+)\s+--->\s+(\d+)\s+====\s+(\d+)\s+<---\s+(\d+)\s+([\d.]+)\s+#UB\)")
+RE_SUMMARY=re.compile(r">>>\s+(\S+)\s+\|V\|\s+(\d+)\s+\|E\|\s+(\d+)\s+\(#LB\s+([-\d.]+)\s+(\d+)\s+--->\s+(\d+)\s+([-\d.]+)\s+(\d+)\s+<---\s+(\d+)\s+([-\d.]+)\s+#UB\)")
+RE_OPTIMAL=re.compile(r">>>\s+(\S+)\s+\|V\|\s+(\d+)\s+\|E\|\s+(\d+)\s+\(#LB\s+([-\d.]+)\s+(\d+)\s+--->\s+(\d+)\s+====\s+(\d+)\s+<---\s+(\d+)\s+([-\d.]+)\s+#UB\)")
 RE_TIMEOUT=re.compile(r">>>\s+Benchmark\s+(\S+)\s+Status\s+(TIMEOUT|MEMOUT)")
 RE_ROUND_FULL=re.compile(r"^\s*(\d+)\s+(-?\d+)\s+(-?\d+)\s+(-?\d+)\s+([\d.]+)\s+(-?\d+)\s+(-?\d+)\s+([\d.]+)\s+([\d.]+)\s*$")
 RE_ROUND_SHORT=re.compile(r"^\s*(\d+)\s+(-?\d+)\s+(-?\d+)\s+(-?\d+)\s+([\d.]+)\s*$")

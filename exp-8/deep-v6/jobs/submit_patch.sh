@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+sbatch jobslurm-patch-deep-v6-DIMACS10-s1
+sleep 0.5
+sbatch jobslurm-patch-deep-v6-DIMACS10-s2
+sleep 0.5
+sbatch jobslurm-patch-deep-v6-DIMACS10-s3
+sleep 0.5
+sbatch jobslurm-patch-deep-v6-DIMACS10-s4
+sleep 0.5
+sbatch jobslurm-patch-deep-v6-DIMACS10-s5
+sleep 0.5
+sbatch jobslurm-patch-deep-v6-NDR-s1
+sleep 0.5
+sbatch jobslurm-patch-deep-v6-NDR-s2
+sleep 0.5
+sbatch jobslurm-patch-deep-v6-NDR-s3
+sleep 0.5
+sbatch jobslurm-patch-deep-v6-NDR-s4
+sleep 0.5
+sbatch jobslurm-patch-deep-v6-NDR-s5
+sleep 0.5

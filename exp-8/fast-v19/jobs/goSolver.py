@@ -11,6 +11,7 @@ import argparse
 import csv
 import time
 import threading
+import shutil
 
 import psutil
 
@@ -141,6 +142,10 @@ def worker(id, solver, instance, output_dir, cutoff_time, cutoff_mem, additional
         cmd = ['python', solver, instance] + list(additional_args)
     else:
         cmd = [solver, instance] + list(additional_args)
+        # C/C++ solvers use block buffering when stdout is piped. Without
+        # line buffering, a timeout kill can lose the latest LB/UB round lines.
+        if shutil.which('stdbuf'):
+            cmd = ['stdbuf', '-oL', '-eL'] + cmd
 
     peak_memory = [0]
     process_status = ["completed"]

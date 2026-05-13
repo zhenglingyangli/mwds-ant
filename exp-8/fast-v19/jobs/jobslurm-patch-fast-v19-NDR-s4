@@ -1,0 +1,10 @@
+#!/bin/sh
+#SBATCH --job-name=p8_fast_ND_s4
+#SBATCH --partition=hfacnormal01
+#SBATCH --time=0-04:00:00
+#SBATCH --output=slurm-%j.out
+#SBATCH --mem=64G
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=5
+cd "$SLURM_SUBMIT_DIR"
+python3 ./goSolver.py 5 3720     ../codes/Dual-Fast-v19/dual-fast-v19 "/public/home/acs4vb4pqv/benchmarks/MWDS2026" ./result     --cutoff_mem 16     --name_list "namelist-patch-fast-v19-NDR-s4.txt"     --suffix patch-fast-v19-NDR-s4     3600 4 90

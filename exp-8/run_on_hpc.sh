@@ -172,8 +172,8 @@ run_smoke() {
     echo "ERROR: smoke test failed or timed out for $solver_name on $ds"
     exit 2
   fi
-  echo "$out" | grep -E "^>>>|\\|V\\||maximum node weight|Warning" || true
-  if ! echo "$out" | grep -q "^>>>"; then
+  echo "$out" | grep -E ">>>|\\|V\\||maximum node weight|Warning" || true
+  if ! echo "$out" | grep -q ">>> $(basename "$inst") "; then
     echo "ERROR: no final >>> summary from $solver_name on $ds"
     exit 2
   fi

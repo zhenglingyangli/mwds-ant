@@ -1,0 +1,15 @@
+With  Parameters CUTOFF 3600 SEED 2  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 0.305264  
+Reducing graph ...  time 0.058173  
+[v6] |V|=262111 |E|=899792 density=3.43 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.087375
+  1    2266893    2266893    2464962     15.0982
+ Switch to original search + AQ boost, timeout 15.098161....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 15.098161
+  2    2246359    2266893    2530564    219.9399ALPHA 1.8304 MaxIteration 5  TIMEOUT 417.885801
+  3    2247858    2266893    2534045    545.0987    2370032     2370032   2801.0529     2834.8920
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 5161.325735
+  4    2249215    2266893    2539309    852.1950
+>>> Amazon0302.clq |V| 262111 |E| 899792  (#LB 0.0000 2266893 ---> 2266893  0.0435  2370032 <--- 2464962  0.0385 #UB)  #read_time 0.3053  #reduce_time 0.0582  #solve_time 3687.3657  #total_time 3687.7291
+ 

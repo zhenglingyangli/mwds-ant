@@ -1,0 +1,23 @@
+With  Parameters CUTOFF 3600 SEED 5  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 0.192235  
+Reducing graph ...  time 0.008754  
+[v6] |V|=27769 |E|=352285 density=12.69 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.012233
+  1     213028     213028     215634      1.5050
+ Switch to original search + AQ boost, timeout 1.504951....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 1.504951
+  2     211358     213028     219004      1.8538ALPHA 1.8304 MaxIteration 5  TIMEOUT 3.522292
+  3     211568     213028     219330      4.6163ALPHA 1.7658 MaxIteration 9  TIMEOUT 8.449953
+  4     212214     213028     217769      9.3624ALPHA 1.7056 MaxIteration 15  TIMEOUT 16.532179
+  5     212227     213028     218714     17.1666ALPHA 1.6493 MaxIteration 25  TIMEOUT 29.278707
+  6     212381     213028     219911     29.9698ALPHA 1.5966 MaxIteration 41  TIMEOUT 49.429426
+  7     212356     213028     220537     50.5363ALPHA 1.5472 MaxIteration 65  TIMEOUT 80.688157
+  8     212494     213028     220737     81.4128ALPHA 1.5008 MaxIteration 100  TIMEOUT 125.964485
+  9     212566     213028     220242    126.3810ALPHA 1.4571 MaxIteration 150  TIMEOUT 189.671362
+ 10     212569     213028     220311    190.1004ALPHA 1.4158 MaxIteration 218  TIMEOUT 276.986819
+ 11     212668     213028     218691    277.4298     214490      214490   2030.1126     2811.0926
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 3977.787967
+ 12     212731     213028     219034    686.1432     214525      214490     54.8621     3599.9734
+>>> Cit-HepTh.clq |V| 27769 |E| 352285  (#LB 0.0000 213028 ---> 213028  0.0068  214490 <--- 215634  0.0053 #UB)  #read_time 0.1922  #reduce_time 0.0088  #solve_time 3599.9734  #total_time 3600.1744
+ 

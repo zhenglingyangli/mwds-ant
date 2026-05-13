@@ -1,0 +1,16 @@
+With  Parameters CUTOFF 3600 SEED 4  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 0.028528  
+Reducing graph ...  time 0.000619  
+[v6] |V|=500 |E|=125248 density=250.50 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.454545
+  1         11         11         16      0.4995
+ Switch to original search + AQ boost, timeout 0.499488....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.499488
+  2         11         11         16      0.0197ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.037381
+  3         11         11         16      0.0291ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.053288
+  4         11         11         16      0.0475ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.083964
+  5         11         11         16      0.0768ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.130948
+  6         11         11         16      0.0252         16          16      0.2052     3599.8018
+>>> DSJC500_5.clq |V| 500 |E| 125248  (#LB 0.0000 11 ---> 11  0.3125  16 <--- 16  0.0000 #UB)  #read_time 0.0285  #reduce_time 0.0006  #solve_time 3599.8018  #total_time 3599.8310
+ 

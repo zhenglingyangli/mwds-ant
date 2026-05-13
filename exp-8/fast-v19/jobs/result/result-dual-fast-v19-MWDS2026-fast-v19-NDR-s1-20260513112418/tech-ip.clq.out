@@ -1,0 +1,23 @@
+>>IBM: |V|=2250498 |E|=21643497
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/NDR/tech-ip.clq #seed 1 #alpha 1.900 #timeout 5.000 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=2250498 |E|=21643497 density=9.62 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.142789
+ALPHA 1.9000 MaxIteration 10  TIMEOUT 21.234324
+  1       2094       2094       2393     21.2343
+ [Tier-2 Medium] gap=0.1428 density=9.62 |V|=2250498 => Standard RL (K=5, 15%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 35.195050
+  2       2020       2094       3146     35.1950ALPHA 1.8304 MaxIteration 5  TIMEOUT 54.917902
+  3       1999       2094       3152     54.9179ALPHA 1.7658 MaxIteration 9  TIMEOUT 114.142939
+  4       2048       2094       3129    114.1429ALPHA 1.7056 MaxIteration 15  TIMEOUT 270.686115
+  5       2077       2094       3111    270.6861ALPHA 1.6493 MaxIteration 25  TIMEOUT 206.372851
+  6       2038       2094       3313    206.3729       2378        2378      9.2800    921.5114
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 242.681075
+  7       2098       2098       2526    242.6811       2337        2337      1.8900   1415.6467
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 336.784149
+  8       2114       2114       2638    336.7841       2343        2337      5.0400   2097.9066
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 436.993470
+  9       2105       2114       2518    436.9935       2357        2337     20.7700   2980.6180
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 619.410534
+ 10       2124       2124       2644    619.4105>>> tech-ip.clq |V| 2250498 |E| 21643497  (#LB 0.0143 2094 ---> 2124  0.1003  2337 <--- 2393  0.0234 #UB)  #solve_ime 3600.1234 read_time 82.0922 

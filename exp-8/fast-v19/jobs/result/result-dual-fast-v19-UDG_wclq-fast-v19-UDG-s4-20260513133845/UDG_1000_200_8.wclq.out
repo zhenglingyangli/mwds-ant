@@ -1,0 +1,27 @@
+>>IBM: |V|=1000 |E|=52120
+>>IBM: The maximum node weight is 100
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/UDG_wclq/UDG_1000_200_8.wclq #seed 4 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=1000 |E|=52120 density=52.12 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.078947
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.304238
+  1         38         38         41      0.3042
+ [Tier-3 Hard] gap=0.0789 density=52.12 |V|=1000 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.018129
+  2         36         38         42      0.0181ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.062057
+  3         38         38         41      0.0621ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.055038
+  4         37         38         41      0.0550ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.093092
+  5         37         38         41      0.0931ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.022511
+  6         37         38         45      0.0225         41          41      0.0000      0.5792
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.053375
+  7         36         38         41      0.0534         41          41      0.0000      0.6893
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.050071
+  8         37         38         41      0.0501         41          41      0.0000      0.7993
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.078038
+  9         36         38         41      0.0780         41          41      0.0000      0.9492
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.124043
+ 10         36         38         41      0.1240         41          41      0.0000      1.1993
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.185204
+ 11         37         38         41      0.1852         41          41      0.0000      1.5693
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.106884
+ 12         36         38         41      0.1069>>> UDG_1000_200_8.wclq |V| 1000 |E| 52120  (#LB 0.0000 38 ---> 38  0.0789  41 <--- 41  0.0000 #UB)  #solve_ime 1.6762 read_time 0.0108 

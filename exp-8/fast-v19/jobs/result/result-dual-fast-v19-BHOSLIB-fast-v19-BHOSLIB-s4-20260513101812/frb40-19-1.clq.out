@@ -1,0 +1,25 @@
+>>IBM: |V|=760 |E|=247106
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/BHOSLIB/frb40-19-1.clq #seed 4 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=760 |E|=247106 density=325.14 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.666667
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.649575
+  1          3          3          5      0.6496
+ [Tier-3 Hard] gap=0.6667 density=325.14 |V|=760 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.016209
+  2          3          3          5      0.0162          5           5      0.0000      0.6922
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.007915
+  3          2          3          5      0.0079          5           5      0.0000      0.7093
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.013189
+  4          2          3          5      0.0132          5           5      0.0000      0.7393
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.020856
+  5          2          3          5      0.0209          5           5      0.0000      0.7916
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.045981
+  6          3          3          5      0.0460          5           5      0.0000      0.8895
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.077863
+  7          3          3          5      0.0779          5           5      0.0000      1.0505
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.112758
+  8          3          3          5      0.1128          5           5      0.0000      1.2816
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.112732
+  9          3          3          5      0.1127>>> frb40-19-1.clq |V| 760 |E| 247106  (#LB 0.0000 3 ---> 3  0.6667  5 <--- 5  0.0000 #UB)  #solve_ime 1.3944 read_time 0.0809 

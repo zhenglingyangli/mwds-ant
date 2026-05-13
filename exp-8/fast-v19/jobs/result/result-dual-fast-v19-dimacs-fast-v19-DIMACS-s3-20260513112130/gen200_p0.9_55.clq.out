@@ -1,0 +1,16 @@
+>>IBM: |V|=200 |E|=17910
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/dimacs/gen200_p0.9_55.clq #seed 3 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=200 |E|=17910 density=89.55 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.200000
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.070362
+  1          5          5          6      0.0704
+ [Tier-3 Hard] gap=0.2000 density=89.55 |V|=200 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.003298
+  2          4          5          6      0.0033ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.002688
+  3          4          5          6      0.0027          6           6      0.0000      0.0858
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.001962
+  4          4          5          6      0.0020          6           6      0.0000      0.0959
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.000663
+  5          3          5          6      0.0007>>> gen200_p0.9_55.clq |V| 200 |E| 17910  (#LB 0.0000 5 ---> 5  0.2000  6 <--- 6  0.0000 #UB)  #solve_ime 0.0966 read_time 0.0044 

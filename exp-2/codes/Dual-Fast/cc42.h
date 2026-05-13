@@ -160,15 +160,8 @@ int build_instance_massive(char *filename)
 
 
   for(j=0;j<vertex_num;j++){
-    infile>>tempstr1>>v1>>v2;
-    if(tempstr1[0] == 'v'){
-      v1--;
-      cs[v1].cost=v2;
-      vertex_weight[v1]=v2;
-    } else {
-      cs[j].cost=(j+1)%200 + 1;
-      vertex_weight[j]=cs[j].cost;
-    }
+    cs[j].cost=(j+1)%200 + 1;
+    vertex_weight[j]=cs[j].cost;
     cs[j].config=2;
     cs[j].time_stamp=1;
     cs[j].is_in_c=0;
@@ -179,17 +172,33 @@ int build_instance_massive(char *filename)
     t[j] = 0;
   }
 
-	for (e=0; e<edge_num; e++)
+	int actual_edge_num = 0;
+	while (infile>>tempstr1>>v1>>v2)
 	{
-		infile>>tempstr1>>v1>>v2;
-		v1--;
-		v2--;
-		vertex_neightbourNum[v1]++;
-		vertex_neightbourNum[v2]++;
-		edge[e].v1 = v1;
-		edge[e].v2 = v2;
+		if(tempstr1[0] == 'v'){
+			v1--;
+			if(v1>=0 && v1<vertex_num){
+				cs[v1].cost=v2;
+				vertex_weight[v1]=v2;
+			}
+		}
+		else if(tempstr1[0] == 'e'){
+			v1--;
+			v2--;
+			if(v1>=0 && v2>=0 && v1<vertex_num && v2<vertex_num && actual_edge_num<edge_num){
+				vertex_neightbourNum[v1]++;
+				vertex_neightbourNum[v2]++;
+				edge[actual_edge_num].v1 = v1;
+				edge[actual_edge_num].v2 = v2;
+				actual_edge_num++;
+			}
+		}
 	}
 	infile.close();
+	if(actual_edge_num != edge_num){
+		printf(">>> Warning: header edge_num=%d, parsed edge_num=%d\n", edge_num, actual_edge_num);
+		edge_num = actual_edge_num;
+	}
 
 	/* build v_adj and v_edges arrays */
 	for (v=0; v<vertex_num; v++){

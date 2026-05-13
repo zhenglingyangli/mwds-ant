@@ -14,3 +14,17 @@ Known paths:
 - SNAP: `/public/home/acs4vb4pqv/benchmarks/MWDS2026/SNAP`
 
 Update `dataset_manifest.json` before submitting jobs for datasets whose path is still `TODO_CONFIRM_ON_HPC/...`.
+
+Recommended cluster entrypoint:
+
+```bash
+cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant
+git pull origin main
+
+# Preflight only: validates dataset paths, selected instance files, compilation,
+# and parser smoke tests, then generates 80 SLURM scripts without submitting.
+bash exp-8/run_on_hpc.sh --no-submit
+
+# Full run: repeats preflight, then asks you to type RUN before submission.
+bash exp-8/run_on_hpc.sh
+```

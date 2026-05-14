@@ -1,0 +1,16 @@
+With  Parameters CUTOFF 3600 SEED 4  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 19.597930  
+Reducing graph ...  time 0.299461  
+[v6] |V|=862664 |E|=16138468 density=18.71 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.014429
+  1    2779417    2779417    2819520     27.0662
+ Switch to original search + AQ boost, timeout 27.066171....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 27.066171
+  2    2773322    2779417    2839282     54.9678ALPHA 1.8304 MaxIteration 5  TIMEOUT 104.438885
+  3    2774537    2779417    2840056    171.9257ALPHA 1.7658 MaxIteration 9  TIMEOUT 314.700221
+  4    2774332    2779417    2842543    344.9212    2810063     2810063   2827.0222     3028.0922
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 5298.615259
+  5    2775797    2779417    2843391    573.5960
+>>> eu-2005.clq |V| 862664 |E| 16138468  (#LB 0.0000 2779417 ---> 2779417  0.0109  2810063 <--- 2819520  0.0034 #UB)  #read_time 19.5979  #reduce_time 0.2995  #solve_time 3603.2051  #total_time 3623.1025
+ 

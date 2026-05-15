@@ -1,0 +1,18 @@
+With  Parameters CUTOFF 3600 SEED 2  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 154.119046  
+Reducing graph ...  time 1.178165  
+[v6] |V|=2250498 |E|=21643497 density=9.62 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.142789
+  1       2094       2094       2393     10.1253
+ Switch to original search + AQ boost, timeout 10.125332....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 10.125332
+  2       2086       2094       2919     13.6555ALPHA 1.8304 MaxIteration 5  TIMEOUT 25.945482
+  3       2072       2094       3073     22.4644ALPHA 1.7658 MaxIteration 9  TIMEOUT 41.119878
+  4       2080       2094       3072     38.6582ALPHA 1.7056 MaxIteration 15  TIMEOUT 68.262650
+  5       2098       2098       3052     71.5112ALPHA 1.6493 MaxIteration 25  TIMEOUT 121.967036
+  6       2082       2098       3005    123.4653ALPHA 1.5966 MaxIteration 41  TIMEOUT 203.632048
+  7       2079       2098       3053    208.6440ALPHA 1.5472 MaxIteration 65  TIMEOUT 333.129129
+  8       2080       2098       3077    334.1422       2279        2279   1966.5428     2787.2666
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 4294.959353
+>>> Benchmark tech-ip.clq Status TIMEOUT TimeTotal 3720.000

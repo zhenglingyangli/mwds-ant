@@ -1,0 +1,16 @@
+#!/bin/sh
+#SBATCH --job-name=diag-fast-dimacs10
+#SBATCH --partition=hfacnormal01
+#SBATCH --time=0-00:20:00
+#SBATCH --output=/public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-8/diagnostics/timeout_capture/jobs/slurm-%j-diag-fast-dimacs10.out
+#SBATCH --mem=64G
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=1
+set -e
+cd "/public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-8/fast-v19/jobs"
+python3 ./goSolver.py 1 900 \
+  "/public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-8/fast-v19/codes/Dual-Fast-v19/dual-fast-v19" "/public/home/acs4vb4pqv/benchmarks/MWDS2026/DIMACS10" "/public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-8/diagnostics/timeout_capture/result/fast-v19" \
+  --cutoff_mem 16 \
+  --name_list "/public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp-8/diagnostics/timeout_capture/namelists/fast-dimacs10.txt" \
+  --suffix "diag-fast-dimacs10-s1" \
+  780 1 90

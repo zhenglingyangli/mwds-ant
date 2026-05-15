@@ -1,0 +1,13 @@
+With  Parameters CUTOFF 3600 SEED 5  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 5.713181  
+Reducing graph ...  time 0.386996  
+[v6] |V|=952203 |E|=22785136 density=23.93 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.257124
+  1     980060     980060    1232057      7.2458
+ Switch to original search + AQ boost, timeout 7.245772....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 7.245772
+  2     971288     980060    1263908    153.0818ALPHA 1.8304 MaxIteration 5  TIMEOUT 290.855348
+  3     972088     980060    1259649    583.3716    1102380     1102380   2837.2402     2863.3145
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 5227.111492
+>>> Benchmark ldoor.clq Status TIMEOUT TimeTotal 3720.000

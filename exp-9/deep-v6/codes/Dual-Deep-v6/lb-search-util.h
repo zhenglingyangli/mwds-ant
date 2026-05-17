@@ -507,6 +507,177 @@ static inline void exact_set_bit(unsigned long long *row, int idx){
   row[idx >> 6] |= (1ULL << (idx & 63));
 }
 
+static WeightSum exact64_lp_dual_lb(){
+  const double EPS = 1e-9;
+  int n = exact64_n;
+  int m = exact64_n;
+  int rhs = n + m;
+  double tab[65][130];
+  for(int i = 0; i <= m; i++)
+    for(int j = 0; j <= rhs; j++)
+      tab[i][j] = 0.0;
+
+  for(int v = 0; v < m; v++){
+    for(int u = 0; u < n; u++){
+      if((exact64_closed[v] >> u) & 1ULL)
+        tab[v][u] = 1.0;
+    }
+    tab[v][n + v] = 1.0;
+    tab[v][rhs] = (double)exact64_weight[v];
+  }
+  for(int u = 0; u < n; u++)
+    tab[m][u] = -1.0;
+
+  for(int iter = 0; iter < 10000; iter++){
+    int enter = -1;
+    for(int j = 0; j < rhs; j++){
+      if(tab[m][j] < -EPS && (enter < 0 || tab[m][j] < tab[m][enter]))
+        enter = j;
+    }
+    if(enter < 0)
+      break;
+
+    int leave = -1;
+    double best_ratio = 0.0;
+    for(int i = 0; i < m; i++){
+      if(tab[i][enter] <= EPS)
+        continue;
+      double ratio = tab[i][rhs] / tab[i][enter];
+      if(leave < 0 || ratio < best_ratio - EPS){
+        leave = i;
+        best_ratio = ratio;
+      }
+    }
+    if(leave < 0)
+      return 0;
+
+    double pivot = tab[leave][enter];
+    for(int j = 0; j <= rhs; j++)
+      tab[leave][j] /= pivot;
+    for(int i = 0; i <= m; i++){
+      if(i == leave)
+        continue;
+      double factor = tab[i][enter];
+      if(factor > -EPS && factor < EPS)
+        continue;
+      for(int j = 0; j <= rhs; j++)
+        tab[i][j] -= factor * tab[leave][j];
+    }
+  }
+
+  if(tab[m][rhs] <= 0.0)
+    return 0;
+  return (WeightSum)(tab[m][rhs] + 1e-7);
+}
+
+static WeightSum compute_residual_lp64_weighted_dom_lb(){
+  int active_nodes[64];
+  int demand_nodes[64];
+  int candidate_nodes[64];
+  int active = 0, demands = 0, candidates = 0;
+
+  for_each_vertex(node){
+    if(deleted(node))
+      continue;
+    if(active >= 64)
+      return 0;
+    active_nodes[active++] = node;
+  }
+  if(active <= 0)
+    return CUR_BOUND;
+
+  for(int i = 0; i < active; i++){
+    int node = active_nodes[i];
+    int dominated_by_fixed = fixed(node);
+    if(!dominated_by_fixed){
+      for_each_neighbor(node, neibor){
+        if(!deleted(neibor) && fixed(neibor)){
+          dominated_by_fixed = 1;
+          break;
+        }
+      }
+    }
+    if(!dominated_by_fixed)
+      demand_nodes[demands++] = node;
+    if(!fixed(node))
+      candidate_nodes[candidates++] = node;
+  }
+  if(demands == 0)
+    return CUR_BOUND;
+  if(candidates == 0)
+    return 0;
+
+  const double EPS = 1e-9;
+  int rhs = demands + candidates;
+  double tab[65][130];
+  for(int i = 0; i <= candidates; i++)
+    for(int j = 0; j <= rhs; j++)
+      tab[i][j] = 0.0;
+
+  for(int r = 0; r < candidates; r++){
+    int cand = candidate_nodes[r];
+    for(int d = 0; d < demands; d++){
+      int demand = demand_nodes[d];
+      int covers = (cand == demand);
+      if(!covers){
+        for_each_neighbor(cand, neibor){
+          if(neibor == demand){
+            covers = 1;
+            break;
+          }
+        }
+      }
+      if(covers)
+        tab[r][d] = 1.0;
+    }
+    tab[r][demands + r] = 1.0;
+    tab[r][rhs] = (double)Node_Weight[cand];
+  }
+  for(int d = 0; d < demands; d++)
+    tab[candidates][d] = -1.0;
+
+  for(int iter = 0; iter < 10000; iter++){
+    int enter = -1;
+    for(int j = 0; j < rhs; j++){
+      if(tab[candidates][j] < -EPS && (enter < 0 || tab[candidates][j] < tab[candidates][enter]))
+        enter = j;
+    }
+    if(enter < 0)
+      break;
+
+    int leave = -1;
+    double best_ratio = 0.0;
+    for(int i = 0; i < candidates; i++){
+      if(tab[i][enter] <= EPS)
+        continue;
+      double ratio = tab[i][rhs] / tab[i][enter];
+      if(leave < 0 || ratio < best_ratio - EPS){
+        leave = i;
+        best_ratio = ratio;
+      }
+    }
+    if(leave < 0)
+      return 0;
+
+    double pivot = tab[leave][enter];
+    for(int j = 0; j <= rhs; j++)
+      tab[leave][j] /= pivot;
+    for(int i = 0; i <= candidates; i++){
+      if(i == leave)
+        continue;
+      double factor = tab[i][enter];
+      if(factor > -EPS && factor < EPS)
+        continue;
+      for(int j = 0; j <= rhs; j++)
+        tab[i][j] -= factor * tab[leave][j];
+    }
+  }
+
+  if(tab[candidates][rhs] <= 0.0)
+    return CUR_BOUND;
+  return CUR_BOUND + (WeightSum)(tab[candidates][rhs] + 1e-7);
+}
+
 static int exact64_choose_uncovered(unsigned long long covered){
   int best_u = -1;
   int best_count = 1000000;
@@ -600,6 +771,10 @@ static int compute_exact64_weighted_dom_certificate(){
     }
   }
 
+  WeightSum lp_lb = exact64_lp_dual_lb();
+  if(lp_lb > exact_small_dom_lb)
+    exact_small_dom_lb = lp_lb;
+
   unsigned long long covered = 0;
   exact64_best = 0;
   exact64_best_size = 0;
@@ -626,7 +801,9 @@ static int compute_exact64_weighted_dom_certificate(){
   exact64_start = get_utime();
   exact64_search(0ULL, 0, 0);
   if(exact64_abort || exact64_best <= 0)
-    return 0;
+    return exact_small_dom_lb > 0;
+  if(exact64_best < exact_small_dom_lb)
+    exact_small_dom_lb = exact64_best;
 
   exact_small_dom_lb = exact64_best;
   exact_small_dom_ub = exact64_best;
@@ -647,6 +824,10 @@ static WeightSum compute_exact_small_weighted_dom_lb(){
   exact_small_dom_node1 = 0;
   exact_small_dom_node2 = 0;
   exact_small_dom_solution_size = 0;
+
+  WeightSum residual_lp_lb = compute_residual_lp64_weighted_dom_lb();
+  if(residual_lp_lb > exact_small_dom_lb)
+    exact_small_dom_lb = residual_lp_lb;
 
   if(compute_exact64_weighted_dom_certificate())
     return exact_small_dom_lb;
@@ -735,14 +916,16 @@ static WeightSum compute_exact_small_weighted_dom_lb(){
   if(min_dom_cost > 0){
     exact_small_dom_ub = min_dom_cost;
     exact_small_dom_solution_size = 0;
+    WeightSum small_lb = 3;
     if(min_dom_cost <= 1)
-      exact_small_dom_lb = 1;
+      small_lb = 1;
     else if(min_dom_cost <= 2)
-      exact_small_dom_lb = 2;
-    else
-      exact_small_dom_lb = 3;
+      small_lb = 2;
+    if(small_lb > exact_small_dom_lb)
+      exact_small_dom_lb = small_lb;
   }else{
-    exact_small_dom_lb = 3;
+    if(exact_small_dom_lb < 3)
+      exact_small_dom_lb = 3;
   }
   free(closed);
   free(active_nodes);

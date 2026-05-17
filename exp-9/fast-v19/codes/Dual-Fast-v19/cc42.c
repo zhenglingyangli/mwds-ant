@@ -1138,7 +1138,7 @@ int main(int argc, char *argv[]){
   init_reduce();
   init_after_reduction();
   double density = (double)NB_EDGE / NB_NODE;
-  USE_ADVANCED = (NB_NODE >= 800) ? 1 : 0;
+  USE_ADVANCED = (NB_NODE >= 800 || density >= 50.0) ? 1 : 0;
   printf("[v19] |V|=%d |E|=%d density=%.2f USE_ADVANCED=%d\n", NB_NODE, NB_EDGE, density, USE_ADVANCED);
 
   WeightSum prev_best_lb = 0;

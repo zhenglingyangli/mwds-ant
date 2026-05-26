@@ -1,0 +1,35 @@
+#!/bin/sh
+#SBATCH --job-name=e10s1_v005
+#SBATCH --partition=hfacnormal01
+#SBATCH --time=0-00:30:00
+#SBATCH --output=slurm-%j.out
+#SBATCH --mem=64G
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=20
+
+set -eu
+
+echo "-----------------------------------------------------------"
+echo "hostname       = $(hostname)"
+echo "SLURM_JOBID    = $SLURM_JOBID"
+echo "candidate      = v005"
+echo "datasets       = T1,T2,UDG,BHOSLIB,DIMACS,DIMACS10,NDR,SNAP"
+echo "seeds          = 1,2,3"
+echo "cutoff         = 20"
+echo "-----------------------------------------------------------"
+
+cd "$SLURM_SUBMIT_DIR"
+
+python3 ./goSolver_stage1.py \
+  --candidate v005 \
+  --candidate-config ./candidates.json \
+  --candidate-root-base ".." \
+  --datasets "T1,T2,UDG,BHOSLIB,DIMACS,DIMACS10,NDR,SNAP" \
+  --seeds "1,2,3" \
+  --reps 2 \
+  --cutoff 20 \
+  --workers 20 \
+  --path-mode hpc \
+  --output-dir "../sumup/result/v005"
+
+echo "=== DONE stage1 candidate v005 ==="

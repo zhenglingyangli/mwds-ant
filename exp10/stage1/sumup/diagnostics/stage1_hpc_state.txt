@@ -1,0 +1,1483 @@
+## date
+2026年 05月 26日 星期二 23:34:26 CST
+
+## git
+abbd5c386798c8222c2935aa27a64067afd87e45
+ M exp-8/deep-v6/jobs/namelist-patch-deep-v6-DIMACS10-s4.txt
+ M exp-8/fast-v19/jobs/namelist-patch-fast-v19-NDR-s1.txt
+ M exp-8/fast-v19/jobs/namelist-patch-fast-v19-NDR-s2.txt
+ M exp-8/fast-v19/jobs/namelist-patch-fast-v19-NDR-s3.txt
+ M exp-8/fast-v19/jobs/namelist-patch-fast-v19-NDR-s4.txt
+ M exp-8/fast-v19/jobs/namelist-patch-fast-v19-NDR-s5.txt
+A  exp10/stage1/analysis/end/strict_check_report.md
+A  exp10/stage1/code/deep/v005/dual-deep-v6
+A  exp10/stage1/code/fast/v005/dual-fast-v19
+A  exp10/stage1/jobs/.submitted_jobs
+A  exp10/stage1/jobs/jobslurm-v005
+A  exp10/stage1/jobs/jobslurm-v006
+A  exp10/stage1/jobs/jobslurm-v007
+A  exp10/stage1/jobs/jobslurm-v009
+A  exp10/stage1/jobs/slurm-26294675.out
+A  exp10/stage1/jobs/slurm-26294676.out
+A  exp10/stage1/jobs/slurm-26294677.out
+A  exp10/stage1/jobs/slurm-26294678.out
+A  exp10/stage1/jobs/submit_all.sh
+A  exp10/stage1/sumup/result/v005/artifact_manifest.json
+A  exp10/stage1/sumup/result/v005/available_instances.csv
+A  exp10/stage1/sumup/result/v005/layer_a_fair_aggregate.csv
+A  exp10/stage1/sumup/result/v005/layer_a_fair_aggregate_by_family.csv
+A  exp10/stage1/sumup/result/v005/layer_a_fair_summary.csv
+A  exp10/stage1/sumup/result/v005/layer_a_runs.csv
+A  exp10/stage1/sumup/result/v005/missing_instances.csv
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb30-15-1.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb40-19-1.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb50-23-3.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-1.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__BHOSLIB__frb56-25-4.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__as-22july06.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__eu-2005.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__in-2004.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__ldoor.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__C4000.5.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__DSJC500_5.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__gen200_p0.9_55.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__hamming6-2.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__DIMACS__p_hat300-2.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__Wiki-Vote.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__SNAP__p2p-Gnutella25.clq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_1000_1000_2.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_100_100_2.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_2000_8.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_200_250_7.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T1__T1_50_1000_0.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_1000_20000_9.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_150_2000_1.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_2000_3.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_250_250_8.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__T2__T2_50_1000_6.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_1000_200_8.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_100_200_1.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_500_150_3.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_50_150_0.wclq__fast-v19__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__deep-v6__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__deep-v6__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__deep-v6__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__deep-v6__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__deep-v6__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__deep-v6__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__deep-v6__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__deep-v6__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__deep-v6__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__deep-v6__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__deep-v6__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__deep-v6__dbs_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__fast-v19__controller_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__fast-v19__controller_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__fast-v19__controller_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__fast-v19__controller_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__fast-v19__controller_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__fast-v19__controller_rep2__s103.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__fast-v19__dbs_rep1__s1.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__fast-v19__dbs_rep1__s2.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__fast-v19__dbs_rep1__s3.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__fast-v19__dbs_rep2__s101.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__fast-v19__dbs_rep2__s102.out
+A  exp10/stage1/sumup/result/v005/raw/v005__UDG__UDG_800_200_8.wclq__fast-v19__dbs_rep2__s103.out
+?? exp-2/analysis/
+?? exp-2/jobs/auto_submit.log
+?? exp-2/jobs/submit_patch.sh
+?? exp-2/sumup/sumup_run.log
+?? exp-4/jobs/auto_submit.log
+?? exp-4/result-dualdeep-2025-01-22-19-45-33/
+?? exp-4/sumup/sumup_run.log
+?? exp-5/jobs/auto_submit.log
+?? exp-5/sumup/sumup_run.log
+?? exp-8/deep-v6/codes/Dual-Deep-v6/dual-deep-v6
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-BHOSLIB-s1
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-BHOSLIB-s2
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-BHOSLIB-s3
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-BHOSLIB-s4
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-BHOSLIB-s5
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-DIMACS-s1
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-DIMACS-s2
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-DIMACS-s3
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-DIMACS-s4
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-DIMACS-s5
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-DIMACS10-s1
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-DIMACS10-s2
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-DIMACS10-s3
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-DIMACS10-s4
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-DIMACS10-s5
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-NDR-s1
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-NDR-s2
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-NDR-s3
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-NDR-s4
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-NDR-s5
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-SNAP-s1
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-SNAP-s2
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-SNAP-s3
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-SNAP-s4
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-SNAP-s5
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-T1-s1
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-T1-s2
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-T1-s3
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-T1-s4
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-T1-s5
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-T2-s1
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-T2-s2
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-T2-s3
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-T2-s4
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-T2-s5
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-UDG-s1
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-UDG-s2
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-UDG-s3
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-UDG-s4
+?? exp-8/deep-v6/jobs/jobslurm-deep-v6-UDG-s5
+?? exp-8/deep-v6/jobs/slurm-25916535.out
+?? exp-8/deep-v6/jobs/slurm-25916537.out
+?? exp-8/deep-v6/jobs/slurm-25916539.out
+?? exp-8/deep-v6/jobs/slurm-25916541.out
+?? exp-8/deep-v6/jobs/slurm-25916543.out
+?? exp-8/deep-v6/jobs/slurm-25916545.out
+?? exp-8/deep-v6/jobs/slurm-25916547.out
+?? exp-8/deep-v6/jobs/slurm-25916549.out
+?? exp-8/deep-v6/jobs/slurm-25916551.out
+?? exp-8/deep-v6/jobs/slurm-25916553.out
+?? exp-8/deep-v6/jobs/slurm-25916555.out
+?? exp-8/deep-v6/jobs/slurm-25916557.out
+?? exp-8/deep-v6/jobs/slurm-25916559.out
+?? exp-8/deep-v6/jobs/slurm-25916561.out
+?? exp-8/deep-v6/jobs/slurm-25916563.out
+?? exp-8/deep-v6/jobs/slurm-25916565.out
+?? exp-8/deep-v6/jobs/slurm-25916567.out
+?? exp-8/deep-v6/jobs/slurm-25916569.out
+?? exp-8/deep-v6/jobs/slurm-25916570.out
+?? exp-8/deep-v6/jobs/slurm-25916572.out
+?? exp-8/deep-v6/jobs/slurm-25916574.out
+?? exp-8/deep-v6/jobs/slurm-25916576.out
+?? exp-8/deep-v6/jobs/slurm-25916578.out
+?? exp-8/deep-v6/jobs/slurm-25916581.out
+?? exp-8/deep-v6/jobs/slurm-25916583.out
+?? exp-8/deep-v6/jobs/slurm-25916585.out
+?? exp-8/deep-v6/jobs/slurm-25916587.out
+?? exp-8/deep-v6/jobs/slurm-25916589.out
+?? exp-8/deep-v6/jobs/slurm-25916591.out
+?? exp-8/deep-v6/jobs/slurm-25916596.out
+?? exp-8/deep-v6/jobs/slurm-25916598.out
+?? exp-8/deep-v6/jobs/slurm-25916601.out
+?? exp-8/deep-v6/jobs/slurm-25916602.out
+?? exp-8/deep-v6/jobs/slurm-25916605.out
+?? exp-8/deep-v6/jobs/slurm-25916606.out
+?? exp-8/deep-v6/jobs/slurm-25916608.out
+?? exp-8/deep-v6/jobs/slurm-25916610.out
+?? exp-8/deep-v6/jobs/slurm-25916612.out
+?? exp-8/deep-v6/jobs/slurm-25916614.out
+?? exp-8/deep-v6/jobs/slurm-25916616.out
+?? exp-8/deep-v6/jobs/slurm-25938484.out
+?? exp-8/deep-v6/jobs/slurm-25938486.out
+?? exp-8/deep-v6/jobs/slurm-25938493.out
+?? exp-8/deep-v6/jobs/slurm-25938495.out
+?? exp-8/deep-v6/jobs/slurm-25938504.out
+?? exp-8/deep-v6/jobs/slurm-25938512.out
+?? exp-8/deep-v6/jobs/slurm-25938516.out
+?? exp-8/deep-v6/jobs/slurm-25938522.out
+?? exp-8/deep-v6/jobs/slurm-25938525.out
+?? exp-8/deep-v6/jobs/slurm-25938530.out
+?? exp-8/deep-v6/jobs/slurm-25990605.out
+?? exp-8/deep-v6/jobs/slurm-25990606.out
+?? exp-8/deep-v6/jobs/slurm-25990607.out
+?? exp-8/deep-v6/jobs/slurm-25990608.out
+?? exp-8/deep-v6/jobs/slurm-25990609.out
+?? exp-8/deep-v6/jobs/slurm-25990610.out
+?? exp-8/deep-v6/jobs/slurm-25990611.out
+?? exp-8/deep-v6/jobs/slurm-25990612.out
+?? exp-8/deep-v6/jobs/slurm-25990613.out
+?? exp-8/deep-v6/jobs/slurm-25990614.out
+?? exp-8/deep-v6/jobs/submit_all.sh
+?? exp-8/fast-v19/codes/Dual-Fast-v19/dual-fast-v19
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-BHOSLIB-s1
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-BHOSLIB-s2
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-BHOSLIB-s3
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-BHOSLIB-s4
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-BHOSLIB-s5
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-DIMACS-s1
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-DIMACS-s2
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-DIMACS-s3
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-DIMACS-s4
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-DIMACS-s5
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-DIMACS10-s1
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-DIMACS10-s2
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-DIMACS10-s3
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-DIMACS10-s4
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-DIMACS10-s5
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-NDR-s1
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-NDR-s2
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-NDR-s3
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-NDR-s4
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-NDR-s5
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-SNAP-s1
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-SNAP-s2
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-SNAP-s3
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-SNAP-s4
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-SNAP-s5
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-T1-s1
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-T1-s2
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-T1-s3
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-T1-s4
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-T1-s5
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-T2-s1
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-T2-s2
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-T2-s3
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-T2-s4
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-T2-s5
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-UDG-s1
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-UDG-s2
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-UDG-s3
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-UDG-s4
+?? exp-8/fast-v19/jobs/jobslurm-fast-v19-UDG-s5
+?? exp-8/fast-v19/jobs/slurm-25916534.out
+?? exp-8/fast-v19/jobs/slurm-25916536.out
+?? exp-8/fast-v19/jobs/slurm-25916538.out
+?? exp-8/fast-v19/jobs/slurm-25916540.out
+?? exp-8/fast-v19/jobs/slurm-25916542.out
+?? exp-8/fast-v19/jobs/slurm-25916544.out
+?? exp-8/fast-v19/jobs/slurm-25916546.out
+?? exp-8/fast-v19/jobs/slurm-25916548.out
+?? exp-8/fast-v19/jobs/slurm-25916550.out
+?? exp-8/fast-v19/jobs/slurm-25916552.out
+?? exp-8/fast-v19/jobs/slurm-25916554.out
+?? exp-8/fast-v19/jobs/slurm-25916556.out
+?? exp-8/fast-v19/jobs/slurm-25916558.out
+?? exp-8/fast-v19/jobs/slurm-25916560.out
+?? exp-8/fast-v19/jobs/slurm-25916562.out
+?? exp-8/fast-v19/jobs/slurm-25916564.out
+?? exp-8/fast-v19/jobs/slurm-25916566.out
+?? exp-8/fast-v19/jobs/slurm-25916568.out
+?? exp-8/fast-v19/jobs/slurm-25916571.out
+?? exp-8/fast-v19/jobs/slurm-25916573.out
+?? exp-8/fast-v19/jobs/slurm-25916575.out
+?? exp-8/fast-v19/jobs/slurm-25916577.out
+?? exp-8/fast-v19/jobs/slurm-25916579.out
+?? exp-8/fast-v19/jobs/slurm-25916580.out
+?? exp-8/fast-v19/jobs/slurm-25916582.out
+?? exp-8/fast-v19/jobs/slurm-25916584.out
+?? exp-8/fast-v19/jobs/slurm-25916586.out
+?? exp-8/fast-v19/jobs/slurm-25916588.out
+?? exp-8/fast-v19/jobs/slurm-25916590.out
+?? exp-8/fast-v19/jobs/slurm-25916595.out
+?? exp-8/fast-v19/jobs/slurm-25916597.out
+?? exp-8/fast-v19/jobs/slurm-25916600.out
+?? exp-8/fast-v19/jobs/slurm-25916603.out
+?? exp-8/fast-v19/jobs/slurm-25916604.out
+?? exp-8/fast-v19/jobs/slurm-25916607.out
+?? exp-8/fast-v19/jobs/slurm-25916609.out
+?? exp-8/fast-v19/jobs/slurm-25916611.out
+?? exp-8/fast-v19/jobs/slurm-25916613.out
+?? exp-8/fast-v19/jobs/slurm-25916615.out
+?? exp-8/fast-v19/jobs/slurm-25916617.out
+?? exp-8/fast-v19/jobs/slurm-25938649.out
+?? exp-8/fast-v19/jobs/slurm-25938653.out
+?? exp-8/fast-v19/jobs/slurm-25938657.out
+?? exp-8/fast-v19/jobs/slurm-25938664.out
+?? exp-8/fast-v19/jobs/slurm-25938669.out
+?? exp-8/fast-v19/jobs/slurm-25938671.out
+?? exp-8/fast-v19/jobs/slurm-25938674.out
+?? exp-8/fast-v19/jobs/slurm-25938679.out
+?? exp-8/fast-v19/jobs/slurm-25938684.out
+?? exp-8/fast-v19/jobs/slurm-25938688.out
+?? exp-8/fast-v19/jobs/slurm-25990624.out
+?? exp-8/fast-v19/jobs/slurm-25990625.out
+?? exp-8/fast-v19/jobs/slurm-25990626.out
+?? exp-8/fast-v19/jobs/slurm-25990627.out
+?? exp-8/fast-v19/jobs/slurm-25990628.out
+?? exp-8/fast-v19/jobs/slurm-25990629.out
+?? exp-8/fast-v19/jobs/slurm-25990630.out
+?? exp-8/fast-v19/jobs/slurm-25990631.out
+?? exp-8/fast-v19/jobs/slurm-25990632.out
+?? exp-8/fast-v19/jobs/slurm-25990633.out
+?? exp-8/fast-v19/jobs/submit_all.sh
+?? exp-9/.exp9_resolved_instances.tsv
+?? exp-9/deep-v6/codes/Dual-Deep-v6/dual-deep-v6
+?? exp-9/deep-v6/jobs/auto_submit.log
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-BHOSLIB-s1
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-BHOSLIB-s2
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-BHOSLIB-s3
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-BHOSLIB-s4
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-BHOSLIB-s5
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-DIMACS-s1
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-DIMACS-s2
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-DIMACS-s3
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-DIMACS-s4
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-DIMACS-s5
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-DIMACS10-s1
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-DIMACS10-s2
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-DIMACS10-s3
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-DIMACS10-s4
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-DIMACS10-s5
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-NDR-s1
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-NDR-s2
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-NDR-s3
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-NDR-s4
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-NDR-s5
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-SNAP-s1
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-SNAP-s2
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-SNAP-s3
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-SNAP-s4
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-SNAP-s5
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-T1-s1
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-T1-s2
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-T1-s3
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-T1-s4
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-T1-s5
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-T2-s1
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-T2-s2
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-T2-s3
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-T2-s4
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-T2-s5
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-UDG-s1
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-UDG-s2
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-UDG-s3
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-UDG-s4
+?? exp-9/deep-v6/jobs/jobslurm-deep-v6-UDG-s5
+?? exp-9/deep-v6/jobs/result/
+?? exp-9/deep-v6/jobs/slurm-26069538.out
+?? exp-9/deep-v6/jobs/slurm-26069542.out
+?? exp-9/deep-v6/jobs/slurm-26069544.out
+?? exp-9/deep-v6/jobs/slurm-26069546.out
+?? exp-9/deep-v6/jobs/slurm-26069548.out
+?? exp-9/deep-v6/jobs/slurm-26069550.out
+?? exp-9/deep-v6/jobs/slurm-26069551.out
+?? exp-9/deep-v6/jobs/slurm-26069553.out
+?? exp-9/deep-v6/jobs/slurm-26069555.out
+?? exp-9/deep-v6/jobs/slurm-26069557.out
+?? exp-9/deep-v6/jobs/slurm-26069560.out
+?? exp-9/deep-v6/jobs/slurm-26069562.out
+?? exp-9/deep-v6/jobs/slurm-26069564.out
+?? exp-9/deep-v6/jobs/slurm-26069566.out
+?? exp-9/deep-v6/jobs/slurm-26069567.out
+?? exp-9/deep-v6/jobs/slurm-26069570.out
+?? exp-9/deep-v6/jobs/slurm-26069573.out
+?? exp-9/deep-v6/jobs/slurm-26070411.out
+?? exp-9/deep-v6/jobs/slurm-26070413.out
+?? exp-9/deep-v6/jobs/slurm-26070415.out
+?? exp-9/deep-v6/jobs/slurm-26070416.out
+?? exp-9/deep-v6/jobs/slurm-26070419.out
+?? exp-9/deep-v6/jobs/slurm-26070420.out
+?? exp-9/deep-v6/jobs/slurm-26070422.out
+?? exp-9/deep-v6/jobs/slurm-26070424.out
+?? exp-9/deep-v6/jobs/slurm-26070428.out
+?? exp-9/deep-v6/jobs/slurm-26070430.out
+?? exp-9/deep-v6/jobs/slurm-26070433.out
+?? exp-9/deep-v6/jobs/slurm-26070435.out
+?? exp-9/deep-v6/jobs/slurm-26070437.out
+?? exp-9/deep-v6/jobs/slurm-26070439.out
+?? exp-9/deep-v6/jobs/slurm-26070441.out
+?? exp-9/deep-v6/jobs/slurm-26070443.out
+?? exp-9/deep-v6/jobs/slurm-26070446.out
+?? exp-9/deep-v6/jobs/slurm-26070448.out
+?? exp-9/deep-v6/jobs/slurm-26070450.out
+?? exp-9/deep-v6/jobs/slurm-26070452.out
+?? exp-9/deep-v6/jobs/slurm-26070454.out
+?? exp-9/deep-v6/jobs/slurm-26070456.out
+?? exp-9/deep-v6/jobs/slurm-26070458.out
+?? exp-9/deep-v6/jobs/slurm-26070460.out
+?? exp-9/deep-v6/jobs/slurm-26070463.out
+?? exp-9/deep-v6/jobs/slurm-26070465.out
+?? exp-9/deep-v6/jobs/slurm-26070467.out
+?? exp-9/deep-v6/jobs/slurm-26070469.out
+?? exp-9/deep-v6/jobs/slurm-26070471.out
+?? exp-9/deep-v6/jobs/slurm-26070473.out
+?? exp-9/deep-v6/jobs/slurm-26070475.out
+?? exp-9/deep-v6/jobs/slurm-26070477.out
+?? exp-9/deep-v6/jobs/slurm-26070479.out
+?? exp-9/deep-v6/jobs/slurm-26070481.out
+?? exp-9/deep-v6/jobs/slurm-26070483.out
+?? exp-9/deep-v6/jobs/slurm-26070486.out
+?? exp-9/deep-v6/jobs/slurm-26070488.out
+?? exp-9/deep-v6/jobs/slurm-26070490.out
+?? exp-9/deep-v6/jobs/slurm-26070492.out
+?? exp-9/deep-v6/jobs/slurm-26070494.out
+?? exp-9/deep-v6/jobs/submit_all.sh
+?? exp-9/fast-v19/codes/Dual-Fast-v19/dual-fast-v19
+?? exp-9/fast-v19/jobs/auto_submit.log
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-BHOSLIB-s1
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-BHOSLIB-s2
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-BHOSLIB-s3
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-BHOSLIB-s4
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-BHOSLIB-s5
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-DIMACS-s1
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-DIMACS-s2
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-DIMACS-s3
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-DIMACS-s4
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-DIMACS-s5
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-DIMACS10-s1
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-DIMACS10-s2
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-DIMACS10-s3
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-DIMACS10-s4
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-DIMACS10-s5
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-NDR-s1
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-NDR-s2
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-NDR-s3
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-NDR-s4
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-NDR-s5
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-SNAP-s1
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-SNAP-s2
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-SNAP-s3
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-SNAP-s4
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-SNAP-s5
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-T1-s1
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-T1-s2
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-T1-s3
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-T1-s4
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-T1-s5
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-T2-s1
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-T2-s2
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-T2-s3
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-T2-s4
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-T2-s5
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-UDG-s1
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-UDG-s2
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-UDG-s3
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-UDG-s4
+?? exp-9/fast-v19/jobs/jobslurm-fast-v19-UDG-s5
+?? exp-9/fast-v19/jobs/result/
+?? exp-9/fast-v19/jobs/slurm-26069537.out
+?? exp-9/fast-v19/jobs/slurm-26069541.out
+?? exp-9/fast-v19/jobs/slurm-26069543.out
+?? exp-9/fast-v19/jobs/slurm-26069545.out
+?? exp-9/fast-v19/jobs/slurm-26069547.out
+?? exp-9/fast-v19/jobs/slurm-26069549.out
+?? exp-9/fast-v19/jobs/slurm-26069552.out
+?? exp-9/fast-v19/jobs/slurm-26069554.out
+?? exp-9/fast-v19/jobs/slurm-26069556.out
+?? exp-9/fast-v19/jobs/slurm-26069558.out
+?? exp-9/fast-v19/jobs/slurm-26069559.out
+?? exp-9/fast-v19/jobs/slurm-26069561.out
+?? exp-9/fast-v19/jobs/slurm-26069563.out
+?? exp-9/fast-v19/jobs/slurm-26069565.out
+?? exp-9/fast-v19/jobs/slurm-26069568.out
+?? exp-9/fast-v19/jobs/slurm-26069571.out
+?? exp-9/fast-v19/jobs/slurm-26069572.out
+?? exp-9/fast-v19/jobs/slurm-26070410.out
+?? exp-9/fast-v19/jobs/slurm-26070412.out
+?? exp-9/fast-v19/jobs/slurm-26070414.out
+?? exp-9/fast-v19/jobs/slurm-26070417.out
+?? exp-9/fast-v19/jobs/slurm-26070418.out
+?? exp-9/fast-v19/jobs/slurm-26070421.out
+?? exp-9/fast-v19/jobs/slurm-26070423.out
+?? exp-9/fast-v19/jobs/slurm-26070425.out
+?? exp-9/fast-v19/jobs/slurm-26070429.out
+?? exp-9/fast-v19/jobs/slurm-26070431.out
+?? exp-9/fast-v19/jobs/slurm-26070432.out
+?? exp-9/fast-v19/jobs/slurm-26070434.out
+?? exp-9/fast-v19/jobs/slurm-26070436.out
+?? exp-9/fast-v19/jobs/slurm-26070438.out
+?? exp-9/fast-v19/jobs/slurm-26070440.out
+?? exp-9/fast-v19/jobs/slurm-26070442.out
+?? exp-9/fast-v19/jobs/slurm-26070445.out
+?? exp-9/fast-v19/jobs/slurm-26070447.out
+?? exp-9/fast-v19/jobs/slurm-26070449.out
+?? exp-9/fast-v19/jobs/slurm-26070451.out
+?? exp-9/fast-v19/jobs/slurm-26070453.out
+?? exp-9/fast-v19/jobs/slurm-26070455.out
+?? exp-9/fast-v19/jobs/slurm-26070457.out
+?? exp-9/fast-v19/jobs/slurm-26070459.out
+?? exp-9/fast-v19/jobs/slurm-26070462.out
+?? exp-9/fast-v19/jobs/slurm-26070464.out
+?? exp-9/fast-v19/jobs/slurm-26070466.out
+?? exp-9/fast-v19/jobs/slurm-26070468.out
+?? exp-9/fast-v19/jobs/slurm-26070470.out
+?? exp-9/fast-v19/jobs/slurm-26070472.out
+?? exp-9/fast-v19/jobs/slurm-26070474.out
+?? exp-9/fast-v19/jobs/slurm-26070476.out
+?? exp-9/fast-v19/jobs/slurm-26070478.out
+?? exp-9/fast-v19/jobs/slurm-26070480.out
+?? exp-9/fast-v19/jobs/slurm-26070482.out
+?? exp-9/fast-v19/jobs/slurm-26070485.out
+?? exp-9/fast-v19/jobs/slurm-26070487.out
+?? exp-9/fast-v19/jobs/slurm-26070489.out
+?? exp-9/fast-v19/jobs/slurm-26070491.out
+?? exp-9/fast-v19/jobs/slurm-26070493.out
+?? exp-9/fast-v19/jobs/submit_all.sh
+?? exp10/stage1/sumup/diagnostics/
+?? exp9_selected_data.tar.gz
+?? exp9_selected_data/
+?? exp9_small_data/
+
+## jobs files
+总用量 516K
+drwxrwxr-x 3 acs4vb4pqv acs4vb4pqv 4.0K 5月  26 22:02 .
+drwxrwxr-x 6 acs4vb4pqv acs4vb4pqv 4.0K 5月  26 21:58 ..
+-rwxrwxr-x 1 acs4vb4pqv acs4vb4pqv 1.1K 5月  26 21:52 auto_submit.sh
+-rw-rw-r-- 1 acs4vb4pqv acs4vb4pqv  684 5月  26 21:52 candidates.json
+-rwxrwxr-x 1 acs4vb4pqv acs4vb4pqv 4.0K 5月  26 21:58 generate_scripts.py
+-rwxrwxr-x 1 acs4vb4pqv acs4vb4pqv  18K 5月  26 22:00 goSolver_stage1.py
+-rwxr-xr-x 1 acs4vb4pqv acs4vb4pqv  938 5月  26 22:01 jobslurm-v005
+-rwxr-xr-x 1 acs4vb4pqv acs4vb4pqv  938 5月  26 22:01 jobslurm-v006
+-rwxr-xr-x 1 acs4vb4pqv acs4vb4pqv  938 5月  26 22:01 jobslurm-v007
+-rwxr-xr-x 1 acs4vb4pqv acs4vb4pqv  938 5月  26 22:01 jobslurm-v009
+drwxrwxr-x 2 acs4vb4pqv acs4vb4pqv 4.0K 5月  26 22:00 __pycache__
+-rw-rw-r-- 1 acs4vb4pqv acs4vb4pqv 474K 5月  26 22:15 slurm-26294675.out
+-rw-rw-r-- 1 acs4vb4pqv acs4vb4pqv  342 5月  26 22:02 slurm-26294676.out
+-rw-rw-r-- 1 acs4vb4pqv acs4vb4pqv  342 5月  26 22:02 slurm-26294677.out
+-rw-rw-r-- 1 acs4vb4pqv acs4vb4pqv  343 5月  26 22:02 slurm-26294678.out
+-rwxr-xr-x 1 acs4vb4pqv acs4vb4pqv  177 5月  26 22:01 submit_all.sh
+-rw-rw-r-- 1 acs4vb4pqv acs4vb4pqv   56 5月  26 22:01 .submitted_jobs
+
+## submitted jobs
+jobslurm-v005
+jobslurm-v006
+jobslurm-v007
+jobslurm-v009
+
+## result dirs
+总用量 12K
+drwxrwxr-x 3 acs4vb4pqv acs4vb4pqv 4.0K 5月  26 22:02 .
+drwxrwxr-x 4 acs4vb4pqv acs4vb4pqv 4.0K 5月  26 23:34 ..
+drwxrwxr-x 3 acs4vb4pqv acs4vb4pqv 4.0K 5月  26 22:15 v005
+
+## queue
+             JOBID PARTITION      NAME           USER           ST       TIME  NODES NODELIST(REASON)
+
+## recent slurm tail
+===== exp10/stage1/jobs/slurm-26294675.out =====
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': -9, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__dbs_rep1__s2.out', 'parse_ok': False, 'n_rounds': 0}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': -9, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__dbs_rep2__s103.out', 'parse_ok': False, 'n_rounds': 0}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': -9, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__controller_rep1__s2.out', 'parse_ok': False, 'n_rounds': 0}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'deep-v6', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__dbs_rep2__s101.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142491, 'best_lb': 1142491, 'lb_gain': 0, 'first_ub': 1143048, 'verified_ub': 1143059, 'ub_gain': -11, 'absolute_gap': 568, 'relative_gap': 0.0004971592774034981, 'solver_certified_opt': 0, 'n_rounds': 14}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'deep-v6', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__controller_rep1__s1.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142491, 'best_lb': 1142491, 'lb_gain': 0, 'first_ub': 1143048, 'verified_ub': 1143031, 'ub_gain': 17, 'absolute_gap': 540, 'relative_gap': 0.0004726514257005088, 'solver_certified_opt': 0, 'n_rounds': 13}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'deep-v6', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__dbs_rep1__s1.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142491, 'best_lb': 1142491, 'lb_gain': 0, 'first_ub': 1143048, 'verified_ub': 1143039, 'ub_gain': 9, 'absolute_gap': 548, 'relative_gap': 0.00047965366904422006, 'solver_certified_opt': 0, 'n_rounds': 14}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'deep-v6', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__controller_rep2__s101.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142491, 'best_lb': 1142491, 'lb_gain': 0, 'first_ub': 1143048, 'verified_ub': 1143036, 'ub_gain': 12, 'absolute_gap': 545, 'relative_gap': 0.00047702782779032835, 'solver_certified_opt': 0, 'n_rounds': 14}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__dbs_rep1__s2.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142491, 'best_lb': 1142491, 'lb_gain': 0, 'first_ub': 1143048, 'verified_ub': 1143054, 'ub_gain': -6, 'absolute_gap': 563, 'relative_gap': 0.0004927828753136786, 'solver_certified_opt': 0, 'n_rounds': 13}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__controller_rep1__s2.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142491, 'best_lb': 1142491, 'lb_gain': 0, 'first_ub': 1143048, 'verified_ub': 1143028, 'ub_gain': 20, 'absolute_gap': 537, 'relative_gap': 0.0004700255844466171, 'solver_certified_opt': 0, 'n_rounds': 13}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': -9, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__controller_rep2__s103.out', 'parse_ok': False, 'n_rounds': 0}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__dbs_rep1__s3.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142491, 'best_lb': 1142491, 'lb_gain': 0, 'first_ub': 1143048, 'verified_ub': 1143050, 'ub_gain': -2, 'absolute_gap': 559, 'relative_gap': 0.000489281753641823, 'solver_certified_opt': 0, 'n_rounds': 14}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__dbs_rep2__s102.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142491, 'best_lb': 1142491, 'lb_gain': 0, 'first_ub': 1143048, 'verified_ub': 1143031, 'ub_gain': 17, 'absolute_gap': 540, 'relative_gap': 0.0004726514257005088, 'solver_certified_opt': 0, 'n_rounds': 14}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__controller_rep2__s102.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142491, 'best_lb': 1142491, 'lb_gain': 0, 'first_ub': 1143048, 'verified_ub': 1143060, 'ub_gain': -12, 'absolute_gap': 569, 'relative_gap': 0.000498034557821462, 'solver_certified_opt': 0, 'n_rounds': 14}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__controller_rep1__s3.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142491, 'best_lb': 1142491, 'lb_gain': 0, 'first_ub': 1143048, 'verified_ub': 1143053, 'ub_gain': -5, 'absolute_gap': 562, 'relative_gap': 0.0004919075948957147, 'solver_certified_opt': 0, 'n_rounds': 14}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__dbs_rep2__s103.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142491, 'best_lb': 1142491, 'lb_gain': 0, 'first_ub': 1143048, 'verified_ub': 1143049, 'ub_gain': -1, 'absolute_gap': 558, 'relative_gap': 0.0004884064732238591, 'solver_certified_opt': 0, 'n_rounds': 13}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__deep-v6__controller_rep2__s103.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142491, 'best_lb': 1142491, 'lb_gain': 0, 'first_ub': 1143048, 'verified_ub': 1143053, 'ub_gain': -5, 'absolute_gap': 562, 'relative_gap': 0.0004919075948957147, 'solver_certified_opt': 0, 'n_rounds': 13}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__dbs_rep1__s1.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142449, 'best_lb': 1142449, 'lb_gain': 0, 'first_ub': 1143119, 'verified_ub': 1143119, 'ub_gain': 0, 'absolute_gap': 670, 'relative_gap': 0.0005864594393272698, 'solver_certified_opt': 0, 'n_rounds': 7}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': -9, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__deep-v6__controller_rep1__s3.out', 'parse_ok': False, 'n_rounds': 0}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': -9, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__controller_rep1__s1.out', 'parse_ok': False, 'n_rounds': 0}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__dbs_rep2__s101.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142449, 'best_lb': 1142449, 'lb_gain': 0, 'first_ub': 1143119, 'verified_ub': 1143119, 'ub_gain': 0, 'absolute_gap': 670, 'relative_gap': 0.0005864594393272698, 'solver_certified_opt': 0, 'n_rounds': 8}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__controller_rep2__s101.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142449, 'best_lb': 1142449, 'lb_gain': 0, 'first_ub': 1143119, 'verified_ub': 1143119, 'ub_gain': 0, 'absolute_gap': 670, 'relative_gap': 0.0005864594393272698, 'solver_certified_opt': 0, 'n_rounds': 8}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__controller_rep1__s1.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142449, 'best_lb': 1142449, 'lb_gain': 0, 'first_ub': 1143119, 'verified_ub': 1143119, 'ub_gain': 0, 'absolute_gap': 670, 'relative_gap': 0.0005864594393272698, 'solver_certified_opt': 0, 'n_rounds': 7}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__dbs_rep1__s2.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142449, 'best_lb': 1142449, 'lb_gain': 0, 'first_ub': 1143119, 'verified_ub': 1143119, 'ub_gain': 0, 'absolute_gap': 670, 'relative_gap': 0.0005864594393272698, 'solver_certified_opt': 0, 'n_rounds': 7}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': -9, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__dbs_rep1__s2.out', 'parse_ok': False, 'n_rounds': 0}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__controller_rep1__s2.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142449, 'best_lb': 1142449, 'lb_gain': 0, 'first_ub': 1143119, 'verified_ub': 1143119, 'ub_gain': 0, 'absolute_gap': 670, 'relative_gap': 0.0005864594393272698, 'solver_certified_opt': 0, 'n_rounds': 8}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__dbs_rep2__s102.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142449, 'best_lb': 1142449, 'lb_gain': 0, 'first_ub': 1143119, 'verified_ub': 1143119, 'ub_gain': 0, 'absolute_gap': 670, 'relative_gap': 0.0005864594393272698, 'solver_certified_opt': 0, 'n_rounds': 7}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': -9, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__controller_rep2__s101.out', 'parse_ok': False, 'n_rounds': 0}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__controller_rep2__s102.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142449, 'best_lb': 1142449, 'lb_gain': 0, 'first_ub': 1143119, 'verified_ub': 1143119, 'ub_gain': 0, 'absolute_gap': 670, 'relative_gap': 0.0005864594393272698, 'solver_certified_opt': 0, 'n_rounds': 7}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__dbs_rep2__s101.out', 'parse_ok': True, 'V': 18520486, 'E': 261257285, 'first_lb': 99425773, 'best_lb': 99425773, 'lb_gain': 0, 'first_ub': 101687786, 'verified_ub': 101687786, 'ub_gain': 0, 'absolute_gap': 2262013, 'relative_gap': 0.02275077107019324, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__dbs_rep1__s3.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142449, 'best_lb': 1142449, 'lb_gain': 0, 'first_ub': 1143119, 'verified_ub': 1143119, 'ub_gain': 0, 'absolute_gap': 670, 'relative_gap': 0.0005864594393272698, 'solver_certified_opt': 0, 'n_rounds': 7}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__dbs_rep1__s1.out', 'parse_ok': True, 'V': 18520486, 'E': 261257285, 'first_lb': 99425773, 'best_lb': 99425773, 'lb_gain': 0, 'first_ub': 101687786, 'verified_ub': 101687786, 'ub_gain': 0, 'absolute_gap': 2262013, 'relative_gap': 0.02275077107019324, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__controller_rep1__s3.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142449, 'best_lb': 1142449, 'lb_gain': 0, 'first_ub': 1143119, 'verified_ub': 1143119, 'ub_gain': 0, 'absolute_gap': 670, 'relative_gap': 0.0005864594393272698, 'solver_certified_opt': 0, 'n_rounds': 7}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__controller_rep2__s102.out', 'parse_ok': True, 'V': 18520486, 'E': 261257285, 'first_lb': 99425773, 'best_lb': 99425773, 'lb_gain': 0, 'first_ub': 101687786, 'verified_ub': 101687786, 'ub_gain': 0, 'absolute_gap': 2262013, 'relative_gap': 0.02275077107019324, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__dbs_rep2__s103.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142449, 'best_lb': 1142449, 'lb_gain': 0, 'first_ub': 1143119, 'verified_ub': 1143119, 'ub_gain': 0, 'absolute_gap': 670, 'relative_gap': 0.0005864594393272698, 'solver_certified_opt': 0, 'n_rounds': 7}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'deep-v6', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__dbs_rep1__s1.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213028, 'best_lb': 213145, 'lb_gain': 117, 'first_ub': 215634, 'verified_ub': 214714, 'ub_gain': 920, 'absolute_gap': 1569, 'relative_gap': 0.007361186047057168, 'solver_certified_opt': 0, 'n_rounds': 12}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'deep-v6', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__controller_rep1__s1.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213028, 'best_lb': 213139, 'lb_gain': 111, 'first_ub': 215634, 'verified_ub': 214849, 'ub_gain': 785, 'absolute_gap': 1710, 'relative_gap': 0.00802293339088576, 'solver_certified_opt': 0, 'n_rounds': 12}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'deep-v6', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__dbs_rep2__s101.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213028, 'best_lb': 213072, 'lb_gain': 44, 'first_ub': 215634, 'verified_ub': 214822, 'ub_gain': 812, 'absolute_gap': 1750, 'relative_gap': 0.00821318615303747, 'solver_certified_opt': 0, 'n_rounds': 13}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Slashdot0902.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Slashdot0902.clq__fast-v19__controller_rep2__s103.out', 'parse_ok': True, 'V': 82168, 'E': 504230, 'first_lb': 1142449, 'best_lb': 1142449, 'lb_gain': 0, 'first_ub': 1143119, 'verified_ub': 1143119, 'ub_gain': 0, 'absolute_gap': 670, 'relative_gap': 0.0005864594393272698, 'solver_certified_opt': 0, 'n_rounds': 8}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__dbs_rep2__s102.out', 'parse_ok': True, 'V': 18520486, 'E': 261257285, 'first_lb': 99425773, 'best_lb': 99425773, 'lb_gain': 0, 'first_ub': 101687786, 'verified_ub': 101687786, 'ub_gain': 0, 'absolute_gap': 2262013, 'relative_gap': 0.02275077107019324, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'deep-v6', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__controller_rep2__s101.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213028, 'best_lb': 213077, 'lb_gain': 49, 'first_ub': 215634, 'verified_ub': 214689, 'ub_gain': 945, 'absolute_gap': 1612, 'relative_gap': 0.007565340229119051, 'solver_certified_opt': 0, 'n_rounds': 12}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__dbs_rep1__s2.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213028, 'best_lb': 213189, 'lb_gain': 161, 'first_ub': 215634, 'verified_ub': 214799, 'ub_gain': 835, 'absolute_gap': 1610, 'relative_gap': 0.007551984389438479, 'solver_certified_opt': 0, 'n_rounds': 13}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__controller_rep1__s2.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213028, 'best_lb': 213137, 'lb_gain': 109, 'first_ub': 215634, 'verified_ub': 214767, 'ub_gain': 867, 'absolute_gap': 1630, 'relative_gap': 0.007647663240075632, 'solver_certified_opt': 0, 'n_rounds': 13}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__controller_rep1__s2.out', 'parse_ok': True, 'V': 18520486, 'E': 261257285, 'first_lb': 99662701, 'best_lb': 99662701, 'lb_gain': 0, 'first_ub': 101480253, 'verified_ub': 101480253, 'ub_gain': 0, 'absolute_gap': 1817552, 'relative_gap': 0.018237033331055315, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__dbs_rep2__s102.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213028, 'best_lb': 213196, 'lb_gain': 168, 'first_ub': 215634, 'verified_ub': 214850, 'ub_gain': 784, 'absolute_gap': 1654, 'relative_gap': 0.007758119289292482, 'solver_certified_opt': 0, 'n_rounds': 13}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__controller_rep2__s102.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213028, 'best_lb': 213089, 'lb_gain': 61, 'first_ub': 215634, 'verified_ub': 214687, 'ub_gain': 947, 'absolute_gap': 1598, 'relative_gap': 0.00749921394346963, 'solver_certified_opt': 0, 'n_rounds': 12}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__dbs_rep1__s3.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213028, 'best_lb': 213139, 'lb_gain': 111, 'first_ub': 215634, 'verified_ub': 214686, 'ub_gain': 948, 'absolute_gap': 1547, 'relative_gap': 0.0072581742430995735, 'solver_certified_opt': 0, 'n_rounds': 12}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__controller_rep1__s3.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213028, 'best_lb': 213117, 'lb_gain': 89, 'first_ub': 215634, 'verified_ub': 214692, 'ub_gain': 942, 'absolute_gap': 1575, 'relative_gap': 0.007390306732921353, 'solver_certified_opt': 0, 'n_rounds': 13}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__dbs_rep2__s103.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213028, 'best_lb': 213087, 'lb_gain': 59, 'first_ub': 215634, 'verified_ub': 214746, 'ub_gain': 888, 'absolute_gap': 1659, 'relative_gap': 0.007785552380013798, 'solver_certified_opt': 0, 'n_rounds': 12}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__deep-v6__controller_rep2__s103.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213028, 'best_lb': 213157, 'lb_gain': 129, 'first_ub': 215634, 'verified_ub': 214801, 'ub_gain': 833, 'absolute_gap': 1644, 'relative_gap': 0.007712624966573934, 'solver_certified_opt': 0, 'n_rounds': 12}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__dbs_rep1__s1.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213014, 'best_lb': 213014, 'lb_gain': 0, 'first_ub': 216122, 'verified_ub': 215310, 'ub_gain': 812, 'absolute_gap': 2296, 'relative_gap': 0.010778634268170167, 'solver_certified_opt': 0, 'n_rounds': 6}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__controller_rep1__s1.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213014, 'best_lb': 213014, 'lb_gain': 0, 'first_ub': 216122, 'verified_ub': 215310, 'ub_gain': 812, 'absolute_gap': 2296, 'relative_gap': 0.010778634268170167, 'solver_certified_opt': 0, 'n_rounds': 6}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__dbs_rep2__s101.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213014, 'best_lb': 213014, 'lb_gain': 0, 'first_ub': 216122, 'verified_ub': 215262, 'ub_gain': 860, 'absolute_gap': 2248, 'relative_gap': 0.010553296966396574, 'solver_certified_opt': 0, 'n_rounds': 6}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__controller_rep2__s101.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213014, 'best_lb': 213014, 'lb_gain': 0, 'first_ub': 216122, 'verified_ub': 215262, 'ub_gain': 860, 'absolute_gap': 2248, 'relative_gap': 0.010553296966396574, 'solver_certified_opt': 0, 'n_rounds': 6}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__dbs_rep1__s2.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213014, 'best_lb': 213014, 'lb_gain': 0, 'first_ub': 216122, 'verified_ub': 215277, 'ub_gain': 845, 'absolute_gap': 2263, 'relative_gap': 0.010623714873200822, 'solver_certified_opt': 0, 'n_rounds': 6}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__controller_rep1__s2.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213014, 'best_lb': 213014, 'lb_gain': 0, 'first_ub': 216122, 'verified_ub': 215277, 'ub_gain': 845, 'absolute_gap': 2263, 'relative_gap': 0.010623714873200822, 'solver_certified_opt': 0, 'n_rounds': 6}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__dbs_rep2__s102.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213014, 'best_lb': 213014, 'lb_gain': 0, 'first_ub': 216122, 'verified_ub': 215352, 'ub_gain': 770, 'absolute_gap': 2338, 'relative_gap': 0.01097580440722206, 'solver_certified_opt': 0, 'n_rounds': 7}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__controller_rep2__s102.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213014, 'best_lb': 213014, 'lb_gain': 0, 'first_ub': 216122, 'verified_ub': 215352, 'ub_gain': 770, 'absolute_gap': 2338, 'relative_gap': 0.01097580440722206, 'solver_certified_opt': 0, 'n_rounds': 6}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__dbs_rep1__s3.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213014, 'best_lb': 213014, 'lb_gain': 0, 'first_ub': 216122, 'verified_ub': 215232, 'ub_gain': 890, 'absolute_gap': 2218, 'relative_gap': 0.01041246115278808, 'solver_certified_opt': 0, 'n_rounds': 7}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__controller_rep1__s3.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213014, 'best_lb': 213014, 'lb_gain': 0, 'first_ub': 216122, 'verified_ub': 215232, 'ub_gain': 890, 'absolute_gap': 2218, 'relative_gap': 0.01041246115278808, 'solver_certified_opt': 0, 'n_rounds': 7}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__dbs_rep2__s103.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213014, 'best_lb': 213014, 'lb_gain': 0, 'first_ub': 216122, 'verified_ub': 215293, 'ub_gain': 829, 'absolute_gap': 2279, 'relative_gap': 0.010698827307125354, 'solver_certified_opt': 0, 'n_rounds': 6}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Cit-HepTh.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Cit-HepTh.clq__fast-v19__controller_rep2__s103.out', 'parse_ok': True, 'V': 27769, 'E': 352285, 'first_lb': 213014, 'best_lb': 213014, 'lb_gain': 0, 'first_ub': 216122, 'verified_ub': 215293, 'ub_gain': 829, 'absolute_gap': 2279, 'relative_gap': 0.010698827307125354, 'solver_certified_opt': 0, 'n_rounds': 7}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'deep-v6', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__dbs_rep1__s1.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2266893, 'best_lb': 2271606, 'lb_gain': 4713, 'first_ub': 2464962, 'verified_ub': 2467269, 'ub_gain': -2307, 'absolute_gap': 195663, 'relative_gap': 0.08613421517639942, 'solver_certified_opt': 0, 'n_rounds': 2}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'deep-v6', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__controller_rep1__s1.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2266893, 'best_lb': 2271606, 'lb_gain': 4713, 'first_ub': 2464962, 'verified_ub': 2467269, 'ub_gain': -2307, 'absolute_gap': 195663, 'relative_gap': 0.08613421517639942, 'solver_certified_opt': 0, 'n_rounds': 2}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'deep-v6', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__dbs_rep2__s101.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2266893, 'best_lb': 2266893, 'lb_gain': 0, 'first_ub': 2464962, 'verified_ub': 2464962, 'ub_gain': 0, 'absolute_gap': 198069, 'relative_gap': 0.08737465773638191, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'deep-v6', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__controller_rep2__s101.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2266893, 'best_lb': 2271339, 'lb_gain': 4446, 'first_ub': 2464962, 'verified_ub': 2467122, 'ub_gain': -2160, 'absolute_gap': 195783, 'relative_gap': 0.08619717268096044, 'solver_certified_opt': 0, 'n_rounds': 2}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__dbs_rep1__s2.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2266893, 'best_lb': 2266893, 'lb_gain': 0, 'first_ub': 2464962, 'verified_ub': 2464962, 'ub_gain': 0, 'absolute_gap': 198069, 'relative_gap': 0.08737465773638191, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__controller_rep1__s2.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2266893, 'best_lb': 2266893, 'lb_gain': 0, 'first_ub': 2466466, 'verified_ub': 2466466, 'ub_gain': 0, 'absolute_gap': 199573, 'relative_gap': 0.08803812089939843, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__dbs_rep2__s102.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2266893, 'best_lb': 2272846, 'lb_gain': 5953, 'first_ub': 2464962, 'verified_ub': 2444880, 'ub_gain': 20082, 'absolute_gap': 172034, 'relative_gap': 0.07569100590185168, 'solver_certified_opt': 0, 'n_rounds': 2}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__dbs_rep1__s3.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2265700, 'best_lb': 2265700, 'lb_gain': 0, 'first_ub': 2466466, 'verified_ub': 2466466, 'ub_gain': 0, 'absolute_gap': 200766, 'relative_gap': 0.08861102529019729, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'deep-v6', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__controller_rep2__s102.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2266893, 'best_lb': 2266893, 'lb_gain': 0, 'first_ub': 2466466, 'verified_ub': 2466466, 'ub_gain': 0, 'absolute_gap': 199573, 'relative_gap': 0.08803812089939843, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__controller_rep1__s3.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2259640, 'best_lb': 2259640, 'lb_gain': 0, 'first_ub': 2477541, 'verified_ub': 2477541, 'ub_gain': 0, 'absolute_gap': 217901, 'relative_gap': 0.09643173248836098, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__dbs_rep2__s103.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2259640, 'best_lb': 2259640, 'lb_gain': 0, 'first_ub': 2477541, 'verified_ub': 2477541, 'ub_gain': 0, 'absolute_gap': 217901, 'relative_gap': 0.09643173248836098, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'deep-v6', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__deep-v6__controller_rep2__s103.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2266893, 'best_lb': 2266893, 'lb_gain': 0, 'first_ub': 2466466, 'verified_ub': 2466466, 'ub_gain': 0, 'absolute_gap': 199573, 'relative_gap': 0.08803812089939843, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__dbs_rep1__s1.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2264711, 'best_lb': 2264711, 'lb_gain': 0, 'first_ub': 2468631, 'verified_ub': 2443947, 'ub_gain': 24684, 'absolute_gap': 179236, 'relative_gap': 0.07914298998856807, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__dbs_rep2__s101.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2264711, 'best_lb': 2264711, 'lb_gain': 0, 'first_ub': 2468631, 'verified_ub': 2443910, 'ub_gain': 24721, 'absolute_gap': 179199, 'relative_gap': 0.07912665236314921, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 1, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__controller_rep1__s1.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2264711, 'best_lb': 2264711, 'lb_gain': 0, 'first_ub': 2468631, 'verified_ub': 2443947, 'ub_gain': 24684, 'absolute_gap': 179236, 'relative_gap': 0.07914298998856807, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'fast-v19', 'logical_seed': 1, 'actual_seed': 101, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__controller_rep2__s101.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2264711, 'best_lb': 2264711, 'lb_gain': 0, 'first_ub': 2468631, 'verified_ub': 2443910, 'ub_gain': 24721, 'absolute_gap': 179199, 'relative_gap': 0.07912665236314921, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__dbs_rep1__s2.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2264711, 'best_lb': 2264711, 'lb_gain': 0, 'first_ub': 2468631, 'verified_ub': 2443773, 'ub_gain': 24858, 'absolute_gap': 179062, 'relative_gap': 0.079066158993355, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 2, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__controller_rep1__s2.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2264711, 'best_lb': 2264711, 'lb_gain': 0, 'first_ub': 2468631, 'verified_ub': 2443773, 'ub_gain': 24858, 'absolute_gap': 179062, 'relative_gap': 0.079066158993355, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__dbs_rep2__s102.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2264711, 'best_lb': 2264711, 'lb_gain': 0, 'first_ub': 2468631, 'verified_ub': 2468631, 'ub_gain': 0, 'absolute_gap': 203920, 'relative_gap': 0.09004239393017476, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'fast-v19', 'logical_seed': 2, 'actual_seed': 102, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__controller_rep2__s102.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2264711, 'best_lb': 2264711, 'lb_gain': 0, 'first_ub': 2468631, 'verified_ub': 2443599, 'ub_gain': 25032, 'absolute_gap': 178888, 'relative_gap': 0.07898932799814193, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__dbs_rep1__s3.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2264711, 'best_lb': 2264711, 'lb_gain': 0, 'first_ub': 2468631, 'verified_ub': 2443744, 'ub_gain': 24887, 'absolute_gap': 179033, 'relative_gap': 0.07905335382748616, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__controller_rep1__s3.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2264711, 'best_lb': 2264711, 'lb_gain': 0, 'first_ub': 2468631, 'verified_ub': 2443744, 'ub_gain': 24887, 'absolute_gap': 179033, 'relative_gap': 0.07905335382748616, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__dbs_rep2__s103.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2264711, 'best_lb': 2264711, 'lb_gain': 0, 'first_ub': 2468631, 'verified_ub': 2443812, 'ub_gain': 24819, 'absolute_gap': 179101, 'relative_gap': 0.07908337973366138, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'SNAP', 'instance': 'Amazon0302.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__SNAP__Amazon0302.clq__fast-v19__controller_rep2__s103.out', 'parse_ok': True, 'V': 262111, 'E': 899792, 'first_lb': 2264711, 'best_lb': 2264711, 'lb_gain': 0, 'first_ub': 2468631, 'verified_ub': 2443812, 'ub_gain': 24819, 'absolute_gap': 179101, 'relative_gap': 0.07908337973366138, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'dbs_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__dbs_rep2__s103.out', 'parse_ok': True, 'V': 18520486, 'E': 261257285, 'first_lb': 99662701, 'best_lb': 99662701, 'lb_gain': 0, 'first_ub': 101480253, 'verified_ub': 101480253, 'ub_gain': 0, 'absolute_gap': 1817552, 'relative_gap': 0.018237033331055315, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 103, 'rep': 2, 'mode': 'controller_rep2', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__controller_rep2__s103.out', 'parse_ok': True, 'V': 18520486, 'E': 261257285, 'first_lb': 99662701, 'best_lb': 99662701, 'lb_gain': 0, 'first_ub': 101480253, 'verified_ub': 101480253, 'ub_gain': 0, 'absolute_gap': 1817552, 'relative_gap': 0.018237033331055315, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'dbs_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__dbs_rep1__s3.out', 'parse_ok': True, 'V': 18520486, 'E': 261257285, 'first_lb': 99662701, 'best_lb': 99662701, 'lb_gain': 0, 'first_ub': 101480253, 'verified_ub': 101480253, 'ub_gain': 0, 'absolute_gap': 1817552, 'relative_gap': 0.018237033331055315, 'solver_certified_opt': 0, 'n_rounds': 1}
+{'candidate': 'v005', 'controller_label': 'online_safe', 'family': 'DIMACS10', 'instance': 'uk-2002.clq', 'solver': 'fast-v19', 'logical_seed': 3, 'actual_seed': 3, 'rep': 1, 'mode': 'controller_rep1', 'cutoff': 20, 'alpha': 90, 'exit_code': 0, 'raw_output': '../sumup/result/v005/raw/v005__DIMACS10__uk-2002.clq__fast-v19__controller_rep1__s3.out', 'parse_ok': True, 'V': 18520486, 'E': 261257285, 'first_lb': 99662701, 'best_lb': 99662701, 'lb_gain': 0, 'first_ub': 101480253, 'verified_ub': 101480253, 'ub_gain': 0, 'absolute_gap': 1817552, 'relative_gap': 0.018237033331055315, 'solver_certified_opt': 0, 'n_rounds': 1}
+{
+  "alpha": 90,
+  "available_instances": 35,
+  "candidate": "v005",
+  "controller_label": "online_safe",
+  "cutoff": 20,
+  "datasets": [
+    "T1",
+    "T2",
+    "UDG",
+    "BHOSLIB",
+    "DIMACS",
+    "DIMACS10",
+    "NDR",
+    "SNAP"
+  ],
+  "deep_binary": "../code/deep/v005/dual-deep-v6",
+  "external_certificates_applied": false,
+  "fast_binary": "../code/fast/v005/dual-fast-v19",
+  "jobs": 840,
+  "known_opt_used": false,
+  "missing_instances": 5,
+  "reps": 2,
+  "seeds": [
+    1,
+    2,
+    3
+  ]
+}
+=== DONE stage1 candidate v005 ===
+slurmstepd: error: Detected 21 oom-kill event(s) in StepId=26294675.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.
+
+===== exp10/stage1/jobs/slurm-26294676.out =====
+-----------------------------------------------------------
+hostname       = node95
+SLURM_JOBID    = 26294676
+candidate      = v006
+datasets       = T1,T2,UDG,BHOSLIB,DIMACS,DIMACS10,NDR,SNAP
+seeds          = 1,2,3
+cutoff         = 20
+-----------------------------------------------------------
+Missing binary: ../code/deep/v006/dual-deep-v6
+
+===== exp10/stage1/jobs/slurm-26294677.out =====
+-----------------------------------------------------------
+hostname       = node83
+SLURM_JOBID    = 26294677
+candidate      = v007
+datasets       = T1,T2,UDG,BHOSLIB,DIMACS,DIMACS10,NDR,SNAP
+seeds          = 1,2,3
+cutoff         = 20
+-----------------------------------------------------------
+Missing binary: ../code/deep/v007/dual-deep-v6
+
+===== exp10/stage1/jobs/slurm-26294678.out =====
+-----------------------------------------------------------
+hostname       = node127
+SLURM_JOBID    = 26294678
+candidate      = v009
+datasets       = T1,T2,UDG,BHOSLIB,DIMACS,DIMACS10,NDR,SNAP
+seeds          = 1,2,3
+cutoff         = 20
+-----------------------------------------------------------
+Missing binary: ../code/deep/v009/dual-deep-v6
+

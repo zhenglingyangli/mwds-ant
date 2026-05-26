@@ -1,0 +1,35 @@
+With  Parameters CUTOFF 20 SEED 1  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0 AQ_MODE=guarded
+Reading  graph ...  time 0.188454  
+Reducing graph ...  time 0.009209  
+[v6] |V|=27769 |E|=352285 density=12.69 USE_ADVANCED=1 SAFE_AQ_MIN_GAP=0.050 DEEP_AQ_RANGE=[800, 5.00, 10.00] structure_blocks_aq=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.012233
+  1     213028     213028     215634      1.4994
+ Switch to DBS-only search, timeout 1.499386....
+ [Online-safe AQ structure guard] |V|=27769 density=12.69 outside [800, 5.00, 10.00], disabling AQ
+ [Online-safe AQ first-gap guard] FIRST_GAP 0.0122 < 0.0500, disabling AQ
+     215018      215018      1.3298        3.4943
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 1.499386
+  2     212967     213028     216262      0.0475     218619      215018      0.0299        3.5914
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.090313
+  3     212862     213028     216624      0.0773     218615      215018      0.0291        3.7466
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.141548
+  4     212868     213028     216201      0.1300     216380      215018      0.1295        4.0073
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.229595
+  5     212871     213028     216186      0.2305     216288      215018      0.1986        4.4690
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.393094
+  6     212886     213028     216057      0.3942     215404      215018      0.3680        5.2582
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.650239
+  7     212987     213028     215905      0.6525     215375      215018      0.5318        6.5640
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 1.041794
+  8     213098     213098     215773      1.0429     215008      215008      0.8489        8.6509
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 1.613601
+  9     213139     213139     215565      1.6177     214957      214957      1.5741       11.8871
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 2.427807
+ 10     213122     213139     215679      0.8491     215103      214957      0.7763       13.5861
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 1.237145
+ 11     213122     213139     215403      1.2145     214849      214849      2.5945       19.9721
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 7.320868
+ 12     213115     213139     215714      0.0289
+>>> Cit-HepTh.clq |V| 27769 |E| 352285  (#LB 0.0005 213028 ---> 213139  0.0080  214849 <--- 215634  0.0036 #UB)  #read_time 0.1885  #reduce_time 0.0092  #solve_time 20.0287  #total_time 20.2263
+ 

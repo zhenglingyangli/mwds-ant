@@ -1,0 +1,38 @@
+>>IBM: |V|=1150 |E|=579607
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/BHOSLIB/frb50-23-3.clq #seed 2 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=guarded SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800
+[v19] |V|=1150 |E|=579607 density=504.01 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.500000
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.988649
+  1          2          2          3      0.9886
+ [Tier-3 Hard] gap=0.5000 density=504.01 |V|=1150 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.068737
+  2          2          2          3      0.0687ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.096622
+  3          2          2          3      0.0966 [AQ guard] no early LB gain, disabling AQ
+          3           3      0.0000      1.2679
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.028689
+  4          2          2          3      0.0287          3           3      0.0000      1.3371
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.040416
+  5          2          2          3      0.0404          3           3      0.0000      1.4309
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.073306
+  6          2          2          3      0.0733          3           3      0.0000      1.5949
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.124979
+  7          2          2          3      0.1250          3           3      0.0000      1.8593
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.228416
+  8          2          2          3      0.2284          3           3      0.0000      2.3250
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.209664
+  9          1          2          3      0.2097          3           3      0.0000      2.7546
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.315372
+ 10          1          2          3      0.3154          3           3      0.0000      3.4027
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.451162
+ 11          1          2          3      0.4512          3           3      0.0000      4.3253
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.632641
+ 12          1          2          3      0.6326          3           3      0.0000      5.5986
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.849472
+ 13          1          2          3      0.8495          3           3      0.0000      7.3126
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 1.147056
+ 14          1          2          3      1.1471
+ [LB Done] stag=11 elapsed=42.3% => 11.5s to UB
+          3           3      0.0000     20.0243
+>>> frb50-23-3.clq |V| 1150 |E| 579607  (#LB 0.0000 2 ---> 2  0.5000  3 <--- 3  0.0000 #UB)  #solve_ime 20.0244 read_time 0.2548 

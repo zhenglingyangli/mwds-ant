@@ -290,7 +290,7 @@ def main() -> int:
     parser.add_argument("--reps", type=int, default=2)
     parser.add_argument("--cutoff", type=int, default=20)
     parser.add_argument("--alpha", type=int, default=90)
-    parser.add_argument("--workers", type=int, default=5)
+    parser.add_argument("--workers", type=int, default=20)
     parser.add_argument("--k-ants", type=int, default=5)
     parser.add_argument("--rho", type=float, default=0.05)
     parser.add_argument("--q0", type=float, default=0.90)

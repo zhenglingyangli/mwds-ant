@@ -99,6 +99,7 @@ python3 generate_scripts.py \
   --seeds 1 \
   --reps 1 \
   --cutoff 20 \
+  --workers 20 \
   --path-mode hpc
 ```
 

@@ -43,7 +43,7 @@ python3 "$STAGE1_ROOT/jobs/generate_scripts.py" \
   --seeds 1 \
   --reps 1 \
   --cutoff 2 \
-  --workers 1 \
+  --workers 20 \
   --path-mode "$PATH_MODE" \
   --candidate-root-base "$STAGE1_ROOT"
 
@@ -58,7 +58,7 @@ if [ "${RUN_REAL_SOLVER:-1}" = "1" ]; then
     --seeds 1 \
     --reps 1 \
     --cutoff 2 \
-    --workers 1 \
+    --workers 20 \
     --path-mode "$PATH_MODE" \
     --output-dir "$TMP_ROOT/real/v005"
   python3 - "$TMP_ROOT/real/v005/layer_a_runs.csv" <<'PY'

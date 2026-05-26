@@ -80,7 +80,7 @@ def main() -> int:
     parser.add_argument("--seeds", default="1,2,3")
     parser.add_argument("--reps", type=int, default=2)
     parser.add_argument("--cutoff", type=int, default=20)
-    parser.add_argument("--workers", type=int, default=5)
+    parser.add_argument("--workers", type=int, default=20)
     parser.add_argument("--path-mode", choices=["hpc", "local"], default="hpc")
     parser.add_argument("--candidate-root-base", type=Path, default=DEFAULT_CANDIDATE_ROOT_BASE)
     parser.add_argument("--allow-recursive-resolve", action="store_true")

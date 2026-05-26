@@ -60,11 +60,12 @@ def candidate_path(base: Path, cfg: dict[str, str], key: str) -> Path:
 def possible_instance_names(family: str, name: str) -> list[str]:
     names = [name]
     if family == "T1" and name.startswith("T1_"):
-        names.append("Problem.dat_" + name.removeprefix("T1_"))
+        names.append("Problem.dat_" + name[len("T1_"):])
     if family == "T2" and name.startswith("T2_"):
-        names.append("Problem.dat_" + name.removeprefix("T2_"))
+        names.append("Problem.dat_" + name[len("T2_"):])
     if family == "UDG" and name.startswith("UDG_"):
-        parts = name.removesuffix(".wclq").split("_")
+        stem = name[:-len(".wclq")] if name.endswith(".wclq") else name
+        parts = stem.split("_")
         if len(parts) == 4:
             n, density_code, seed = parts[1], parts[2], parts[3]
             variant = {"150": "A", "200": "B"}.get(density_code)

@@ -21,6 +21,7 @@ used in this stage.
 The default candidates are copied controller branches under `code/`:
 
 ```text
+refctl = deep-v6 / fast-v19 with a clean online-safe controller transplant
 v005 = online-safe controller
 v006 = online slope controller
 v007 = contextual bandit controller
@@ -45,6 +46,7 @@ stage1/
 │   ├── deep/
 │   │   ├── baseline/
 │   │   ├── deepv6/
+│   │   ├── deepv6ctl/
 │   │   ├── v005/
 │   │   ├── v006/
 │   │   ├── v007/
@@ -52,6 +54,7 @@ stage1/
 │   └── fast/
 │       ├── baseline/
 │       ├── fastv19/
+│       ├── fastv19ctl/
 │       ├── v005/
 │       ├── v006/
 │       ├── v007/
@@ -172,6 +175,54 @@ screen. They are excluded here because the purpose is to confirm the selected
 Layer-A controller against original references before spending a larger budget,
 and the first screen showed these two families are dominated by resource kills
 (`uk-2002.clq`) and very large UB/gap outliers.
+
+## Reference Controller Check
+
+If the selected candidate fails against the original reference, test a cleaner
+controller transplant:
+
+```text
+refctl = original deep-v6 / fast-v19 with the online-safe controller switch
+```
+
+`refctl` keeps the original reference termination condition and adds the
+`MWDS_AQ_MODE` controlled online-safe controller. This separates the controller
+effect from other candidate-branch changes.
+
+Build and run `refctl` on the same core families:
+
+```bash
+cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp10/stage1
+for d in code/deep/deepv6ctl code/fast/fastv19ctl; do
+  make -C "$d" || exit 1
+done
+
+cd jobs
+python3 generate_scripts.py \
+  --candidates refctl \
+  --datasets T1,T2,UDG,BHOSLIB,DIMACS,NDR \
+  --seeds 1,2,3 \
+  --reps 2 \
+  --cutoff 20 \
+  --workers 20 \
+  --path-mode hpc \
+  --output-root ../sumup/refctl_result
+
+sbatch jobslurm-refctl
+```
+
+After the job finishes, compare `refctl` against the already computed
+baseline/reference runs:
+
+```bash
+cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp10/stage1/analysis/end
+python3 check_reference_results.py \
+  --selected refctl \
+  --selected-result ../../sumup/refctl_result/refctl \
+  --reference-result ../../sumup/reference_result \
+  --output refctl_reference_check_report.md \
+  --strict
+```
 
 ## Local Tool Smoke Test
 

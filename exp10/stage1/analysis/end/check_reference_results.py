@@ -13,6 +13,8 @@ import csv
 from pathlib import Path
 from typing import Any
 
+MAX_REASONABLE_OBJECTIVE = 10**12
+
 
 def read_csv(path: Path) -> list[dict[str, str]]:
     if not path.exists():
@@ -49,10 +51,22 @@ def build_records(path: Path, *, mode_prefix: str, datasets: set[str]) -> tuple[
         return {}, [f"{path}: missing or empty layer_a_runs.csv"]
 
     grouped: dict[tuple[str, str, str, str], list[dict[str, str]]] = {}
+    ignored_sentinels: set[tuple[str, str, str, str]] = set()
     for row in rows:
         if datasets and row.get("family", "") not in datasets:
             continue
         if not mode_matches(row, mode_prefix):
+            continue
+        best_lb = as_int(row.get("best_lb"))
+        verified_ub = as_int(row.get("verified_ub"))
+        if best_lb >= MAX_REASONABLE_OBJECTIVE or verified_ub >= MAX_REASONABLE_OBJECTIVE:
+            sentinel_key = (row.get("family", ""), row.get("instance", ""), row.get("solver", ""), row.get("logical_seed", ""))
+            if sentinel_key not in ignored_sentinels:
+                warnings.append(
+                    f"{path.name}: ignored sentinel objective for "
+                    f"{row.get('family', '')}/{row.get('instance', '')}/{row.get('solver', '')}/seed={row.get('logical_seed', '')}"
+                )
+                ignored_sentinels.add(sentinel_key)
             continue
         key = (row.get("family", ""), row.get("instance", ""), row.get("solver", ""), row.get("logical_seed", ""))
         grouped.setdefault(key, []).append(row)

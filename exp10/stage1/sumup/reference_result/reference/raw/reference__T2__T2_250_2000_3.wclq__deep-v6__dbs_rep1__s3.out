@@ -1,0 +1,28 @@
+With  Parameters CUTOFF 20 SEED 3  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 0.000659  
+Reducing graph ...  time 0.000051  
+[v6] |V|=250 |E|=2000 density=8.00 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.220339
+  1       1003       1003       1224      0.1164
+ Switch to original search + AQ boost, timeout 0.116439....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.116439
+  2        983       1003       1244      0.0107ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.020292
+  3       1008       1008       1261      0.0043ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.007865
+  4       1008       1008       1260      0.0083ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.014739
+  5       1023       1023       1244      0.0153ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.026126
+  6       1021       1023       1247      0.0194ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.032076
+  7       1002       1023       1229      0.0323ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.051640
+  8       1004       1023       1229      0.0522ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.080721
+  9       1011       1023       1224      0.0782ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.117330
+ 10       1008       1023       1224      0.1181ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.172137
+ 11       1007       1023       1224      0.1724ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.244119
+ 12       1009       1023       1224      0.2443ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.336315
+ 13       1013       1023       1224      0.3365ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.450927
+ 14       1011       1023       1224      0.4512ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.588729
+ 15       1013       1023       1223      0.5888ALPHA 1.2402 MaxIteration 942  TIMEOUT 0.748849
+ 16       1034       1034       1211      0.7494       1183        1183      2.9092       17.1161
+ALPHA 1.2102 MaxIteration 1168  TIMEOUT 21.081827
+ 17       1042       1042       1210      1.4749       1183        1183      0.0156       19.9997
+>>> T2_250_2000_3.wclq |V| 250 |E| 2000  (#LB 0.0389 1003 ---> 1042  0.1192  1183 <--- 1224  0.0335 #UB)  #read_time 0.0007  #reduce_time 0.0001  #solve_time 19.9997  #total_time 20.0004
+ 

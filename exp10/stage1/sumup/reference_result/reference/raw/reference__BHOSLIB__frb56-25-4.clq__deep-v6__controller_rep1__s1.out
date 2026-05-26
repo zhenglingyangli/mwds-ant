@@ -1,0 +1,15 @@
+With  Parameters CUTOFF 20 SEED 1  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 0.793702  
+Reducing graph ...  time 0.018366  
+[v6] |V|=1400 |E|=869262 density=620.90 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.500000
+  1          2          2          3      1.9910
+ Switch to original search + AQ boost, timeout 1.991000....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 1.991000
+  2          2          2          3      0.0612ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.116208
+  3          2          2          3      0.0963ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.176297
+  4          2          2          3      0.0206          3           3      0.2303       19.8237
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 31.452573
+  5          2          2          3      0.0242>>> frb56-25-4.clq |V| 1400 |E| 869262  (#LB 0.0000 2 ---> 2  0.3333  3 <--- 3  0.0000 #UB)  #read_time 0.7937  #reduce_time 0.0184  #solve_time 19.8479  #total_time 20.6600
+ 

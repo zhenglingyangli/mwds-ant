@@ -1,0 +1,28 @@
+>>IBM: |V|=1000 |E|=20000
+>>IBM: The maximum node weight is 3050
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/T2_wclq/T2_1000_20000_9.wclq #seed 101 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=1000 |E|=20000 density=20.00 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.437956
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.933525
+  1       5343       5343       7683      0.9335
+ [Tier-3 Hard] gap=0.4380 density=20.00 |V|=1000 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.040106
+  2       5284       5343       9516      0.0401ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.048933
+  3       5440       5440       9050      0.0489ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.083001
+  4       5400       5440       8948      0.0830ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.322063
+  5       6101       6101       9699      0.3221ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.259440
+  6       6078       6101      11880      0.2594ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.520609
+  7       6073       6101      11606      0.5206ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.795110
+  8       6039       6101       9672      0.7951ALPHA 1.5008 MaxIteration 100  TIMEOUT 1.068621
+  9       6059       6101       9602      1.0686ALPHA 1.4571 MaxIteration 150  TIMEOUT 1.420968
+ 10       6019       6101       9506      1.4210       7238        7238      0.1400      6.9067
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.431158
+ 11       5770       6101       8258      0.4312       7238        7238      0.0300      7.7766
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.372468
+ 12       5909       6101      10044      0.3725       7238        7238      0.0100      8.5267
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.490049
+ 13       5706       6101       9236      0.4900
+ [LB Done] stag=3 elapsed=45.1% => 11.0s to UB
+       7177        7177      1.5900     19.9266
+>>> T2_1000_20000_9.wclq |V| 1000 |E| 20000  (#LB 0.1419 5343 ---> 6101  0.1764  7177 <--- 7683  0.0659 #UB)  #solve_ime 19.9267 read_time 0.0034 

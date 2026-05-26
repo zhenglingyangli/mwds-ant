@@ -1,0 +1,31 @@
+>>IBM: |V|=50 |E|=1000
+>>IBM: The maximum node weight is 49
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/T1_wclq/T1_50_1000_0.wclq #seed 3 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=50 |E|=1000 density=20.00 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.428571
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.004080
+  1         28         28         40      0.0041
+ [Tier-3 Hard] gap=0.4286 density=20.00 |V|=50 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.000608
+  2         28         28         40      0.0006         40          40      0.0000      0.0089
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.000162
+  3         25         28         40      0.0002         40          40      0.0000      0.0190
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.000221
+  4         25         28         62      0.0002         40          40      0.0000      0.0289
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.000343
+  5         25         28         62      0.0003         40          40      0.0000      0.0389
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.000566
+  6         24         28         62      0.0006         40          40      0.0000      0.0489
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.000973
+  7         24         28         62      0.0010         40          40      0.0000      0.0589
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.001246
+  8         24         28         62      0.0012         40          40      0.0000      0.0690
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.002085
+  9         24         28         62      0.0021         40          40      0.0000      0.0789
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.003469
+ 10         24         28         62      0.0035         40          40      0.0000      0.0890
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.004438
+ 11         24         28         62      0.0044         40          40      0.0000      0.0990
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.000221
+ 12         25         28         40      0.0002>>> T1_50_1000_0.wclq |V| 50 |E| 1000  (#LB 0.0000 28 ---> 28  0.4286  40 <--- 40  0.0000 #UB)  #solve_ime 0.0992 read_time 0.0011 

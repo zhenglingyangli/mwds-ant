@@ -1,0 +1,24 @@
+>>> Warning: header edge_num=125248, parsed edge_num=62624
+>>IBM: |V|=500 |E|=62624
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/dimacs/DSJC500_5.clq #seed 3 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=500 |E|=62624 density=125.25 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.454545
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.527502
+  1         11         11         16      0.5275
+ [Tier-3 Hard] gap=0.4545 density=125.25 |V|=500 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.021372
+  2         11         11         21      0.0214         16          16      0.0000      0.5757
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.012338
+  3          9         11         16      0.0123         16          16      0.0000      0.6051
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.015755
+  4         10         11         16      0.0158         16          16      0.0000      0.6352
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.018508
+  5          9         11         16      0.0185         16          16      0.0000      0.6657
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.051466
+  6         11         11         16      0.0515         16          16      0.0000      0.7752
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.054861
+  7         11         11         16      0.0549         16          16      0.0000      0.8854
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.009269
+  8         11         11         18      0.0093>>> DSJC500_5.clq |V| 500 |E| 62624  (#LB 0.0000 11 ---> 11  0.4545  16 <--- 16  0.0000 #UB)  #solve_ime 0.8946 read_time 0.0150 

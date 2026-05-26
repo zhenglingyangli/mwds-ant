@@ -1,0 +1,27 @@
+With  Parameters CUTOFF 20 SEED 102  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 0.000268  
+Reducing graph ...  time 0.000030  
+[v6] |V|=200 |E|=250 density=1.25 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.090909
+  1       1848       1848       2016      0.0231
+ Switch to original search + AQ boost, timeout 0.023109....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.023109
+  2       1838       1848       2122      0.0024ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.004604
+  3       1819       1848       2156      0.0049ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.008911
+  4       1837       1848       2122      0.0091ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.016139
+  5       1832       1848       2107      0.0162ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.027569
+  6       1835       1848       2076      0.0283ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.046674
+  7       1844       1848       2084      0.0472ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.075403
+  8       1840       1848       2103      0.0756ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.116994
+  9       1840       1848       2084      0.1171ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.175694
+ 10       1841       1848       2094      0.1760ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.256385
+ 11       1845       1848       2055      0.2566ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.363236
+ 12       1842       1848       2067      0.3635ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.500405
+ 13       1840       1848       2053      0.5008ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.670992
+ 14       1846       1848       2077      0.4198ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.547782
+ 15       1841       1848       2081      0.5484       1937        1937      3.0584       16.9465
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 21.519757
+ 16       1841       1848       2043      0.8084       1937        1937      0.0020       19.9999
+>>> T1_200_250_7.wclq |V| 200 |E| 250  (#LB 0.0000 1848 ---> 1848  0.0459  1937 <--- 2016  0.0392 #UB)  #read_time 0.0003  #reduce_time 0.0000  #solve_time 19.9999  #total_time 20.0002
+ 

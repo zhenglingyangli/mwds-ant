@@ -1,0 +1,30 @@
+>>> Warning: header edge_num=125248, parsed edge_num=62624
+>>IBM: |V|=500 |E|=62624
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/dimacs/DSJC500_5.clq #seed 102 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=500 |E|=62624 density=125.25 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.454545
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.520007
+  1         11         11         16      0.5200
+ [Tier-3 Hard] gap=0.4545 density=125.25 |V|=500 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.006596
+  2         10         11         21      0.0066         16          16      0.0000      0.5351
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.011859
+  3         11         11         16      0.0119         16          16      0.0000      0.5652
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.011965
+  4          9         11         16      0.0120         16          16      0.0000      0.5951
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.031850
+  5         10         11         16      0.0319         16          16      0.0000      0.6649
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.040135
+  6         11         11         16      0.0401         16          16      0.0000      0.7550
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.046322
+  7         10         11         16      0.0463         16          16      0.0000      0.8453
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.082596
+  8         11         11         16      0.0826         16          16      0.0000      1.0151
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.133273
+  9         10         11         16      0.1333         16          16      0.0000      1.2851
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.172051
+ 10         10         11         16      0.1721         16          16      0.0000      1.6354
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.012245
+ 11         10         11         18      0.0122>>> DSJC500_5.clq |V| 500 |E| 62624  (#LB 0.0000 11 ---> 11  0.4545  16 <--- 16  0.0000 #UB)  #solve_ime 1.6476 read_time 0.0153 

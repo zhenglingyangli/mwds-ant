@@ -1,0 +1,15 @@
+With  Parameters CUTOFF 20 SEED 2  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 0.006258  
+Reducing graph ...  time 0.000300  
+[v6] |V|=300 |E|=21928 density=73.09 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.068966
+  1         29         29         31      0.2397
+ Switch to original search + AQ boost, timeout 0.239655....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.239655
+  2         29         29         31      0.0051ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.009629
+  3         29         29         31      0.0095ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.017389
+  4         29         29         31      0.0159         31          31      0.0723       19.9295
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 34.765630
+  5         29         29         31      0.0017>>> p_hat300-2.clq |V| 300 |E| 21928  (#LB 0.0000 29 ---> 29  0.0645  31 <--- 31  0.0000 #UB)  #read_time 0.0063  #reduce_time 0.0003  #solve_time 19.9313  #total_time 19.9378
+ 

@@ -1,0 +1,25 @@
+>>IBM: |V|=1000 |E|=1000
+>>IBM: The maximum node weight is 49
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/T1_wclq/T1_1000_1000_2.wclq #seed 2 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=1000 |E|=1000 density=1.00 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.114525
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.218858
+  1      10251      10251      11425      0.2189
+ [Tier-2 Medium] gap=0.1145 density=1.00 |V|=1000 => Standard RL (K=5, 15%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.237911
+  2      10106      10251      12181      0.2379ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.293503
+  3      10123      10251      12320      0.2935ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.370781
+  4      10138      10251      12230      0.3708ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.505313
+  5      10114      10251      12404      0.5053ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.517630
+  6      10122      10251      12412      0.5176ALPHA 1.5966 MaxIteration 41  TIMEOUT 1.497172
+  7      10158      10251      12509      1.4972      10806       10806      0.7700      5.0281
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.488166
+  8      10142      10251      12202      0.4882      10810       10806      0.2400      5.9463
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.667471
+  9      10123      10251      12279      0.6675      10788       10788      0.6000      7.2181
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.881158
+ 10      10000      10251      12407      0.8812
+ [LB Done] stag=3 elapsed=40.5% => 11.9s to UB
+      10785       10785      4.6400     19.1581
+>>> T1_1000_1000_2.wclq |V| 1000 |E| 1000  (#LB 0.0000 10251 ---> 10251  0.0521  10785 <--- 11425  0.0560 #UB)  #solve_ime 19.1581 read_time 0.0019 

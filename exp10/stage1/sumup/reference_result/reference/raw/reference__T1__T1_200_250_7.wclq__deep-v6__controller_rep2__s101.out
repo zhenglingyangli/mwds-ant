@@ -1,0 +1,29 @@
+With  Parameters CUTOFF 20 SEED 101  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 0.014069  
+Reducing graph ...  time 0.000030  
+[v6] |V|=200 |E|=250 density=1.25 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.090909
+  1       1848       1848       2016      0.0246
+ Switch to original search + AQ boost, timeout 0.024626....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.024626
+  2       1839       1848       2150      0.0025ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.004788
+  3       1806       1848       2098      0.0048ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.008830
+  4       1816       1848       2099      0.0094ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.016593
+  5       1812       1848       2083      0.0167ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.028498
+  6       1812       1848       2108      0.0286ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.047201
+  7       1822       1848       2101      0.0389ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.062050
+  8       1811       1848       2089      0.0621ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.096099
+  9       1821       1848       2045      0.0963ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.144477
+ 10       1824       1848       2095      0.1447ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.210864
+ 11       1826       1848       2043      0.2111ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.298890
+ 12       1844       1848       2070      0.2279ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.313818
+ 13       1827       1848       2072      0.3143ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.421103
+ 14       1830       1848       2084      0.4217ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.550281
+ 15       1845       1848       2056      0.5508ALPHA 1.2402 MaxIteration 942  TIMEOUT 0.700471
+ 16       1851       1851       2067      0.7011ALPHA 1.2102 MaxIteration 1168  TIMEOUT 0.869514
+ 17       1844       1851       2059      0.8699       1937        1937      3.7193       16.2828
+ALPHA 1.1816 MaxIteration 1413  TIMEOUT 19.675386
+ 18       1857       1857       2069      1.2843       1937        1937      0.0019       19.9999
+>>> T1_200_250_7.wclq |V| 200 |E| 250  (#LB 0.0049 1848 ---> 1857  0.0413  1937 <--- 2016  0.0392 #UB)  #read_time 0.0141  #reduce_time 0.0000  #solve_time 19.9999  #total_time 20.0140
+ 

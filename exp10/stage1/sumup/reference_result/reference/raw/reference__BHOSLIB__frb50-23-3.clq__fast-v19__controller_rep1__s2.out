@@ -1,0 +1,15 @@
+>>IBM: |V|=1150 |E|=579607
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/BHOSLIB/frb50-23-3.clq #seed 2 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=1150 |E|=579607 density=504.01 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.500000
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 1.075525
+  1          2          2          3      1.0755
+ [Tier-3 Hard] gap=0.5000 density=504.01 |V|=1150 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.043547
+  2          2          2          3      0.0435          3           3      0.0000      1.1882
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.020716
+  3          2          2          3      0.0207          3           3      0.0000      1.2516
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.005255
+  4          1          2          3      0.0053>>> frb50-23-3.clq |V| 1150 |E| 579607  (#LB 0.0000 2 ---> 2  0.5000  3 <--- 3  0.0000 #UB)  #solve_ime 1.2569 read_time 0.2695 

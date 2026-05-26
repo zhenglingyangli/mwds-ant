@@ -1,11 +1,11 @@
-# exp10: Layer-A Fair DBS vs Ant-Q Full Matrix
+# exp10: Layer-A Fair DBS vs Adaptive ACO Controller Full Matrix
 
 ## 目标
 
 本实验只回答主算法问题：
 
 ```text
-在同等 solver budget 下，DBS + Ant-Q 是否比 DBS baseline 稳定改善
+在同等 solver budget 下，DBS + adaptive ACO-style controller 是否比 DBS baseline 稳定改善
 solver-side LB / UB / gap / #OPT？
 ```
 
@@ -15,7 +15,7 @@ solver-side LB / UB / gap / #OPT？
 不使用 LP dual certificate
 不使用 restricted-demand infeasibility certificate
 不使用 full-MILP OPT closure
-不把 v084 的 SNAP OPT 计入 Ant-Q
+不把 v084 的 SNAP OPT 计入 adaptive ACO-style controller
 ```
 
 ## 为什么 exp-4/exp-5 看起来好，exp-8 不好
@@ -24,7 +24,7 @@ solver-side LB / UB / gap / #OPT？
 
 1. `exp-4/exp-5` 主要覆盖 T1/T2 的 1080 个实例，分布集中，且很多小规模/易闭合实例会放大平均收益。
 2. `exp-8` 是 8 个 family 各选 5 个 representative/hard instances，更像压力测试；它暴露了算法在 SNAP、DIMACS、NDR、BHOSLIB 等跨族场景下的不稳定。
-3. Ant-Q 目前更像有偏好的启发式增强，而不是全局全面提升设计；`v085` 已经显示 Deep 侧有小正信号，但 Fast 侧存在 UB regression outliers。
+3. 目前的 ACO-style controller 更像有偏好的启发式增强，而不是全局全面提升设计；`v085` 已经显示 Deep 侧有小正信号，但 Fast 侧存在 UB regression outliers。
 
 因此 exp10 不再只跑 T1/T2，而是跑：
 
@@ -42,7 +42,7 @@ solver-side LB / UB / gap / #OPT？
 
 ```text
 DBS baseline
-DBS + Ant-Q
+DBS + adaptive ACO-style controller
 DBS neutral multi-start
 ```
 
@@ -73,7 +73,7 @@ selected_instances/*.txt
 未实现，暂时留空：
 
 ```text
-Guarded Ant-Q
+Guarded / adaptive ACO-style controller
 ```
 
 原因：guard 必须只使用当前 run 早期信号，例如 early UB、early LB gain、first-round gap、density/size；不能使用历史 per-case 胜负、known OPT 或外部证书。等 T1_RISK pilot 上 guard 规则明确后，再加入 exp10。
@@ -85,7 +85,7 @@ families = T1,T2,UDG,BHOSLIB,DIMACS,DIMACS10,NDR,SNAP
 instances per family = 5
 seeds = 1,2,3,4,5
 solver families = deep-v6,fast-v19
-methods = dbs,antq
+methods = dbs,controller
 k calls per method = 2
 cutoff = 3600s
 alpha = 90
@@ -164,9 +164,9 @@ grep -E "ALPHA|CUTOFF_MEM|DEFAULT_CUTOFF" exp10/jobs/generate_scripts.py
 
 # 3. 编译/检查已有 solver
 test -x exp-4/codes/Dual-Deep/dual-deep || { echo "missing deep DBS"; exit 1; }
-test -x exp-4/codes/Dual-Deep-v6/dual-deep-v6 || { echo "missing deep Ant-Q"; exit 1; }
+test -x exp-4/codes/Dual-Deep-v6/dual-deep-v6 || { echo "missing deep ACO-style controller"; exit 1; }
 test -x exp-2/codes/Dual-Fast/dual-fast || { echo "missing fast DBS"; exit 1; }
-test -x exp-2/codes/Dual-Fast-v19/dual-fast-v19 || { echo "missing fast Ant-Q"; exit 1; }
+test -x exp-2/codes/Dual-Fast-v19/dual-fast-v19 || { echo "missing fast ACO-style controller"; exit 1; }
 
 # 4. 生成 smoke 脚本，不提交
 cd exp10/jobs
@@ -175,7 +175,7 @@ python3 generate_scripts.py --datasets T1 --seeds 1 --k 1
 
 ## 成功判据
 
-只有满足以下条件，才能继续把 DBS+Ant-Q 作为主算法主线：
+只有满足以下条件，才能继续把 DBS + adaptive ACO-style controller 作为主算法主线：
 
 ```text
 1. deep-v6 与 fast-v19 不互相矛盾；
@@ -185,7 +185,7 @@ python3 generate_scripts.py --datasets T1 --seeds 1 --k 1
 5. 对比 neutral multi-start 后仍有优势。
 ```
 
-如果失败，应停止把论文主线写成 “DBS+Ant-Q 显著提升 MWDS”，转向：
+如果失败，应停止把论文主线写成 “DBS + adaptive ACO-style controller 显著提升 MWDS”，转向：
 
 ```text
 hybrid search + certification pipeline

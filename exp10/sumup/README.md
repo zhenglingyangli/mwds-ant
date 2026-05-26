@@ -29,5 +29,13 @@ method_gap = method_best_ub - method_best_lb
 method_solver_opt = (method_gap == 0)
 ```
 
-如果需要先分析 20s pilot，可临时复用 `MWDS26.2/experiments/exp1/tools/run_mainline_fair_antq.py` 的 CSV 结构作为参考，但不要引入外部 LP/MILP certificate 字段。
+Stage 1 的统一筛选与严格检查代码位于：
+
+```text
+exp10/stage1/jobs/goSolver_stage1.py
+exp10/stage1/analysis/end/check_results.py
+exp10/stage1/sumup/run_sumup.sh
+```
+
+这些脚本只比较 DBS-only 与 DBS + adaptive ACO-style controller，不引入外部 LP/MILP certificate 字段。
 

@@ -1,0 +1,5 @@
+candidate,controller_label,family,instance,solver,logical_seed,actual_seed,rep,mode,cutoff,alpha,exit_code,parse_ok,V,E,first_lb,best_lb,lb_gain,first_ub,verified_ub,ub_gain,absolute_gap,relative_gap,solver_certified_opt,n_rounds,raw_output
+vfixture,fixture,T1,T1_fixture.wclq,deep-v6,1,1,1,dbs_rep1,20,90,0,True,10,20,10,10,0,20,20,0,10,1.0,0,1,raw/dbs.out
+vfixture,fixture,T1,T1_fixture.wclq,deep-v6,1,1,1,controller_rep1,20,90,0,True,10,20,10,12,2,20,19,1,7,0.5833333333,0,1,raw/controller.out
+vfixture,fixture,T1,T1_fixture.wclq,fast-v19,1,1,1,dbs_rep1,20,90,0,True,10,20,10,10,0,20,20,0,10,1.0,0,1,raw/fast_dbs.out
+vfixture,fixture,T1,T1_fixture.wclq,fast-v19,1,1,1,controller_rep1,20,90,0,True,10,20,10,11,1,20,20,0,9,0.8181818182,0,1,raw/fast_controller.out

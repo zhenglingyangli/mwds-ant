@@ -251,7 +251,7 @@ def summarize(results: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list
             ub_deltas = [int(row["delta_ub_controller_minus_dbs"]) for row in subset]
             gap_deltas = [int(row["delta_gap_controller_minus_dbs"]) for row in subset]
             opt_deltas = [int(row["delta_opt_controller_minus_dbs"]) for row in subset]
-            out = dict(zip(keys, group_key, strict=True))
+            out = dict(zip(keys, group_key))
             out.update(
                 {
                     "rows": len(subset),

@@ -11,6 +11,13 @@ rm -rf "$TMP_ROOT" jobslurm-* submit_all.sh
 mkdir -p "$TMP_RESULT"
 cp "$SCRIPT_DIR"/fixtures/*.csv "$TMP_RESULT"/
 
+if [ -z "${PATH_MODE:-}" ]; then
+  PATH_MODE=local
+  if [ -d "/public/home/acs4vb4pqv/benchmarks/MWDS2026/T1_wclq" ]; then
+    PATH_MODE=hpc
+  fi
+fi
+
 python3 "$STAGE1_ROOT/analysis/end/check_results.py" \
   --result "$TMP_ROOT/result" \
   --output "$TMP_ROOT/smoke_strict_check_report.md" \
@@ -37,7 +44,7 @@ python3 "$STAGE1_ROOT/jobs/generate_scripts.py" \
   --reps 1 \
   --cutoff 2 \
   --workers 1 \
-  --path-mode local \
+  --path-mode "$PATH_MODE" \
   --candidate-root-base "$STAGE1_ROOT"
 
 test -x jobslurm-v005
@@ -52,7 +59,7 @@ if [ "${RUN_REAL_SOLVER:-1}" = "1" ]; then
     --reps 1 \
     --cutoff 2 \
     --workers 1 \
-    --path-mode local \
+    --path-mode "$PATH_MODE" \
     --output-dir "$TMP_ROOT/real/v005"
   python3 - "$TMP_ROOT/real/v005/layer_a_runs.csv" <<'PY'
 import csv

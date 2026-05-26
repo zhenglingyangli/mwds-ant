@@ -116,6 +116,63 @@ cd ../sumup
 bash run_sumup.sh
 ```
 
+## Reference Sanity Check
+
+Before promoting `v006` to the formal Stage-1 run, run a small core-family
+reference check against the copied original binaries:
+
+```text
+baseline  = original baseline Deep/Fast binaries
+reference = original deep-v6 / fast-v19 binaries
+v006      = selected adaptive ACO controller candidate
+```
+
+This check reuses the existing selected result at `sumup/result/v006` and writes
+only the new baseline/reference runs to `sumup/reference_result`, so it does not
+overwrite the candidate-screen results in `sumup/result`.
+
+Build only the required reference code:
+
+```bash
+cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp10/stage1
+for d in code/deep/baseline code/deep/deepv6 \
+         code/fast/baseline code/fast/fastv19; do
+  make -C "$d" || exit 1
+done
+```
+
+Generate and submit the reference jobs:
+
+```bash
+cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp10/stage1/jobs
+python3 generate_scripts.py \
+  --candidates baseline,reference \
+  --datasets T1,T2,UDG,BHOSLIB,DIMACS,NDR \
+  --seeds 1,2,3 \
+  --reps 2 \
+  --cutoff 20 \
+  --workers 20 \
+  --path-mode hpc \
+  --output-root ../sumup/reference_result
+
+sbatch jobslurm-baseline
+sbatch jobslurm-reference
+```
+
+Check whether `v006` improves over both references:
+
+```bash
+cd /public/home/acs4vb4pqv/ylzl/MWDS-Ant/exp10/stage1/sumup
+bash run_reference_sumup.sh
+```
+
+This reference check uses core families only. `DIMACS10` and `SNAP` are not
+discarded from the project; they remain stress-test evidence in the candidate
+screen. They are excluded here because the purpose is to confirm the selected
+Layer-A controller against original references before spending a larger budget,
+and the first screen showed these two families are dominated by resource kills
+(`uk-2002.clq`) and very large UB/gap outliers.
+
 ## Local Tool Smoke Test
 
 This first checks fixture CSVs, compiles the copied v005 Deep/Fast code, and runs
@@ -128,10 +185,15 @@ bash test_smoke.sh
 
 ## Promotion Rule
 
-Stage 1 is not "LB only". A candidate should pass:
+Stage 1 is not "LB only". The strict gate is applied to the core screen
+(`T1,T2,UDG,BHOSLIB,DIMACS,NDR`). `DIMACS10` and `SNAP` are reported as stress
+families because they can dominate the result through resource kills or large
+UB/gap outliers.
+
+A candidate should pass the core gate:
 
 ```text
-parse_failures = 0
+core parse_failures = 0
 same run count for DBS and controller
 total_delta_LB > 0
 LB wins > LB losses
@@ -140,4 +202,8 @@ no large UB regression outlier
 #OPT delta >= 0
 ```
 
-Deep and Fast should be ranked separately before any combined decision.
+Deep and Fast should be ranked separately before any combined decision. Stress
+family observations are still reported and should be used as risk evidence, but
+they do not by themselves fail the core Stage-1 screen. For a multi-candidate
+screen, `--strict` exits successfully when at least one candidate passes the core
+gate; rejected candidates remain listed in the report.

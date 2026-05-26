@@ -1,0 +1,41 @@
+With  Parameters CUTOFF 20 SEED 1  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0 AQ_MODE=dbs
+Reading  graph ...  time 0.156494  
+Reducing graph ...  time 0.011696  
+[v9] |V|=82168 |E|=504230 density=6.14 USE_ADVANCED=1 SAFE_AQ_MIN_GAP=0.050 DEEP_AQ_RANGE=[800, 5.00, 10.00] structure_blocks_aq=0 AQ_SLOPE_MARGIN=1.15 AQ_MAX_UB_DRIFT=0.20 AQ_PROBE_FRAC=0.15 AQ_T1LIKE_FRAC=0.15
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.000488
+  1    1142491    1142491    1143048      2.4748 [AQ bandit arm] arm=4 gap=0.0005 density=6.14 |V|=82168
+
+ Switch to DBS-only search, timeout 2.474831....
+ [Online-safe AQ first-gap guard] FIRST_GAP 0.0005 < 0.0500, disabling AQ
+    1143079     1143079      1.6776        5.0815
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 2.474831
+  2    1142491    1142491    1143152      0.0096    1144326     1143079      0.0054        5.1070
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.018312
+  3    1142491    1142491    1143152      0.0141    1144326     1143079      0.0052        5.1388
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.025815
+  4    1142491    1142491    1143152      0.0278    1144326     1143079      0.0057        5.1978
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.049121
+  5    1142491    1142491    1143153      0.0351    1144326     1143079      0.0059        5.2712
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.059811
+  6    1142491    1142491    1143153      0.0611    1144326     1143079      0.0066        5.3974
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.100804
+  7    1142491    1142491    1143175      0.1014    1144232     1143079      0.1010        5.6069
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.161867
+  8    1142491    1142491    1143175      0.1600    1143746     1143079      0.1573        5.9315
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.247633
+  9    1142491    1142491    1143175      0.2144    1143504     1143079      0.2038        6.3657
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.321774
+ 10    1142491    1142491    1143175      0.3232    1143471     1143079      0.2584        7.0233
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.470973
+ 11    1142491    1142491    1143175      0.4735    1143240     1143079      0.4031        7.9748
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.670432
+ 12    1142491    1142491    1143175      0.6708    1143224     1143079      0.6222        9.3230
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.923532
+ 13    1142491    1142491    1143175      0.9265    1143157     1143079      0.5166       11.1793
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 1.241402
+ 14    1142491    1142491    1143175      1.2458    1143117     1143079      0.8072       13.6895
+ALPHA 1.2718 MaxIteration 741  TIMEOUT 1.625725
+ 15    1142491    1142491    1143175      1.6272    1143056     1143056      2.8333       19.9982
+>>> Slashdot0902.clq |V| 82168 |E| 504230  (#LB 0.0000 1142491 ---> 1142491  0.0005  1143056 <--- 1143048  -0.0000 #UB)  #read_time 0.1565  #reduce_time 0.0117  #solve_time 19.9983  #total_time 20.1665
+ 

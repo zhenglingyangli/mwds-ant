@@ -1,0 +1,55 @@
+With  Parameters CUTOFF 20 SEED 102  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0 AQ_MODE=guarded
+Reading  graph ...  time 0.034475  
+Reducing graph ...  time 0.000751  
+[v9] |V|=1000 |E|=52120 density=52.12 USE_ADVANCED=0 SAFE_AQ_MIN_GAP=0.050 DEEP_AQ_RANGE=[800, 5.00, 10.00] structure_blocks_aq=1 AQ_SLOPE_MARGIN=1.15 AQ_MAX_UB_DRIFT=0.20 AQ_PROBE_FRAC=0.15 AQ_T1LIKE_FRAC=0.15
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.078947
+  1         38         38         41      0.3090 [AQ bandit arm] arm=0 gap=0.0789 density=52.12 |V|=1000
+
+ Switch to DBS-only search, timeout 0.308954....
+ [Online-safe AQ structure guard] |V|=1000 density=52.12 outside [800, 5.00, 10.00], disabling AQ
+         41          41      0.0054        0.8377
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.308954
+  2         37         38         42      0.0021         42          41      0.0050        0.8449
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.003910
+  3         37         38         43      0.0032         42          41      0.0050        0.8531
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.005835
+  4         37         38         41      0.0052         42          41      0.0050        0.8637
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.009228
+  5         37         38         41      0.0083         41          41      0.0053        0.8803
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.014098
+  6         38         38         41      0.0145         41          41      0.0054        0.9093
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.023907
+  7         38         38         41      0.0213         41          41      0.0054        0.9519
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.033983
+  8         38         38         41      0.0331         41          41      0.0057        1.0181
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.051196
+  9         38         38         41      0.0494         41          41      0.0055        1.1177
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.074165
+ 10         38         38         41      0.0747         41          41      0.0055        1.2672
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.108790
+ 11         38         38         41      0.1092         41          41      0.0058        1.4857
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.154550
+ 12         38         38         41      0.1547         41          41      0.0054        1.7952
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.213035
+ 13         38         38         41      0.2131         41          41      0.0054        2.2216
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.285576
+ 14         38         38         41      0.2858         41          41      0.0054        2.7933
+ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.372922
+ 15         38         38         41      0.3734         41          41      0.0055        3.6182
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 0.474840
+ 16         38         38         41      0.4749         41          41      0.0057        4.9455
+ALPHA 1.2102 MaxIteration 1168  TIMEOUT 0.588918
+ 17         38         38         41      0.5889         41          41      0.0056        6.1238
+ALPHA 1.1816 MaxIteration 1413  TIMEOUT 0.712732
+ 18         38         38         41      0.7130         41          41      0.0055        7.6630
+ALPHA 1.1543 MaxIteration 1669  TIMEOUT 0.842532
+ 19         38         38         41      0.8429         41          41      0.0059        9.3490
+ALPHA 1.1283 MaxIteration 1926  TIMEOUT 0.972928
+ 20         38         38         41      0.9732         41          41      0.0053       11.4966
+ALPHA 1.1034 MaxIteration 2173  TIMEOUT 1.098067
+ 21         38         38         41      1.0982         41          41      0.0056       13.7791
+ALPHA 1.0795 MaxIteration 2397  TIMEOUT 1.211695
+ 22         38         38         41      1.2118         41          41      0.0061       19.9949
+>>> UDG_1000_200_8.wclq |V| 1000 |E| 52120  (#LB 0.0000 38 ---> 38  0.0732  41 <--- 41  0.0000 #UB)  #read_time 0.0345  #reduce_time 0.0008  #solve_time 19.9949  #total_time 20.0301
+ 

@@ -1,0 +1,15 @@
+With  Parameters CUTOFF 20 SEED 1  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0 AQ_MODE=guarded
+Reading  graph ...  time 6.243345  
+Reducing graph ...  time 0.398788  
+[v9] |V|=952203 |E|=22785136 density=23.93 USE_ADVANCED=0 SAFE_AQ_MIN_GAP=0.050 DEEP_AQ_RANGE=[800, 5.00, 10.00] structure_blocks_aq=1 AQ_SLOPE_MARGIN=1.15 AQ_MAX_UB_DRIFT=0.20 AQ_PROBE_FRAC=0.15 AQ_T1LIKE_FRAC=0.15
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.257124
+  1     980060     980060    1232057      8.4441 [AQ bandit arm] arm=0 gap=0.2571 density=23.93 |V|=952203
+
+ Switch to DBS-only search, timeout 8.444145....
+ [Online-safe AQ structure guard] |V|=952203 density=23.93 outside [800, 5.00, 10.00], disabling AQ
+    1150077     1150077      4.1846       16.1861
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 6.605587
+  2     985589     985589    1251718      2.6692
+>>> ldoor.clq |V| 952203 |E| 22785136  (#LB 0.0056 980060 ---> 985589  0.1430  1150077 <--- 1232057  0.0665 #UB)  #read_time 6.2433  #reduce_time 0.3988  #solve_time 24.6173  #total_time 31.2595
+ 

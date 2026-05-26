@@ -1,0 +1,12 @@
+With  Parameters CUTOFF 20 SEED 2  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0 AQ_MODE=dbs
+Reading  graph ...  time 7.764786  
+Reducing graph ...  time 0.223749  
+[v6] |V|=1382908 |E|=13591473 density=9.83 USE_ADVANCED=1 SAFE_AQ_MIN_GAP=0.050 DEEP_AQ_RANGE=[800, 5.00, 10.00] structure_blocks_aq=0 AQ_SLOPE_MARGIN=1.15 AQ_MAX_UB_DRIFT=0.20
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.005452
+  1    7390447    7390447    7430741     20.1171
+ Switch to DBS-only search, timeout 20.117092....
+ [Online-safe AQ first-gap guard] FIRST_GAP 0.0055 < 0.0500, disabling AQ
+
+>>> in-2004.clq |V| 1382908 |E| 13591473  (#LB 0.0000 7390447 ---> 7390447  0.0054  7430741 <--- 7430741  0.0000 #UB)  #read_time 7.7648  #reduce_time 0.2237  #solve_time 21.4423  #total_time 29.4308
+ 

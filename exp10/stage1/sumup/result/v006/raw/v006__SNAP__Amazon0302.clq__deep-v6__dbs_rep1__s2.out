@@ -1,0 +1,14 @@
+With  Parameters CUTOFF 20 SEED 2  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0 AQ_MODE=dbs
+Reading  graph ...  time 0.244975  
+Reducing graph ...  time 0.063520  
+[v6] |V|=262111 |E|=899792 density=3.43 USE_ADVANCED=1 SAFE_AQ_MIN_GAP=0.050 DEEP_AQ_RANGE=[800, 5.00, 10.00] structure_blocks_aq=1 AQ_SLOPE_MARGIN=1.15 AQ_MAX_UB_DRIFT=0.20
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.087375
+  1    2266893    2266893    2464962     19.4092
+ Switch to DBS-only search, timeout 19.409215....
+ [Online-safe AQ structure guard] |V|=262111 density=3.43 outside [800, 5.00, 10.00], disabling AQ
+    2467429     2467429      0.3114       19.8243
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.184469
+  2    2268965    2268965    2490224      0.1795
+>>> Amazon0302.clq |V| 262111 |E| 899792  (#LB 0.0009 2266893 ---> 2268965  0.0804  2467429 <--- 2464962  -0.0010 #UB)  #read_time 0.2450  #reduce_time 0.0635  #solve_time 20.3495  #total_time 20.6580
+ 

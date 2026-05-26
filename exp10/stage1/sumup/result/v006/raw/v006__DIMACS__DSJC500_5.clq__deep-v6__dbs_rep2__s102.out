@@ -1,0 +1,48 @@
+With  Parameters CUTOFF 20 SEED 102  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0 AQ_MODE=dbs
+Reading  graph ...  time 0.024448  
+Reducing graph ...  time 0.000648  
+[v6] |V|=500 |E|=125248 density=250.50 USE_ADVANCED=0 SAFE_AQ_MIN_GAP=0.050 DEEP_AQ_RANGE=[800, 5.00, 10.00] structure_blocks_aq=1 AQ_SLOPE_MARGIN=1.15 AQ_MAX_UB_DRIFT=0.20
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.454545
+  1         11         11         16      0.5272
+ Switch to DBS-only search, timeout 0.527232....
+ [Online-safe AQ structure guard] |V|=500 density=250.50 outside [800, 5.00, 10.00], disabling AQ
+         16          16      0.0177        1.0554
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.527232
+  2         11         11         16      0.0053         18          16      0.0041        1.0663
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.010036
+  3         11         11         16      0.0060         18          16      0.0042        1.0785
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.010908
+  4         10         11         16      0.0118         16          16      0.0061        1.1022
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.020806
+  5         11         11         18      0.0209         16          16      0.0058        1.1443
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.035704
+  6         11         11         16      0.0275         16          16      0.0056        1.1997
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.045397
+  7         11         11         16      0.0378         16          16      0.0063        1.2764
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.060377
+  8         11         11         18      0.0609         16          16      0.0066        1.3983
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.094220
+  9         11         11         18      0.0935         16          16      0.0058        1.5854
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.140253
+ 10         11         11         18      0.1392         16          16      0.0083        1.8641
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.202837
+ 11         11         11         16      0.2018         16          16      0.0059        2.2677
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.285668
+ 12         11         11         16      0.2862         16          16      0.0094        2.8403
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.394050
+ 13         11         11         16      0.3926         16          16      0.0054        3.6258
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.526009
+ 14         11         11         16      0.5180         16          16      0.0066        4.6622
+ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.675965
+ 15         11         11         16      0.6715         16          16      0.0109        6.0072
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 0.853970
+ 16         11         11         16      0.8544         16          16      0.0056        7.7174
+ALPHA 1.2102 MaxIteration 1168  TIMEOUT 1.059668
+ 17         11         11         16      1.0605         16          16      0.0059        9.8395
+ALPHA 1.1816 MaxIteration 1413  TIMEOUT 1.283393
+ 18         11         11         16      1.2840         16          16      0.0059       12.4099
+ALPHA 1.1543 MaxIteration 1669  TIMEOUT 1.517105
+ 19         11         11         16      1.5179         16          16      0.0069       19.9956
+>>> DSJC500_5.clq |V| 500 |E| 125248  (#LB 0.0000 11 ---> 11  0.3125  16 <--- 16  0.0000 #UB)  #read_time 0.0244  #reduce_time 0.0006  #solve_time 19.9956  #total_time 20.0207
+ 

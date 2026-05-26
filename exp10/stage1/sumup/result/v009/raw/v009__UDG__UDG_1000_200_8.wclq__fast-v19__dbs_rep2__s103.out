@@ -1,0 +1,47 @@
+>>IBM: |V|=1000 |E|=52120
+>>IBM: The maximum node weight is 100
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/UDG_wclq/UDG_1000_200_8.wclq #seed 103 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=dbs SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800 AQ_SLOPE_MARGIN=1.05 AQ_MAX_UB_DRIFT=0.25 AQ_HEAVY_FRAC=0.20 AQ_HEAVY_ANTS=6
+[v19] |V|=1000 |E|=52120 density=52.12 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.078947
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.301452
+  1         38         38         41      0.3015         41          41      0.0000      0.6072
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.005610
+  2         38         38         41      0.0056         41          41      0.0000      0.6172
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.006349
+  3         37         38         41      0.0063         41          41      0.0000      0.6273
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.007064
+  4         36         38         41      0.0071         41          41      0.0000      0.6373
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.023203
+  5         37         38         41      0.0232         41          41      0.0000      0.6872
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.025518
+  6         36         38         41      0.0255         41          41      0.0000      0.7372
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.070962
+  7         36         38         41      0.0710         41          41      0.0000      0.8872
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.074302
+  8         35         38         41      0.0743         41          41      0.0000      1.0372
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.116736
+  9         33         38         41      0.1167         41          41      0.0000      1.2673
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.094576
+ 10         31         38         41      0.0946         41          41      0.0000      1.4572
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.138192
+ 11         31         38         41      0.1382         41          41      0.0000      1.7272
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.194549
+ 12         31         38         41      0.1945         41          41      0.0000      2.1172
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.266040
+ 13         31         38         41      0.2660         41          41      0.0000      2.6473
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.348230
+ 14         31         38         41      0.3482         41          41      0.0000      3.3372
+ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.451373
+ 15         31         38         41      0.4514         41          41      0.0000      4.2472
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 0.563367
+ 16         31         38         41      0.5634         41          41      0.0000      5.3772
+ALPHA 1.2102 MaxIteration 1168  TIMEOUT 0.704214
+ 17         31         38         41      0.7042         41          41      0.0000      6.7771
+ALPHA 1.1816 MaxIteration 1413  TIMEOUT 0.854365
+ 18         31         38         41      0.8544         41          41      0.0000      8.4873
+ALPHA 1.1543 MaxIteration 1669  TIMEOUT 1.010643
+ 19         31         38         41      1.0106
+ [LB Done] stag=18 elapsed=47.5% => 10.5s to UB
+         41          41      0.0000     19.9773
+>>> UDG_1000_200_8.wclq |V| 1000 |E| 52120  (#LB 0.0000 38 ---> 38  0.0789  41 <--- 41  0.0000 #UB)  #solve_ime 19.9773 read_time 0.0129 

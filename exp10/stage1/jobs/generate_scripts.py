@@ -26,10 +26,11 @@ def job_script(
     cutoff: int,
     workers: int,
     path_mode: str,
+    output_root: Path,
     candidate_root_base: Path,
     allow_recursive_resolve: bool,
 ) -> str:
-    output_dir = Path("../sumup/result") / candidate
+    output_dir = output_root / candidate
     recursive_flag = " \\\n  --allow-recursive-resolve" if allow_recursive_resolve else ""
     wall_minutes = max(30, int(cutoff * reps * 5 / 60) + 20)
     hours = wall_minutes // 60
@@ -82,6 +83,7 @@ def main() -> int:
     parser.add_argument("--cutoff", type=int, default=20)
     parser.add_argument("--workers", type=int, default=20)
     parser.add_argument("--path-mode", choices=["hpc", "local"], default="hpc")
+    parser.add_argument("--output-root", type=Path, default=Path("../sumup/result"))
     parser.add_argument("--candidate-root-base", type=Path, default=DEFAULT_CANDIDATE_ROOT_BASE)
     parser.add_argument("--allow-recursive-resolve", action="store_true")
     parser.add_argument("--keep-old", action="store_true")
@@ -106,6 +108,7 @@ def main() -> int:
                 cutoff=args.cutoff,
                 workers=args.workers,
                 path_mode=args.path_mode,
+                output_root=args.output_root,
                 candidate_root_base=args.candidate_root_base,
                 allow_recursive_resolve=args.allow_recursive_resolve,
             )

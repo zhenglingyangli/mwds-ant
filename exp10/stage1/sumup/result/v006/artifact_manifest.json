@@ -1,0 +1,28 @@
+{
+  "alpha": 90,
+  "arm_plan": "../sumup/randomized_arm_plan.csv",
+  "available_instances": 25,
+  "candidate": "v006",
+  "controller_label": "online_slope",
+  "cutoff": 20,
+  "datasets": [
+    "T1",
+    "T2",
+    "UDG",
+    "BHOSLIB",
+    "DIMACS",
+    "NDR"
+  ],
+  "deep_binary": "../code/deep/v006/dual-deep-v6",
+  "external_certificates_applied": false,
+  "fast_binary": "../code/fast/v006/dual-fast-v19",
+  "jobs": 300,
+  "known_opt_used": false,
+  "missing_instances": 5,
+  "reps": 2,
+  "seeds": [
+    1,
+    2,
+    3
+  ]
+}

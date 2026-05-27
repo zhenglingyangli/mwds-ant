@@ -1,0 +1,101 @@
+# Stage 1 Randomized Arm Analysis
+
+- result: `result`
+- arm_groups: 50
+- comparison_groups: 40
+
+## Arm Summary
+
+- v006/deep-v6/BHOSLIB/dbs_only: valid=8/8, avg_lb_gain=0.125, avg_gap=1.125, opt=1, guards=`dbs_mode:1;structure:7`
+- v006/deep-v6/BHOSLIB/heavy_probe: valid=2/2, avg_lb_gain=0.000, avg_gap=0.500, opt=1, guards=`structure:1`
+- v006/deep-v6/BHOSLIB/light_probe: valid=9/9, avg_lb_gain=0.222, avg_gap=0.889, opt=2, guards=`structure:7`
+- v006/deep-v6/BHOSLIB/rollback_probe: valid=5/5, avg_lb_gain=0.200, avg_gap=1.400, opt=0, guards=`structure:5`
+- v006/deep-v6/BHOSLIB/standard_probe: valid=6/6, avg_lb_gain=0.333, avg_gap=0.833, opt=2, guards=`structure:4`
+- v006/deep-v6/DIMACS/dbs_only: valid=4/4, avg_lb_gain=0.000, avg_gap=3.500, opt=0, guards=`structure:4`
+- v006/deep-v6/DIMACS/heavy_probe: valid=5/5, avg_lb_gain=0.000, avg_gap=2.200, opt=1, guards=`structure:4`
+- v006/deep-v6/DIMACS/light_probe: valid=7/7, avg_lb_gain=0.000, avg_gap=2.429, opt=1, guards=`structure:6`
+- v006/deep-v6/DIMACS/rollback_probe: valid=9/9, avg_lb_gain=0.000, avg_gap=2.222, opt=3, guards=`structure:6`
+- v006/deep-v6/DIMACS/standard_probe: valid=5/5, avg_lb_gain=0.000, avg_gap=4.400, opt=1, guards=`structure:4`
+- v006/deep-v6/T1/dbs_only: valid=6/6, avg_lb_gain=17.833, avg_gap=115.667, opt=0, guards=`structure:6`
+- v006/deep-v6/T1/heavy_probe: valid=6/6, avg_lb_gain=14.833, avg_gap=105.833, opt=0, guards=`structure:6`
+- v006/deep-v6/T1/light_probe: valid=8/8, avg_lb_gain=34.875, avg_gap=132.500, opt=0, guards=`structure:8`
+- v006/deep-v6/T1/rollback_probe: valid=4/4, avg_lb_gain=25.750, avg_gap=208.750, opt=0, guards=`structure:4`
+- v006/deep-v6/T1/standard_probe: valid=6/6, avg_lb_gain=27.333, avg_gap=126.167, opt=0, guards=`structure:6`
+- v006/deep-v6/T2/dbs_only: valid=5/5, avg_lb_gain=161.200, avg_gap=296.600, opt=1, guards=`dbs_mode:1;structure:4`
+- v006/deep-v6/T2/heavy_probe: valid=7/7, avg_lb_gain=87.429, avg_gap=215.286, opt=3, guards=`structure:4`
+- v006/deep-v6/T2/light_probe: valid=7/7, avg_lb_gain=170.857, avg_gap=378.857, opt=4, guards=`structure:3`
+- v006/deep-v6/T2/rollback_probe: valid=7/7, avg_lb_gain=99.286, avg_gap=227.714, opt=3, guards=`structure:4`
+- v006/deep-v6/T2/standard_probe: valid=4/4, avg_lb_gain=162.750, avg_gap=364.500, opt=1, guards=`structure:3`
+- v006/deep-v6/UDG/dbs_only: valid=9/9, avg_lb_gain=0.000, avg_gap=0.333, opt=8, guards=`dbs_mode:8;structure:1`
+- v006/deep-v6/UDG/heavy_probe: valid=5/5, avg_lb_gain=0.000, avg_gap=1.800, opt=2, guards=`structure:3`
+- v006/deep-v6/UDG/light_probe: valid=8/8, avg_lb_gain=0.000, avg_gap=0.375, opt=7, guards=`structure:1`
+- v006/deep-v6/UDG/rollback_probe: valid=5/5, avg_lb_gain=0.000, avg_gap=0.600, opt=4, guards=`structure:1`
+- v006/deep-v6/UDG/standard_probe: valid=3/3, avg_lb_gain=0.000, avg_gap=0.000, opt=3, guards=`none`
+- v006/fast-v19/BHOSLIB/dbs_only: valid=9/9, avg_lb_gain=0.333, avg_gap=0.667, opt=3, guards=`dbs_mode:9`
+- v006/fast-v19/BHOSLIB/heavy_probe: valid=6/6, avg_lb_gain=0.000, avg_gap=1.500, opt=0, guards=`no_early_lb_gain:6`
+- v006/fast-v19/BHOSLIB/light_probe: valid=3/3, avg_lb_gain=0.333, avg_gap=1.333, opt=0, guards=`no_early_lb_gain:3`
+- v006/fast-v19/BHOSLIB/rollback_probe: valid=7/7, avg_lb_gain=0.000, avg_gap=0.714, opt=3, guards=`no_early_lb_gain:4`
+- v006/fast-v19/BHOSLIB/standard_probe: valid=5/5, avg_lb_gain=0.400, avg_gap=1.200, opt=0, guards=`no_early_lb_gain:5`
+- v006/fast-v19/DIMACS/dbs_only: valid=3/3, avg_lb_gain=0.000, avg_gap=2.333, opt=1, guards=`dbs_mode:3`
+- v006/fast-v19/DIMACS/heavy_probe: valid=6/6, avg_lb_gain=0.000, avg_gap=1.000, opt=2, guards=`no_early_lb_gain:4`
+- v006/fast-v19/DIMACS/light_probe: valid=10/10, avg_lb_gain=0.000, avg_gap=3.700, opt=1, guards=`no_early_lb_gain:7`
+- v006/fast-v19/DIMACS/rollback_probe: valid=4/4, avg_lb_gain=0.000, avg_gap=2.250, opt=1, guards=`no_early_lb_gain:3`
+- v006/fast-v19/DIMACS/standard_probe: valid=7/7, avg_lb_gain=0.000, avg_gap=3.571, opt=1, guards=`no_early_lb_gain:3`
+- v006/fast-v19/T1/dbs_only: valid=5/5, avg_lb_gain=0.400, avg_gap=264.000, opt=0, guards=`dbs_mode:5`
+- v006/fast-v19/T1/heavy_probe: valid=5/5, avg_lb_gain=6.600, avg_gap=151.600, opt=0, guards=`no_early_lb_gain:5`
+- v006/fast-v19/T1/light_probe: valid=8/8, avg_lb_gain=11.750, avg_gap=189.000, opt=0, guards=`no_early_lb_gain:8`
+- v006/fast-v19/T1/rollback_probe: valid=7/7, avg_lb_gain=0.143, avg_gap=189.857, opt=0, guards=`no_early_lb_gain:7`
+- v006/fast-v19/T1/standard_probe: valid=5/5, avg_lb_gain=6.000, avg_gap=47.200, opt=0, guards=`no_early_lb_gain:5`
+- v006/fast-v19/T2/dbs_only: valid=7/7, avg_lb_gain=0.000, avg_gap=537.571, opt=4, guards=`dbs_mode:7`
+- v006/fast-v19/T2/heavy_probe: valid=7/7, avg_lb_gain=110.429, avg_gap=243.714, opt=1, guards=`no_early_lb_gain:6`
+- v006/fast-v19/T2/light_probe: valid=3/3, avg_lb_gain=262.000, avg_gap=441.000, opt=0, guards=`no_early_lb_gain:2`
+- v006/fast-v19/T2/rollback_probe: valid=8/8, avg_lb_gain=97.000, avg_gap=418.375, opt=3, guards=`no_early_lb_gain:5`
+- v006/fast-v19/T2/standard_probe: valid=5/5, avg_lb_gain=0.000, avg_gap=36.000, opt=4, guards=`no_early_lb_gain:1`
+- v006/fast-v19/UDG/dbs_only: valid=9/9, avg_lb_gain=0.000, avg_gap=1.000, opt=6, guards=`dbs_mode:9`
+- v006/fast-v19/UDG/heavy_probe: valid=5/5, avg_lb_gain=0.000, avg_gap=0.600, opt=4, guards=`no_early_lb_gain:1`
+- v006/fast-v19/UDG/light_probe: valid=5/5, avg_lb_gain=0.000, avg_gap=0.600, opt=4, guards=`no_early_lb_gain:1`
+- v006/fast-v19/UDG/rollback_probe: valid=7/7, avg_lb_gain=0.000, avg_gap=0.000, opt=7, guards=`none`
+- v006/fast-v19/UDG/standard_probe: valid=4/4, avg_lb_gain=0.000, avg_gap=0.750, opt=3, guards=`no_early_lb_gain:1`
+
+## Against DBS-only
+
+- v006/deep-v6/BHOSLIB/heavy_probe: dLB=0.750, dLBGain=-0.125, dGap=-0.625, dUBGain=0.000, dOptRate=0.375
+- v006/deep-v6/BHOSLIB/light_probe: dLB=0.528, dLBGain=0.097, dGap=-0.236, dUBGain=0.000, dOptRate=0.097
+- v006/deep-v6/BHOSLIB/rollback_probe: dLB=-0.250, dLBGain=0.075, dGap=0.275, dUBGain=0.000, dOptRate=-0.125
+- v006/deep-v6/BHOSLIB/standard_probe: dLB=0.917, dLBGain=0.208, dGap=-0.292, dUBGain=0.000, dOptRate=0.208
+- v006/deep-v6/DIMACS/heavy_probe: dLB=-5.800, dLBGain=0.000, dGap=-1.300, dUBGain=0.000, dOptRate=0.200
+- v006/deep-v6/DIMACS/light_probe: dLB=-12.143, dLBGain=0.000, dGap=-1.071, dUBGain=0.000, dOptRate=0.143
+- v006/deep-v6/DIMACS/rollback_probe: dLB=-11.222, dLBGain=0.000, dGap=-1.278, dUBGain=0.000, dOptRate=0.333
+- v006/deep-v6/DIMACS/standard_probe: dLB=-13.400, dLBGain=0.000, dGap=0.900, dUBGain=0.000, dOptRate=0.200
+- v006/deep-v6/T1/heavy_probe: dLB=-139.833, dLBGain=-3.000, dGap=-9.833, dUBGain=-9.667, dOptRate=0.000
+- v006/deep-v6/T1/light_probe: dLB=811.000, dLBGain=17.042, dGap=16.833, dUBGain=48.625, dOptRate=0.000
+- v006/deep-v6/T1/rollback_probe: dLB=2773.250, dLBGain=7.917, dGap=93.083, dUBGain=161.500, dOptRate=0.000
+- v006/deep-v6/T1/standard_probe: dLB=-1375.167, dLBGain=9.500, dGap=10.500, dUBGain=-60.000, dOptRate=0.000
+- v006/deep-v6/T2/heavy_probe: dLB=-679.657, dLBGain=-73.771, dGap=-81.314, dUBGain=-45.314, dOptRate=0.229
+- v006/deep-v6/T2/light_probe: dLB=138.486, dLBGain=9.657, dGap=82.257, dUBGain=32.829, dOptRate=0.371
+- v006/deep-v6/T2/rollback_probe: dLB=-482.800, dLBGain=-61.914, dGap=-68.886, dUBGain=-33.600, dOptRate=0.229
+- v006/deep-v6/T2/standard_probe: dLB=84.950, dLBGain=1.550, dGap=67.900, dUBGain=19.150, dOptRate=0.050
+- v006/deep-v6/UDG/heavy_probe: dLB=-27.356, dLBGain=0.000, dGap=1.467, dUBGain=0.000, dOptRate=-0.489
+- v006/deep-v6/UDG/light_probe: dLB=-3.181, dLBGain=0.000, dGap=0.042, dUBGain=0.000, dOptRate=-0.014
+- v006/deep-v6/UDG/rollback_probe: dLB=-37.756, dLBGain=0.000, dGap=0.267, dUBGain=0.000, dOptRate=-0.089
+- v006/deep-v6/UDG/standard_probe: dLB=93.444, dLBGain=0.000, dGap=-0.333, dUBGain=0.000, dOptRate=0.111
+- v006/fast-v19/BHOSLIB/heavy_probe: dLB=-1.833, dLBGain=-0.333, dGap=0.833, dUBGain=0.000, dOptRate=-0.333
+- v006/fast-v19/BHOSLIB/light_probe: dLB=-1.000, dLBGain=0.000, dGap=0.667, dUBGain=0.000, dOptRate=-0.333
+- v006/fast-v19/BHOSLIB/rollback_probe: dLB=-0.619, dLBGain=-0.333, dGap=0.048, dUBGain=0.000, dOptRate=0.095
+- v006/fast-v19/BHOSLIB/standard_probe: dLB=-0.733, dLBGain=0.067, dGap=0.533, dUBGain=0.000, dOptRate=-0.333
+- v006/fast-v19/DIMACS/heavy_probe: dLB=8.667, dLBGain=0.000, dGap=-1.333, dUBGain=0.000, dOptRate=0.000
+- v006/fast-v19/DIMACS/light_probe: dLB=7.467, dLBGain=0.000, dGap=1.367, dUBGain=0.000, dOptRate=-0.233
+- v006/fast-v19/DIMACS/rollback_probe: dLB=14.167, dLBGain=0.000, dGap=-0.083, dUBGain=0.000, dOptRate=-0.083
+- v006/fast-v19/DIMACS/standard_probe: dLB=0.667, dLBGain=0.000, dGap=1.238, dUBGain=0.000, dOptRate=-0.190
+- v006/fast-v19/T1/heavy_probe: dLB=-2237.200, dLBGain=6.200, dGap=-112.400, dUBGain=-131.200, dOptRate=0.000
+- v006/fast-v19/T1/light_probe: dLB=-2265.325, dLBGain=11.350, dGap=-75.000, dUBGain=-138.975, dOptRate=0.000
+- v006/fast-v19/T1/rollback_probe: dLB=-658.486, dLBGain=-0.257, dGap=-74.143, dUBGain=-60.457, dOptRate=0.000
+- v006/fast-v19/T1/standard_probe: dLB=-4481.200, dLBGain=5.600, dGap=-216.800, dUBGain=-263.600, dOptRate=0.000
+- v006/fast-v19/T2/heavy_probe: dLB=-185.143, dLBGain=110.429, dGap=-293.857, dUBGain=-60.571, dOptRate=-0.429
+- v006/fast-v19/T2/light_probe: dLB=940.286, dLBGain=262.000, dGap=-96.571, dUBGain=37.762, dOptRate=-0.571
+- v006/fast-v19/T2/rollback_probe: dLB=219.536, dLBGain=97.000, dGap=-119.196, dUBGain=-7.821, dOptRate=-0.196
+- v006/fast-v19/T2/standard_probe: dLB=-1218.314, dLBGain=0.000, dGap=-501.571, dUBGain=-136.371, dOptRate=0.229
+- v006/fast-v19/UDG/heavy_probe: dLB=-8.933, dLBGain=0.000, dGap=-0.400, dUBGain=0.000, dOptRate=0.133
+- v006/fast-v19/UDG/light_probe: dLB=-33.533, dLBGain=0.000, dGap=-0.400, dUBGain=0.000, dOptRate=0.133
+- v006/fast-v19/UDG/rollback_probe: dLB=174.952, dLBGain=0.000, dGap=-1.000, dUBGain=0.000, dOptRate=0.333
+- v006/fast-v19/UDG/standard_probe: dLB=-126.583, dLBGain=0.000, dGap=-0.250, dUBGain=0.000, dOptRate=0.083

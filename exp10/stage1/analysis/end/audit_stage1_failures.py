@@ -134,7 +134,7 @@ def summarize_candidate(path: Path, *, min_rounds: int, max_ub_regression: int) 
             "controller_guards": ";".join(f"{name}:{count}" for name, count in sorted(guard_counts.items())),
             "controller_actions": ";".join(f"{name}:{count}" for name, count in sorted(action_counts.items())),
         }
-        for field in CORE_FIELDS[4:11]:
+        for field in CORE_FIELDS[4:13]:
             out[field] = counts.get(field, 0)
         rows.append(out)
 
@@ -159,7 +159,8 @@ def render_report(rows: list[dict[str, Any]], warnings: list[str], *, result: Pa
         label = f"{row['candidate']}/{row['solver']}/{row['family']}"
         lines.append(
             "- {label}: pairs={rows}, improved={improved}, no_effect={no_effect}, "
-            "lb_reg={lb_reg}, ub_reg={ub_reg}, opt_reg={opt_reg}, early_stop_runs={early}, "
+            "lb_reg={lb_reg}, ub_reg={ub_reg}, opt_reg={opt_reg}, "
+            "lb_gain_not_converted={lb_not_gap}, gap_reg_no_lb={gap_no_lb}, early_stop_runs={early}, "
             "timeout_or_parse_runs={timeout}, no_lb_gain_runs={no_gain}".format(
                 label=label,
                 rows=row.get("rows", 0),
@@ -168,6 +169,8 @@ def render_report(rows: list[dict[str, Any]], warnings: list[str], *, result: Pa
                 lb_reg=row.get("lb_regression", 0),
                 ub_reg=row.get("ub_regression", 0),
                 opt_reg=row.get("opt_regression", 0),
+                lb_not_gap=row.get("lb_gain_not_converted", 0),
+                gap_no_lb=row.get("gap_regression_without_lb_gain", 0),
                 early=row.get("early_stop_runs", 0),
                 timeout=row.get("timeout_or_parse_runs", 0),
                 no_gain=row.get("no_lb_gain_runs", 0),

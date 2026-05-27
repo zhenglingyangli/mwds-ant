@@ -29,9 +29,11 @@ def job_script(
     output_root: Path,
     candidate_root_base: Path,
     allow_recursive_resolve: bool,
+    arm_plan: Path | None,
 ) -> str:
     output_dir = output_root / candidate
     recursive_flag = " \\\n  --allow-recursive-resolve" if allow_recursive_resolve else ""
+    arm_plan_flag = "" if arm_plan is None else f' \\\n  --arm-plan "{arm_plan}"'
     wall_minutes = max(30, int(cutoff * reps * 5 / 60) + 20)
     hours = wall_minutes // 60
     minutes = wall_minutes % 60
@@ -68,7 +70,7 @@ python3 ./goSolver_stage1.py \\
   --cutoff {cutoff} \\
   --workers {workers} \\
   --path-mode {path_mode} \\
-  --output-dir "{output_dir}"{recursive_flag}
+  --output-dir "{output_dir}"{recursive_flag}{arm_plan_flag}
 
 echo "=== DONE stage1 candidate {candidate} ==="
 """
@@ -86,6 +88,7 @@ def main() -> int:
     parser.add_argument("--output-root", type=Path, default=Path("../sumup/result"))
     parser.add_argument("--candidate-root-base", type=Path, default=DEFAULT_CANDIDATE_ROOT_BASE)
     parser.add_argument("--allow-recursive-resolve", action="store_true")
+    parser.add_argument("--arm-plan", type=Path, help="Optional randomized arm plan CSV for arm logging jobs")
     parser.add_argument("--keep-old", action="store_true")
     args = parser.parse_args()
 
@@ -111,6 +114,7 @@ def main() -> int:
                 output_root=args.output_root,
                 candidate_root_base=args.candidate_root_base,
                 allow_recursive_resolve=args.allow_recursive_resolve,
+                arm_plan=args.arm_plan,
             )
         )
         os.chmod(path, 0o755)

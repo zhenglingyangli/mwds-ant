@@ -32,6 +32,26 @@ SUMMARY_RE = re.compile(
     r"(?P<best_ub>\d+)\s+<---\s+(?P<first_ub>\d+)"
 )
 ROUND_RE = re.compile(r"^\s*\d+\s+[-\d]+\s+[-\d]+\s+[-\d]+", re.MULTILINE)
+CONTROLLER_HEADER_RE = re.compile(
+    r"\[(?P<version>v\d+)\]\s+\|V\|=(?P<V>\d+)\s+\|E\|=(?P<E>\d+)\s+"
+    r"density=(?P<density>[-\d.]+).*?(?:structure_blocks_aq=(?P<structure_blocks_aq>\d+))?"
+)
+ARM_RE = re.compile(
+    r"\[AQ bandit arm\]\s+arm=(?P<arm>\d+)\s+gap=(?P<gap>[-\d.]+)\s+"
+    r"density=(?P<density>[-\d.]+)\s+\|V\|=(?P<nodes>\d+)"
+)
+ACTION_RE = re.compile(
+    r"gap=(?P<gap>[-\d.]+)\s+density=(?P<density>[-\d.]+)\s+\|V\|=(?P<nodes>\d+)\s+=>\s+"
+    r"(?P<action>No RL|Light RL|Standard RL|Heavy RL)"
+)
+SLOPE_RE = re.compile(
+    r"\[AQ slope (?P<decision>accept|reject)\]\s+dbs_slope=(?P<dbs>[-\d.]+)\s+"
+    r"aq_slope=(?P<aq>[-\d.]+)\s+aq_gain=(?P<gain>-?\d+)\s+ub_drift=(?P<ub>[-\d.]+)"
+)
+TUNED_PROBE_RE = re.compile(
+    r"\[AQ tuned probe\]\s+effective_frac=(?P<effective>[-\d.]+)\s+"
+    r"base_frac=(?P<base>[-\d.]+)\s+t1like_frac=(?P<t1like>[-\d.]+)"
+)
 
 
 def csv_list(text: str) -> list[str]:
@@ -126,9 +146,10 @@ def load_instances(
 
 
 def parse_output(text: str) -> dict[str, Any]:
+    controller = parse_controller_trace(text)
     summary = SUMMARY_RE.search(text)
     if not summary:
-        return {"parse_ok": False, "n_rounds": len(ROUND_RE.findall(text))}
+        return {"parse_ok": False, "n_rounds": len(ROUND_RE.findall(text)), **controller}
 
     first_lb = int(summary.group("first_lb"))
     best_lb = int(summary.group("best_lb"))
@@ -149,13 +170,83 @@ def parse_output(text: str) -> dict[str, Any]:
         "relative_gap": (absolute_gap / best_lb) if best_lb else "",
         "solver_certified_opt": int(absolute_gap == 0),
         "n_rounds": len(ROUND_RE.findall(text)),
+        **controller,
     }
+
+
+def parse_controller_trace(text: str) -> dict[str, Any]:
+    """Extract online controller/probe signals already printed by solver variants."""
+    out: dict[str, Any] = {
+        "controller_version": "",
+        "controller_density": "",
+        "structure_blocks_aq": "",
+        "aq_arm": "",
+        "aq_action": "",
+        "aq_first_gap": "",
+        "aq_probe_frac": "",
+        "aq_slope_decision": "",
+        "dbs_lb_slope": "",
+        "aq_lb_slope": "",
+        "aq_probe_gain": "",
+        "aq_ub_drift": "",
+        "aq_guard_reason": "",
+    }
+
+    header = CONTROLLER_HEADER_RE.search(text)
+    if header:
+        out["controller_version"] = header.group("version")
+        out["controller_density"] = header.group("density")
+        out["structure_blocks_aq"] = header.group("structure_blocks_aq") or ""
+
+    arm = ARM_RE.search(text)
+    if arm:
+        out["aq_arm"] = arm.group("arm")
+        out["aq_first_gap"] = arm.group("gap")
+        out["controller_density"] = arm.group("density")
+
+    action = ACTION_RE.search(text)
+    if action:
+        out["aq_action"] = action.group("action").replace(" ", "_").lower()
+        out["aq_first_gap"] = action.group("gap")
+        out["controller_density"] = action.group("density")
+
+    tuned_probe = TUNED_PROBE_RE.search(text)
+    if tuned_probe:
+        out["aq_probe_frac"] = tuned_probe.group("effective")
+    elif "small-headroom probe" in text:
+        out["aq_probe_frac"] = "small"
+    elif "Tier-2 Medium" in text:
+        out["aq_probe_frac"] = "standard"
+    elif "Tier-3 Hard" in text:
+        out["aq_probe_frac"] = "heavy"
+
+    slope = SLOPE_RE.search(text)
+    if slope:
+        out["aq_slope_decision"] = slope.group("decision")
+        out["dbs_lb_slope"] = slope.group("dbs")
+        out["aq_lb_slope"] = slope.group("aq")
+        out["aq_probe_gain"] = slope.group("gain")
+        out["aq_ub_drift"] = slope.group("ub")
+
+    if "Online-safe AQ structure guard" in text:
+        out["aq_guard_reason"] = "structure"
+    elif "Online-safe AQ first-gap guard" in text or "Online-safe AQ eligibility guard" in text:
+        out["aq_guard_reason"] = "first_gap"
+    elif "AQ guard] no early LB gain" in text:
+        out["aq_guard_reason"] = "no_early_lb_gain"
+    elif out["aq_slope_decision"] == "reject":
+        out["aq_guard_reason"] = "slope_reject"
+    elif "AQ_MODE=dbs" in text:
+        out["aq_guard_reason"] = "dbs_mode"
+
+    return out
 
 
 def run_one(job: dict[str, Any]) -> dict[str, Any]:
     env = os.environ.copy()
     env["MWDS_AQ_MODE"] = job["mode_family"]
     env["DUMP_BEST_SOL"] = "1"
+    env.update(job.get("env_overrides", {}))
     cmd = [
         str(job["binary"]),
         str(job["instance_path"]),
@@ -180,6 +271,7 @@ def run_one(job: dict[str, Any]) -> dict[str, Any]:
         "logical_seed": job["logical_seed"],
         "actual_seed": job["actual_seed"],
         "rep": job["rep"],
+        "arm": job.get("arm", ""),
         "mode": job["mode"],
         "cutoff": job["cutoff"],
         "alpha": job["alpha"],
@@ -296,6 +388,7 @@ def main() -> int:
     parser.add_argument("--q0", type=float, default=0.90)
     parser.add_argument("--deep-beta", type=float, default=3.0)
     parser.add_argument("--fast-beta", type=float, default=3.5)
+    parser.add_argument("--arm-plan", type=Path, help="Optional randomized arm plan CSV generated by generate_randomized_arm_plan.py")
     args = parser.parse_args()
 
     configs = load_json(args.candidate_config)
@@ -323,35 +416,85 @@ def main() -> int:
     seeds = parse_ints(args.seeds)
     raw_dir = args.output_dir / "raw"
     jobs: list[dict[str, Any]] = []
-    for inst in available:
-        for solver, binary, beta in [("deep-v6", deep_binary, args.deep_beta), ("fast-v19", fast_binary, args.fast_beta)]:
-            for logical_seed in seeds:
-                for rep in range(1, args.reps + 1):
-                    actual_seed = logical_seed + (rep - 1) * 100
-                    for mode_family, mode_prefix in [("dbs", "dbs"), ("guarded", "controller")]:
-                        mode = f"{mode_prefix}_rep{rep}"
-                        jobs.append(
-                            {
-                                **inst,
-                                "candidate": args.candidate,
-                                "controller_label": cfg.get("label", args.candidate),
-                                "solver": solver,
-                                "binary": binary,
-                                "logical_seed": logical_seed,
-                                "actual_seed": actual_seed,
-                                "rep": rep,
-                                "mode_family": mode_family,
-                                "mode": mode,
-                                "instance_path": inst["path"],
-                                "cutoff": args.cutoff,
-                                "alpha": args.alpha,
-                                "k_ants": args.k_ants,
-                                "rho": args.rho,
-                                "q0": args.q0,
-                                "beta": beta,
-                                "output_path": raw_dir / f"{args.candidate}__{inst['family']}__{inst['instance']}__{solver}__{mode}__s{actual_seed}.out",
-                            }
-                        )
+    binaries = {
+        "deep-v6": (deep_binary, args.deep_beta),
+        "fast-v19": (fast_binary, args.fast_beta),
+    }
+    available_by_key = {(row["family"], row["instance"]): row for row in available}
+    if args.arm_plan:
+        with args.arm_plan.open(newline="") as handle:
+            arm_rows = list(csv.DictReader(handle))
+        for arm_row in arm_rows:
+            inst = available_by_key.get((arm_row.get("family", ""), arm_row.get("instance", "")))
+            if inst is None:
+                continue
+            solver = arm_row.get("solver", "")
+            if solver not in binaries:
+                raise SystemExit(f"Unknown solver in arm plan: {solver}")
+            binary, beta = binaries[solver]
+            logical_seed = int(arm_row["logical_seed"])
+            rep = int(arm_row["rep"])
+            actual_seed = logical_seed + (rep - 1) * 100
+            arm = arm_row.get("arm", "planned_arm")
+            mode_family = arm_row.get("mode_family") or "guarded"
+            env_overrides = json.loads(arm_row.get("env_overrides_json") or "{}")
+            mode = f"arm_{arm}_rep{rep}"
+            jobs.append(
+                {
+                    **inst,
+                    "candidate": args.candidate,
+                    "controller_label": cfg.get("label", args.candidate),
+                    "solver": solver,
+                    "binary": binary,
+                    "logical_seed": logical_seed,
+                    "actual_seed": actual_seed,
+                    "rep": rep,
+                    "arm": arm,
+                    "mode_family": mode_family,
+                    "mode": mode,
+                    "env_overrides": env_overrides,
+                    "instance_path": inst["path"],
+                    "cutoff": args.cutoff,
+                    "alpha": args.alpha,
+                    "k_ants": args.k_ants,
+                    "rho": args.rho,
+                    "q0": args.q0,
+                    "beta": beta,
+                    "output_path": raw_dir / f"{args.candidate}__{inst['family']}__{inst['instance']}__{solver}__{mode}__s{actual_seed}.out",
+                }
+            )
+    else:
+        for inst in available:
+            for solver, (binary, beta) in binaries.items():
+                for logical_seed in seeds:
+                    for rep in range(1, args.reps + 1):
+                        actual_seed = logical_seed + (rep - 1) * 100
+                        for mode_family, mode_prefix in [("dbs", "dbs"), ("guarded", "controller")]:
+                            mode = f"{mode_prefix}_rep{rep}"
+                            jobs.append(
+                                {
+                                    **inst,
+                                    "candidate": args.candidate,
+                                    "controller_label": cfg.get("label", args.candidate),
+                                    "solver": solver,
+                                    "binary": binary,
+                                    "logical_seed": logical_seed,
+                                    "actual_seed": actual_seed,
+                                    "rep": rep,
+                                    "arm": "",
+                                    "mode_family": mode_family,
+                                    "mode": mode,
+                                    "env_overrides": {},
+                                    "instance_path": inst["path"],
+                                    "cutoff": args.cutoff,
+                                    "alpha": args.alpha,
+                                    "k_ants": args.k_ants,
+                                    "rho": args.rho,
+                                    "q0": args.q0,
+                                    "beta": beta,
+                                    "output_path": raw_dir / f"{args.candidate}__{inst['family']}__{inst['instance']}__{solver}__{mode}__s{actual_seed}.out",
+                                }
+                            )
 
     results: list[dict[str, Any]] = []
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
@@ -362,9 +505,11 @@ def main() -> int:
 
     run_fields = [
         "candidate", "controller_label", "family", "instance", "solver", "logical_seed", "actual_seed",
-        "rep", "mode", "cutoff", "alpha", "exit_code", "parse_ok", "V", "E", "first_lb", "best_lb",
+        "rep", "arm", "mode", "cutoff", "alpha", "exit_code", "parse_ok", "V", "E", "first_lb", "best_lb",
         "lb_gain", "first_ub", "verified_ub", "ub_gain", "absolute_gap", "relative_gap",
-        "solver_certified_opt", "n_rounds", "raw_output",
+        "solver_certified_opt", "n_rounds", "controller_version", "controller_density", "structure_blocks_aq",
+        "aq_arm", "aq_action", "aq_first_gap", "aq_probe_frac", "aq_slope_decision", "dbs_lb_slope",
+        "aq_lb_slope", "aq_probe_gain", "aq_ub_drift", "aq_guard_reason", "raw_output",
     ]
     write_csv(args.output_dir / "layer_a_runs.csv", results, run_fields)
     fair_rows, aggregate_rows, by_family_rows = summarize(results)
@@ -381,6 +526,7 @@ def main() -> int:
         "cutoff": args.cutoff,
         "alpha": args.alpha,
         "jobs": len(jobs),
+        "arm_plan": "" if args.arm_plan is None else str(args.arm_plan),
         "available_instances": len(available),
         "missing_instances": len(missing),
         "deep_binary": str(deep_binary),

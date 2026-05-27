@@ -13,5 +13,12 @@ if [ ! -d "$RESULT" ]; then
 fi
 
 mkdir -p "$(dirname "$OUTPUT")"
+set +e
 python3 ../analysis/end/check_results.py --result "$RESULT" --output "$OUTPUT" --strict
+STRICT_STATUS=$?
+set -e
+python3 ../analysis/end/audit_stage1_failures.py --result "$RESULT" --output ../analysis/end/stage1_failure_audit.md
+python3 ../analysis/end/validate_stage1_holdout.py --result "$RESULT" --output ../analysis/end/stage1_holdout_validation.md
+python3 ../analysis/end/choose_learning_form.py --result "$RESULT" --output ../analysis/end/stage1_learning_form_decision.md
 echo "Done. See $OUTPUT"
+exit "$STRICT_STATUS"

@@ -1,0 +1,52 @@
+>>IBM: |V|=200 |E|=250
+>>IBM: The maximum node weight is 49
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/T1_wclq/T1_200_250_7.wclq #seed 103 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=200 |E|=250 density=1.25 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.097109
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.034628
+  1       1833       1833       2011      0.0346
+ [Tier-2 Medium] gap=0.0971 density=1.25 |V|=200 => Standard RL (K=5, 15%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.011331
+  2       1821       1833       2133      0.0113ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.006323
+  3       1827       1833       2189      0.0063ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.025333
+  4       1837       1837       2228      0.0253ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.037577
+  5       1852       1852       2250      0.0376ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.044110
+  6       1855       1855       2238      0.0441ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.035987
+  7       1847       1855       2230      0.0360ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.090387
+  8       1863       1863       2143      0.0904ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.082123
+  9       1844       1863       2185      0.0821ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.328530
+ 10       1849       1863       2109      0.3285ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.439781
+ 11       1851       1863       2163      0.4398ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.292005
+ 12       1848       1863       2139      0.2920ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.339692
+ 13       1852       1863       2110      0.3397ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.479573
+ 14       1835       1863       2144      0.4796ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.787463
+ 15       1845       1863       2145      0.7875       1937        1937      0.0100      3.7388
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 0.177135
+ 16       1845       1863       2129      0.1771       1937        1937      0.0100      4.0688
+ALPHA 1.2102 MaxIteration 1168  TIMEOUT 0.202167
+ 17       1851       1863       2194      0.2022       1937        1937      0.0100      4.4588
+ALPHA 1.1816 MaxIteration 1413  TIMEOUT 0.234742
+ 18       1848       1863       2159      0.2347       1937        1937      0.0200      4.9088
+ALPHA 1.1543 MaxIteration 1669  TIMEOUT 0.312988
+ 19       1820       1863       2160      0.3130       1937        1937      0.0000      5.5162
+ALPHA 1.1283 MaxIteration 1926  TIMEOUT 0.372105
+ 20       1808       1863       2171      0.3721       1937        1937      0.0100      6.2388
+ALPHA 1.1034 MaxIteration 2173  TIMEOUT 0.459780
+ 21       1819       1863       2179      0.4598       1937        1937      0.0200      7.1091
+ALPHA 1.0795 MaxIteration 2397  TIMEOUT 0.729426
+ 22       1807       1863       2139      0.7294       1937        1937      0.0100      8.5088
+ALPHA 1.0567 MaxIteration 2587  TIMEOUT 0.605463
+ 23       1824       1863       2149      0.6055       1937        1937      0.0100      9.6788
+ALPHA 1.0349 MaxIteration 2733  TIMEOUT 1.027354
+ 24       1831       1863       2101      1.0274       1937        1937      0.0200     11.6488
+ALPHA 1.0349 MaxIteration 2828  TIMEOUT 1.251087
+ 25       1826       1863       2133      1.2511       1937        1937      0.0100     14.0588
+ALPHA 1.0349 MaxIteration 2926  TIMEOUT 1.416063
+ 26       1830       1863       2117      1.4161       1937        1937      0.0100     16.7588
+ALPHA 1.0349 MaxIteration 3027  TIMEOUT 0.842923
+ 27       1827       1863       2159      0.8429       1937        1937      0.0100     18.3888
+ALPHA 1.0349 MaxIteration 3132  TIMEOUT 0.759761
+ 28       1820       1863       2147      0.7598       1937        1937      0.0200     19.8488
+ALPHA 1.0349 MaxIteration 3241  TIMEOUT 0.151274
+ 29       1794       1863       2174      0.1513>>> T1_200_250_7.wclq |V| 200 |E| 250  (#LB 0.0164 1833 ---> 1863  0.0397  1937 <--- 2011  0.0368 #UB)  #solve_ime 20.0001 read_time 0.0012 

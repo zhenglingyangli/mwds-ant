@@ -1,0 +1,15 @@
+>>IBM: |V|=50 |E|=1000
+>>IBM: The maximum node weight is 49
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/T1_wclq/T1_50_1000_0.wclq #seed 101 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=50 |E|=1000 density=20.00 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.428571
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.004053
+  1         28         28         40      0.0041
+ [Tier-3 Hard] gap=0.4286 density=20.00 |V|=50 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.000722
+  2         28         28         62      0.0007ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.000676
+  3         28         28         62      0.0007ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.000432
+  4         26         28         40      0.0004         40          40      0.0000      0.0100
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.000303
+  5         25         28         40      0.0003>>> T1_50_1000_0.wclq |V| 50 |E| 1000  (#LB 0.0000 28 ---> 28  0.4286  40 <--- 40  0.0000 #UB)  #solve_ime 0.0103 read_time 0.0000 

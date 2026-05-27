@@ -1,0 +1,11 @@
+>>IBM: |V|=862664 |E|=16138468
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/DIMACS10/eu-2005.clq #seed 1 #alpha 1.900 #timeout 5.000 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=guarded SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800 AQ_SLOPE_MARGIN=1.05 AQ_MAX_UB_DRIFT=0.25
+[v19] |V|=862664 |E|=16138468 density=18.71 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.015068
+ALPHA 1.9000 MaxIteration 10  TIMEOUT 18.992424
+  1    2779366    2779366    2821246     18.9924
+ [Online-safe AQ eligibility guard] gap=0.0151 density=18.71 |V|=862664 => No RL
+    2817358     2817358      0.0100     21.1185
+>>> eu-2005.clq |V| 862664 |E| 16138468  (#LB 0.0000 2779366 ---> 2779366  0.0137  2817358 <--- 2821246  0.0014 #UB)  #solve_ime 21.1318 read_time 20.4818 

@@ -1,0 +1,21 @@
+>>IBM: |V|=82168 |E|=504230
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/SNAP/Slashdot0902.clq #seed 2 #alpha 1.900 #timeout 0.300 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=dbs SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800 AQ_SLOPE_MARGIN=1.05 AQ_MAX_UB_DRIFT=0.25 AQ_HEAVY_FRAC=0.20 AQ_HEAVY_ANTS=6
+[v19] |V|=82168 |E|=504230 density=6.14 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.000586
+ALPHA 1.9000 MaxIteration 50  TIMEOUT 1.152480
+  1    1142449    1142449    1143119      1.1525    1143119     1143119      0.0000      2.3389
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.161091
+  2    1142402    1142449    1143244      0.1611    1143244     1143119      0.0000      2.6988
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.308138
+  3    1142430    1142449    1143224      0.3081    1143224     1143119      0.0000      3.3388
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.853409
+  4    1142432    1142449    1143220      0.8534    1143220     1143119      0.0000      5.0789
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 1.345986
+  5    1142381    1142449    1143230      1.3460    1143230     1143119      0.0000      7.7987
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 1.500397
+  6    1141188    1142449    1144639      1.5004
+ [LB Done] stag=5 elapsed=46.5% => 10.7s to UB
+    1144393     1143119     10.5900     19.9787
+>>> Slashdot0902.clq |V| 82168 |E| 504230  (#LB 0.0000 1142449 ---> 1142449  0.0006  1143119 <--- 1143119  0.0000 #UB)  #solve_ime 19.9798 read_time 0.1213 

@@ -1,0 +1,21 @@
+>>IBM: |V|=1000 |E|=52120
+>>IBM: The maximum node weight is 100
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/UDG_wclq/UDG_1000_200_8.wclq #seed 3 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=1000 |E|=52120 density=52.12 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.078947
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.337720
+  1         38         38         41      0.3377
+ [Tier-3 Hard] gap=0.0789 density=52.12 |V|=1000 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.020295
+  2         36         38         41      0.0203ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.030695
+  3         36         38         42      0.0307ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.025414
+  4         37         38         43      0.0254         41          41      0.0000      0.4363
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.025207
+  5         35         38         41      0.0252         41          41      0.0000      0.4864
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.036054
+  6         37         38         41      0.0361         41          41      0.0000      0.5564
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.046866
+  7         36         38         41      0.0469         41          41      0.0000      0.6464
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.084121
+  8         37         38         41      0.0841>>> UDG_1000_200_8.wclq |V| 1000 |E| 52120  (#LB 0.0000 38 ---> 38  0.0789  41 <--- 41  0.0000 #UB)  #solve_ime 0.7305 read_time 0.0137 

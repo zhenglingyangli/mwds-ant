@@ -1,0 +1,42 @@
+With  Parameters CUTOFF 20 SEED 102  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0 AQ_MODE=guarded
+Reading  graph ...  time 0.294762  
+Reducing graph ...  time 0.009438  
+[v6] |V|=1150 |E|=579607 density=504.01 USE_ADVANCED=0 SAFE_AQ_MIN_GAP=0.050 DEEP_AQ_RANGE=[800, 5.00, 10.00] structure_blocks_aq=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.500000
+  1          2          2          3      1.2160
+ Switch to DBS-only search, timeout 1.216032....
+ [Online-safe AQ structure guard] |V|=1150 density=504.01 outside [800, 5.00, 10.00], disabling AQ
+          3           3      0.0354        2.4418
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 1.216032
+  2          2          2          3      0.0114          3           3      0.0358        2.4901
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.021567
+  3          2          2          3      0.0181          3           3      0.0352        2.5435
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.033213
+  4          2          2          3      0.0315          3           3      0.0357        2.6107
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.055559
+  5          2          2          3      0.0452          3           3      0.0355        2.7013
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.077098
+  6          2          2          3      0.0780          3           3      0.0356        2.8593
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.128610
+  7          2          2          3      0.1188          3           3      0.0354        3.0993
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.189740
+  8          2          2          3      0.1879          3           3      0.0359        3.4766
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.290674
+  9          2          2          3      0.2915          3           3      0.0368        4.0609
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.437525
+ 10          2          2          3      0.4376          3           3      0.0353        4.9372
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.637597
+ 11          2          2          3      0.6392          3           3      0.0348        6.2193
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.905029
+ 12          2          2          3      0.9061          3           3      0.0363        8.0335
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 1.247537
+ 13          2          2          3      1.2476          3           3      0.0365       10.5318
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 1.671699
+ 14          2          2          3      1.6738          3           3      0.0356       13.8815
+ALPHA 1.2718 MaxIteration 741  TIMEOUT 2.184221
+ 15          2          2          3      2.1854          3           3      0.0363       19.9657
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 4.952501
+ 16          2          2          3      0.0359
+>>> frb50-23-3.clq |V| 1150 |E| 579607  (#LB 0.0000 2 ---> 2  0.3333  3 <--- 3  0.0000 #UB)  #read_time 0.2948  #reduce_time 0.0094  #solve_time 20.0366  #total_time 20.3408
+ 

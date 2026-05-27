@@ -1,0 +1,28 @@
+>>IBM: |V|=1000 |E|=20000
+>>IBM: The maximum node weight is 3050
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/T2_wclq/T2_1000_20000_9.wclq #seed 103 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=guarded SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800
+[v19] |V|=1000 |E|=20000 density=20.00 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.437956
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.916380
+  1       5343       5343       7683      0.9164
+ [Tier-3 Hard] gap=0.4380 density=20.00 |V|=1000 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.037143
+  2       5295       5343       9022      0.0371ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.062925
+  3       5391       5391       9117      0.0629ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.086015
+  4       5498       5498       8965      0.0860ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.125956
+  5       5774       5774       9324      0.1260ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.319819
+  6       6087       6087       8924      0.3198ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.617239
+  7       6032       6087       8262      0.6172ALPHA 1.5472 MaxIteration 65  TIMEOUT 1.089870
+  8       6096       6096       8372      1.0899ALPHA 1.5008 MaxIteration 100  TIMEOUT 1.080996
+  9       6080       6096       8001      1.0810ALPHA 1.4571 MaxIteration 150  TIMEOUT 1.400546
+ 10       6124       6124       8324      1.4005       7238        7238      0.0300      7.1349
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.298618
+ 11       6064       6124       8113      0.2986       7177        7177      0.0500      7.7249
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.391140
+ 12       5961       6124       8377      0.3911       7177        7177      0.0100      8.5149
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.538334
+ 13       5926       6124       7999      0.5383
+ [LB Done] stag=3 elapsed=45.3% => 10.9s to UB
+       7177        7177      0.0800     19.9049
+>>> T2_1000_20000_9.wclq |V| 1000 |E| 20000  (#LB 0.1462 5343 ---> 6124  0.1719  7177 <--- 7683  0.0659 #UB)  #solve_ime 19.9049 read_time 0.0052 

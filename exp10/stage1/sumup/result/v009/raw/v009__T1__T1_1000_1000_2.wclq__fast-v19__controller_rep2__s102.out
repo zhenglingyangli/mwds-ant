@@ -1,0 +1,52 @@
+>>IBM: |V|=1000 |E|=1000
+>>IBM: The maximum node weight is 49
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/T1_wclq/T1_1000_1000_2.wclq #seed 102 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=guarded SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800 AQ_SLOPE_MARGIN=1.05 AQ_MAX_UB_DRIFT=0.25 AQ_HEAVY_FRAC=0.20 AQ_HEAVY_ANTS=6
+[v19] |V|=1000 |E|=1000 density=1.00 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.114525
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.203501
+  1      10251      10251      11425      0.2035
+ [AQ bandit arm] arm=2 gap=0.1145 density=1.00 |V|=1000
+
+ [Tier-2 Medium] gap=0.1145 density=1.00 |V|=1000 => Standard RL (K=5, 15%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.163152
+  2      10095      10251      12301      0.1632ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.232179
+  3      10061      10251      12101      0.2322 [AQ guard] no early LB gain, disabling AQ
+      10809       10809      0.1100      0.8285
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.005231
+  4      10048      10251      11769      0.0052      10994       10809      0.0000      0.8385
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.013567
+  5      10144      10251      11579      0.0136      10856       10809      0.0100      0.8685
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.030025
+  6      10104      10251      11757      0.0300      10828       10809      0.0100      0.9310
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.015139
+  7       9961      10251      11993      0.0151      10836       10809      0.0100      0.9585
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.026047
+  8       9962      10251      12000      0.0260      10820       10809      0.0100      1.0085
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.088848
+  9      10011      10251      12003      0.0888      10814       10809      0.0800      1.1685
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.081802
+ 10       9984      10251      12041      0.0818      10800       10800      0.0700      1.3385
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.062653
+ 11       9937      10251      12042      0.0627      10815       10800      0.0500      1.4585
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.068428
+ 12       9941      10251      12040      0.0684      10806       10800      0.0600      1.5869
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.200685
+ 13       9984      10251      11926      0.2007      10793       10793      0.0700      1.9719
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.274824
+ 14       9989      10251      11947      0.2748      10805       10793      0.1300      2.4985
+ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.454640
+ 15       9983      10251      11936      0.4546      10802       10793      0.2100      3.3785
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 0.504201
+ 16       9972      10251      11985      0.5042      10809       10793      0.1600      4.3485
+ALPHA 1.2102 MaxIteration 1168  TIMEOUT 0.523504
+ 17       9981      10251      11968      0.5235      10790       10790      0.1500      5.3585
+ALPHA 1.1816 MaxIteration 1413  TIMEOUT 0.585534
+ 18       9964      10251      12063      0.5855      10792       10790      0.4500      6.4885
+ALPHA 1.1543 MaxIteration 1669  TIMEOUT 0.778934
+ 19       9958      10251      12065      0.7789      10808       10790      0.0800      7.9785
+ALPHA 1.1283 MaxIteration 1926  TIMEOUT 1.053194
+ 20       9960      10251      12067      1.0532
+ [LB Done] stag=17 elapsed=45.2% => 11.0s to UB
+      10786       10786      4.2900     19.0685
+>>> T1_1000_1000_2.wclq |V| 1000 |E| 1000  (#LB 0.0000 10251 ---> 10251  0.0522  10786 <--- 11425  0.0559 #UB)  #solve_ime 19.0687 read_time 0.0015 

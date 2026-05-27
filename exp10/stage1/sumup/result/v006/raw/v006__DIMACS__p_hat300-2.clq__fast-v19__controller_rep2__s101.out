@@ -1,0 +1,56 @@
+>>IBM: |V|=300 |E|=21928
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/dimacs/p_hat300-2.clq #seed 101 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=guarded SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800 AQ_SLOPE_MARGIN=1.05 AQ_MAX_UB_DRIFT=0.25
+[v19] |V|=300 |E|=21928 density=73.09 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.068966
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.207153
+  1         29         29         31      0.2072
+ [AQ small-headroom probe] gap=0.0690 density=73.09 |V|=300 => Light RL (K=3, 5.0%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.003908
+  2         28         29         31      0.0039ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.006157
+  3         29         29         31      0.0062 [AQ guard] no early LB gain, disabling AQ
+         31          31      0.0000      0.2232
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.002689
+  4         28         29         31      0.0027         31          31      0.0000      0.2333
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.004477
+  5         28         29         31      0.0045         31          31      0.0000      0.2433
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.007918
+  6         28         29         31      0.0079         31          31      0.0000      0.2532
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.040287
+  7         28         29         31      0.0403         31          31      0.0000      0.3432
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.023856
+  8         25         29         31      0.0239         31          31      0.0000      0.3932
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.060588
+  9         28         29         31      0.0606         31          31      0.0000      0.5233
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.080130
+ 10         29         29         31      0.0801         31          31      0.0000      0.6933
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.090794
+ 11         28         29         31      0.0908         31          31      0.0000      0.8832
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.210216
+ 12         29         29         31      0.2102         31          31      0.0000      1.3135
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.135767
+ 13         28         29         31      0.1358         31          31      0.0000      1.5833
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.269982
+ 14         29         29         31      0.2700         31          31      0.0000      2.1235
+ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.268653
+ 15         28         29         31      0.2687         31          31      0.0000      2.6533
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 0.503904
+ 16         29         29         31      0.5039         31          31      0.0000      3.6632
+ALPHA 1.2102 MaxIteration 1168  TIMEOUT 0.646810
+ 17         29         29         31      0.6468         31          31      0.0000      4.9533
+ALPHA 1.1816 MaxIteration 1413  TIMEOUT 0.652630
+ 18         29         29         31      0.6526         31          31      0.0000      6.2635
+ALPHA 1.1543 MaxIteration 1669  TIMEOUT 0.643726
+ 19         29         29         31      0.6437         31          31      0.0000      7.5534
+ALPHA 1.1283 MaxIteration 1926  TIMEOUT 0.800370
+ 20         29         29         31      0.8004         31          31      0.0000      9.1633
+ALPHA 1.1034 MaxIteration 2173  TIMEOUT 1.398827
+ 21         29         29         31      1.3988         31          31      0.0000     11.9533
+ALPHA 1.0795 MaxIteration 2397  TIMEOUT 1.487151
+ 22         29         29         31      1.4872         31          31      0.0000     14.9233
+ALPHA 1.0567 MaxIteration 2587  TIMEOUT 1.010622
+ 23         29         29         31      1.0106         31          31      0.0000     16.9432
+ALPHA 1.0349 MaxIteration 2733  TIMEOUT 1.764382
+ 24         29         29         31      1.7644         31          31      0.0000     20.0034
+>>> p_hat300-2.clq |V| 300 |E| 21928  (#LB 0.0000 29 ---> 29  0.0690  31 <--- 31  0.0000 #UB)  #solve_ime 20.0034 read_time 0.0068 

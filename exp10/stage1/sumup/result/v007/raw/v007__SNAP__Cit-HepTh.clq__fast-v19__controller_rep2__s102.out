@@ -1,0 +1,24 @@
+>>IBM: |V|=27769 |E|=352285
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/SNAP/Cit-HepTh.clq #seed 102 #alpha 1.900 #timeout 0.300 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=guarded SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800 AQ_SLOPE_MARGIN=1.05 AQ_MAX_UB_DRIFT=0.25
+[v19] |V|=27769 |E|=352285 density=12.69 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.014591
+ALPHA 1.9000 MaxIteration 50  TIMEOUT 1.416916
+  1     213014     213014     216122      1.4169
+ [AQ bandit arm] arm=4 gap=0.0146 density=12.69 |V|=27769
+ [AQ bandit] UB_FOCUS/DBS-safe => No RL
+     215352      215352      0.0000      2.8631
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.140418
+  2     211779     213014     217964      0.1404     216612      215352      0.0000      3.1732
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.344229
+  3     212280     213014     217219      0.3442     216414      215352      0.0000      3.8731
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.444282
+  4     212280     213014     217125      0.4443     216464      215352      0.0000      4.7831
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 1.161203
+  5     212721     213014     216512      1.1612     215872      215352      0.0100      7.1131
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.998415
+  6     210391     213014     217959      0.9984
+ [LB Done] stag=5 elapsed=40.6% => 11.9s to UB
+     215719      215352     11.2200     19.9431
+>>> Cit-HepTh.clq |V| 27769 |E| 352285  (#LB 0.0000 213014 ---> 213014  0.0110  215352 <--- 216122  0.0036 #UB)  #solve_ime 19.9437 read_time 0.0769 

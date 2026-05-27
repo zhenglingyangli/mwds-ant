@@ -1,0 +1,48 @@
+>>> Warning: header edge_num=125248, parsed edge_num=62624
+>>IBM: |V|=500 |E|=62624
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/dimacs/DSJC500_5.clq #seed 101 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=guarded SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800 AQ_SLOPE_MARGIN=1.05 AQ_MAX_UB_DRIFT=0.25
+[v19] |V|=500 |E|=62624 density=125.25 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.454545
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.536288
+  1         11         11         16      0.5363
+ [AQ small-headroom probe] gap=0.4545 density=125.25 |V|=500 => Light RL (K=3, 5.0%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.011760
+  2         10         11         19      0.0118ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.017320
+  3         10         11         21      0.0173 [AQ guard] no early LB gain, disabling AQ
+         16          16      0.0000      0.5819
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.017341
+  4         10         11         18      0.0173         16          16      0.0000      0.6119
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.038205
+  5         11         11         16      0.0382         16          16      0.0000      0.6818
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.028481
+  6         10         11         16      0.0285         16          16      0.0000      0.7324
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.054276
+  7         11         11         16      0.0543         16          16      0.0000      0.8420
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.073326
+  8         11         11         16      0.0733         16          16      0.0000      0.9919
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.111839
+  9         11         11         16      0.1118         16          16      0.0000      1.2223
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.164160
+ 10         11         11         16      0.1642         16          16      0.0000      1.5518
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.233732
+ 11         11         11         16      0.2337         16          16      0.0000      2.0222
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.335185
+ 12         11         11         16      0.3352         16          16      0.0000      2.6922
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.596436
+ 13         11         11         16      0.5964         16          16      0.0000      3.8823
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 1.117892
+ 14         11         11         16      1.1179         16          16      0.0000      6.1122
+ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.826820
+ 15         11         11         16      0.8268         16          16      0.0000      7.7624
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 1.105166
+ 16         11         11         16      1.1052         16          16      0.0000      9.9723
+ALPHA 1.2102 MaxIteration 1168  TIMEOUT 1.390558
+ 17         11         11         16      1.3906         16          16      0.0000     12.7620
+ALPHA 1.1816 MaxIteration 1413  TIMEOUT 1.439947
+ 18         10         11         16      1.4399         16          16      0.0000     15.6423
+ALPHA 1.1543 MaxIteration 1669  TIMEOUT 1.711901
+ 19         10         11         16      1.7119         16          16      0.0000     19.0718
+ALPHA 1.1283 MaxIteration 1926  TIMEOUT 0.929081
+ 20         10         11         16      0.9291>>> DSJC500_5.clq |V| 500 |E| 62624  (#LB 0.0000 11 ---> 11  0.4545  16 <--- 16  0.0000 #UB)  #solve_ime 20.0013 read_time 0.0183 

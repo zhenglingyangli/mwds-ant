@@ -1,0 +1,14 @@
+With  Parameters CUTOFF 20 SEED 102  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 0.004887  
+Reducing graph ...  time 0.000202  
+[v6] |V|=200 |E|=17910 density=89.55 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.200000
+  1          5          5          6      0.0963
+ Switch to original search + AQ boost, timeout 0.096320....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.096320
+  2          5          5          6      0.0034ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.006428
+  3          5          5          6      0.0052ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.009495
+  4          5          5          6      0.0059          6           6      0.0158       19.9855
+>>> gen200_p0.9_55.clq |V| 200 |E| 17910  (#LB 0.0000 5 ---> 5  0.1667  6 <--- 6  0.0000 #UB)  #read_time 0.0049  #reduce_time 0.0002  #solve_time 19.9855  #total_time 19.9906
+ 

@@ -1,0 +1,109 @@
+With  Parameters CUTOFF 20 SEED 103  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0 AQ_MODE=dbs
+Reading  graph ...  time 0.000598  
+Reducing graph ...  time 0.000043  
+[v6] |V|=150 |E|=2000 density=13.33 USE_ADVANCED=0 SAFE_AQ_MIN_GAP=0.050 DEEP_AQ_RANGE=[800, 5.00, 10.00] structure_blocks_aq=1 AQ_SLOPE_MARGIN=1.15 AQ_MAX_UB_DRIFT=0.20
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.188867
+  1        503        503        598      0.0363 [AQ bandit arm] arm=4 gap=0.1889 density=13.33 |V|=150
+
+ Switch to DBS-only search, timeout 0.036260....
+ [Online-safe AQ structure guard] |V|=150 density=13.33 outside [800, 5.00, 10.00], disabling AQ
+        598         598      0.0003        0.0734
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.036260
+  2        492        503        672      0.0002        601         598      0.0002        0.0739
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.000435
+  3        495        503        649      0.0005        601         598      0.0002        0.0748
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.000857
+  4        512        512        649      0.0009        598         598      0.0003        0.0766
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.001545
+  5        503        512        705      0.0016        598         598      0.0003        0.0798
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.002705
+  6        501        512        655      0.0015        598         598      0.0003        0.0827
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.002400
+  7        502        512        656      0.0024        598         598      0.0002        0.0875
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.003888
+  8        502        512        638      0.0039        598         598      0.0013        0.0954
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.006068
+  9        502        512        635      0.0061        598         598      0.0010        0.1076
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.009150
+ 10        503        512        638      0.0092        598         598      0.0003        0.1260
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.013339
+ 11        503        512        638      0.0133        598         598      0.0003        0.1527
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.018898
+ 12        503        512        638      0.0189        598         598      0.0003        0.1906
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.026060
+ 13        503        512        638      0.0254        598         598      0.0004        0.2425
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.034059
+ 14        503        512        638      0.0337        598         598      0.0003        0.3099
+ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.043988
+ 15        503        512        638      0.0415        598         598      0.0005        0.3929
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 0.052787
+ 16        503        512        635      0.0509        598         598      0.0005        0.4958
+ALPHA 1.2102 MaxIteration 1168  TIMEOUT 0.063143
+ 17        503        512        635      0.0614        598         598      0.0003        0.6186
+ALPHA 1.1816 MaxIteration 1413  TIMEOUT 0.074332
+ 18        505        512        635      0.0743        598         598      0.0003        0.7673
+ALPHA 1.1543 MaxIteration 1669  TIMEOUT 0.087835
+ 19        505        512        601      0.0879        598         598      0.0002        0.9471
+ALPHA 1.1283 MaxIteration 1926  TIMEOUT 0.101432
+ 20        505        512        601      0.1015        598         598      0.0003        1.1501
+ALPHA 1.1034 MaxIteration 2173  TIMEOUT 0.114494
+ 21        505        512        601      0.1145        598         598      0.0003        1.3792
+ALPHA 1.0795 MaxIteration 2397  TIMEOUT 0.126364
+ 22        505        512        601      0.1264        598         598      0.0003        1.6340
+ALPHA 1.0567 MaxIteration 2587  TIMEOUT 0.136474
+ 23        505        512        601      0.1365        601         598      0.0002        1.9071
+ALPHA 1.0349 MaxIteration 2733  TIMEOUT 0.144251
+ 24        509        512        612      0.1443        601         598      0.0002        2.1977
+ALPHA 1.0349 MaxIteration 2828  TIMEOUT 0.149331
+ 25        509        512        612      0.1494        598         598      0.0003        2.4975
+ALPHA 1.0349 MaxIteration 2926  TIMEOUT 0.154596
+ 26        509        512        612      0.1546        598         598      0.0003        2.8078
+ALPHA 1.0349 MaxIteration 3027  TIMEOUT 0.160002
+ 27        509        512        612      0.1600        598         598      0.0002        3.1288
+ALPHA 1.0349 MaxIteration 3132  TIMEOUT 0.165602
+ 28        509        512        612      0.1656        598         598      0.0003        3.4631
+ALPHA 1.0349 MaxIteration 3241  TIMEOUT 0.171382
+ 29        509        512        612      0.1714        598         598      0.0003        3.8059
+ALPHA 1.0349 MaxIteration 3353  TIMEOUT 0.177384
+ 30        509        512        612      0.1774        598         598      0.0003        4.1617
+ALPHA 1.0349 MaxIteration 3469  TIMEOUT 0.183600
+ 31        509        512        612      0.1836        598         598      0.0006        4.5300
+ALPHA 1.0349 MaxIteration 3589  TIMEOUT 0.190035
+ 32        509        512        612      0.1901        598         598      0.0003        4.9122
+ALPHA 1.0349 MaxIteration 3714  TIMEOUT 0.196691
+ 33        509        512        612      0.1967        598         598      0.0003        5.3087
+ALPHA 1.0349 MaxIteration 3843  TIMEOUT 0.203603
+ 34        509        512        612      0.2036        598         598      0.0003        5.7180
+ALPHA 1.0349 MaxIteration 3976  TIMEOUT 0.210743
+ 35        509        512        612      0.2108        598         598      0.0005        6.1396
+ALPHA 1.0349 MaxIteration 4114  TIMEOUT 0.218118
+ 36        509        512        612      0.2182        598         598      0.0003        6.5770
+ALPHA 1.0349 MaxIteration 4257  TIMEOUT 0.225765
+ 37        509        512        612      0.2258        598         598      0.0003        7.0295
+ALPHA 1.0349 MaxIteration 4405  TIMEOUT 0.233650
+ 38        509        512        612      0.2337        598         598      0.0007        7.5009
+ALPHA 1.0349 MaxIteration 4558  TIMEOUT 0.241813
+ 39        509        512        612      0.2419        598         598      0.0002        7.9856
+ALPHA 1.0349 MaxIteration 4716  TIMEOUT 0.250282
+ 40        509        512        612      0.2503        598         598      0.0003        8.4903
+ALPHA 1.0349 MaxIteration 4880  TIMEOUT 0.259039
+ 41        509        512        612      0.2591        598         598      0.0004        9.0144
+ALPHA 1.0349 MaxIteration 5050  TIMEOUT 0.268088
+ 42        509        512        612      0.2681        598         598      0.0004        9.5516
+ALPHA 1.0349 MaxIteration 5226  TIMEOUT 0.277439
+ 43        509        512        612      0.2775        598         598      0.0003       10.1086
+ALPHA 1.0349 MaxIteration 5408  TIMEOUT 0.287125
+ 44        509        512        612      0.2871        598         598      0.1895       10.6829
+ALPHA 1.0349 MaxIteration 5596  TIMEOUT 0.297149
+ 45        509        512        612      0.2972        598         598      0.0004       11.2803
+ALPHA 1.0349 MaxIteration 5791  TIMEOUT 0.307554
+ 46        509        512        612      0.3076        598         598      0.0003       11.8965
+ALPHA 1.0349 MaxIteration 5992  TIMEOUT 0.318308
+ 47        509        512        612      0.3183        598         598      0.0003       12.5331
+ALPHA 1.0349 MaxIteration 6200  TIMEOUT 0.329413
+ 48        509        512        612      0.3294        598         598      0.0003       13.1960
+ALPHA 1.0349 MaxIteration 6416  TIMEOUT 0.340910
+ 49        509        512        612      0.3410        598         598      0.0011       19.9998
+>>> T2_150_2000_1.wclq |V| 150 |E| 2000  (#LB 0.0179 503 ---> 512  0.1438  598 <--- 598  0.0000 #UB)  #read_time 0.0006  #reduce_time 0.0000  #solve_time 19.9998  #total_time 20.0004
+ 

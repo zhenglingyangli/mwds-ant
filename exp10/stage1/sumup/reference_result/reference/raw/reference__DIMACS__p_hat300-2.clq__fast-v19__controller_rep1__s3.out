@@ -1,0 +1,27 @@
+>>IBM: |V|=300 |E|=21928
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/dimacs/p_hat300-2.clq #seed 3 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5
+[v19] |V|=300 |E|=21928 density=73.09 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.068966
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.210367
+  1         29         29         31      0.2104
+ [Tier-3 Hard] gap=0.0690 density=73.09 |V|=300 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.002200
+  2         28         29         42      0.0022         38          38      0.0000      0.2133
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.002723
+  3         22         29         31      0.0027         31          31      0.0000      0.2235
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.007472
+  4         23         29         31      0.0075         31          31      0.0000      0.2334
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.020009
+  5         28         29         31      0.0200         31          31      0.0000      0.2835
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.009407
+  6         28         29         31      0.0094         31          31      0.0000      0.3035
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.021957
+  7         28         29         31      0.0220         31          31      0.0000      0.3535
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.037911
+  8         29         29         31      0.0379         31          31      0.0000      0.4233
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.075396
+  9         28         29         31      0.0754         31          31      0.0000      0.5735
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.072336
+ 10         28         29         31      0.0723>>> p_hat300-2.clq |V| 300 |E| 21928  (#LB 0.0000 29 ---> 29  0.0690  31 <--- 31  0.0000 #UB)  #solve_ime 0.6459 read_time 0.0067 

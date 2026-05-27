@@ -1,0 +1,9 @@
+>>IBM: |V|=262111 |E|=899792
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/SNAP/Amazon0302.clq #seed 3 #alpha 1.900 #timeout 0.500 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=dbs SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800 AQ_SLOPE_MARGIN=1.05 AQ_MAX_UB_DRIFT=0.25 AQ_HEAVY_FRAC=0.20 AQ_HEAVY_ANTS=6
+[v19] |V|=262111 |E|=899792 density=3.43 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.090042
+ALPHA 1.9000 MaxIteration 10  TIMEOUT 15.089446
+  1    2264711    2264711    2468631     15.0894    2443744     2443744      0.2100     20.0744
+>>> Amazon0302.clq |V| 262111 |E| 899792  (#LB 0.0000 2264711 ---> 2264711  0.0791  2443744 <--- 2468631  0.0101 #UB)  #solve_ime 20.0785 read_time 0.2056 

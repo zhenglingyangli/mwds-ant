@@ -1,0 +1,46 @@
+>>IBM: |V|=760 |E|=247106
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/BHOSLIB/frb40-19-1.clq #seed 3 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=guarded SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800 AQ_SLOPE_MARGIN=1.05 AQ_MAX_UB_DRIFT=0.25
+[v19] |V|=760 |E|=247106 density=325.14 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.666667
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.762921
+  1          3          3          5      0.7629
+ [AQ bandit arm] arm=1 gap=0.6667 density=325.14 |V|=760
+
+ [AQ small-headroom probe] gap=0.6667 density=325.14 |V|=760 => Light RL (K=3, 5.0%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.013823
+  2          3          3          5      0.0138ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.025029
+  3          3          3          5      0.0250 [AQ guard] no early LB gain, disabling AQ
+          5           5      0.0000      0.8312
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.014736
+  4          3          3          5      0.0147          5           5      0.0000      0.8617
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.027157
+  5          3          3          5      0.0272          5           5      0.0000      0.9210
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.042544
+  6          3          3          5      0.0425          5           5      0.0000      1.0112
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.071570
+  7          3          3          5      0.0716          5           5      0.0000      1.1594
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.111367
+  8          3          3          5      0.1114          5           5      0.0000      1.3939
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.167647
+  9          3          3          5      0.1676          5           5      0.0000      1.7296
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.233426
+ 10          3          3          5      0.2334          5           5      0.0000      2.2018
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.370494
+ 11          3          3          5      0.3705          5           5      0.0000      2.9515
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.504398
+ 12          3          3          5      0.5044          5           5      0.0000      3.9707
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.697689
+ 13          3          3          5      0.6977          5           5      0.0000      5.3706
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.889500
+ 14          3          3          5      0.8895          5           5      0.0000      7.1516
+ALPHA 1.2718 MaxIteration 741  TIMEOUT 1.185100
+ 15          3          3          5      1.1851          5           5      0.0000      9.5305
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 1.502776
+ 16          3          3          5      1.5028          5           5      0.0000     12.5420
+ALPHA 1.2102 MaxIteration 1168  TIMEOUT 1.821823
+ 17          3          3          5      1.8218          5           5      0.0000     16.1821
+ALPHA 1.1816 MaxIteration 1413  TIMEOUT 2.327682
+ 18          3          3          5      2.3277          5           5      0.0000     20.0118
+>>> frb40-19-1.clq |V| 760 |E| 247106  (#LB 0.0000 3 ---> 3  0.6667  5 <--- 5  0.0000 #UB)  #solve_ime 20.0119 read_time 0.1308 

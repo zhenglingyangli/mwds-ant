@@ -1,0 +1,17 @@
+With  Parameters CUTOFF 20 SEED 101  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0
+Reading  graph ...  time 0.064087  
+Reducing graph ...  time 0.000682  
+[v6] |V|=1000 |E|=52120 density=52.12 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.078947
+  1         38         38         41      0.3699
+ Switch to original search + AQ boost, timeout 0.369858....
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.369858
+  2         38         38         41      0.0134ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.025431
+  3         37         38         41      0.0213ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.038954
+  4         37         38         41      0.0413ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.072848
+  5         38         38         41      0.0589ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.100473
+  6         38         38         41      0.0575         41          41      0.1979       19.8076
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 32.052406
+  7         38         38         41      0.0042>>> UDG_1000_200_8.wclq |V| 1000 |E| 52120  (#LB 0.0000 38 ---> 38  0.0732  41 <--- 41  0.0000 #UB)  #read_time 0.0641  #reduce_time 0.0007  #solve_time 19.8118  #total_time 19.8766
+ 

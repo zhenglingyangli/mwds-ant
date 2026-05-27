@@ -1,0 +1,27 @@
+{
+  "alpha": 90,
+  "available_instances": 25,
+  "candidate": "baseline",
+  "controller_label": "baseline_original",
+  "cutoff": 20,
+  "datasets": [
+    "T1",
+    "T2",
+    "UDG",
+    "BHOSLIB",
+    "DIMACS",
+    "NDR"
+  ],
+  "deep_binary": "../code/deep/baseline/dual-deep",
+  "external_certificates_applied": false,
+  "fast_binary": "../code/fast/baseline/dual-fast",
+  "jobs": 600,
+  "known_opt_used": false,
+  "missing_instances": 5,
+  "reps": 2,
+  "seeds": [
+    1,
+    2,
+    3
+  ]
+}

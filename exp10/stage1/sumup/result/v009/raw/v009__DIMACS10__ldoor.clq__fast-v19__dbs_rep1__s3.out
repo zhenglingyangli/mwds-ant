@@ -1,0 +1,10 @@
+>>IBM: |V|=952203 |E|=22785136
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/DIMACS10/ldoor.clq #seed 3 #alpha 1.900 #timeout 5.000 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=dbs SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800 AQ_SLOPE_MARGIN=1.05 AQ_MAX_UB_DRIFT=0.25 AQ_HEAVY_FRAC=0.20 AQ_HEAVY_ANTS=6
+[v19] |V|=952203 |E|=22785136 density=23.93 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.257124
+ALPHA 1.9000 MaxIteration 10  TIMEOUT 7.934423
+  1     980060     980060    1232057      7.9344    1152671     1152671      7.9300     16.4128
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 4.052751
+  2     983355     983355    1244979      4.0528>>> ldoor.clq |V| 952203 |E| 22785136  (#LB 0.0034 980060 ---> 983355  0.1722  1152671 <--- 1232057  0.0644 #UB)  #solve_ime 20.4878 read_time 5.0873 

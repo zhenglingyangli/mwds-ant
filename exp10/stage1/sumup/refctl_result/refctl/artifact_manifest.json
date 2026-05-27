@@ -1,0 +1,27 @@
+{
+  "alpha": 90,
+  "available_instances": 25,
+  "candidate": "refctl",
+  "controller_label": "reference_online_safe_controller",
+  "cutoff": 20,
+  "datasets": [
+    "T1",
+    "T2",
+    "UDG",
+    "BHOSLIB",
+    "DIMACS",
+    "NDR"
+  ],
+  "deep_binary": "../code/deep/deepv6ctl/dual-deep-v6",
+  "external_certificates_applied": false,
+  "fast_binary": "../code/fast/fastv19ctl/dual-fast-v19",
+  "jobs": 600,
+  "known_opt_used": false,
+  "missing_instances": 5,
+  "reps": 2,
+  "seeds": [
+    1,
+    2,
+    3
+  ]
+}

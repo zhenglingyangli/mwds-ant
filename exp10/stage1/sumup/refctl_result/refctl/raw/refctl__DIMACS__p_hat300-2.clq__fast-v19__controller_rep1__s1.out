@@ -1,0 +1,55 @@
+>>IBM: |V|=300 |E|=21928
+>>IBM: The maximum node weight is 200
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/dimacs/p_hat300-2.clq #seed 1 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=guarded SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800 AQ_SLOPE_MARGIN=1.05 AQ_MAX_UB_DRIFT=0.25
+[v19] |V|=300 |E|=21928 density=73.09 USE_ADVANCED=0
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.068966
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.217489
+  1         29         29         31      0.2175
+ [AQ small-headroom probe] gap=0.0690 density=73.09 |V|=300 => Light RL (K=3, 5.0%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.000885
+  2         28         29         40      0.0009 [AQ slope reject] dbs_slope=0.0000 aq_slope=0.0000 aq_gain=0 ub_drift=4.5000
+         31          31      0.0000      0.2250
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.001806
+  3         28         29         31      0.0018         31          31      0.0000      0.2350
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.004111
+  4         28         29         31      0.0041         31          31      0.0000      0.2449
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.004807
+  5         28         29         31      0.0048         31          31      0.0000      0.2550
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.017259
+  6         26         29         31      0.0173         31          31      0.0000      0.2849
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.015134
+  7         25         29         31      0.0151         31          31      0.0000      0.3148
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.025717
+  8         25         29         31      0.0257         31          31      0.0000      0.3650
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.078522
+  9         29         29         31      0.0785         31          31      0.0000      0.5150
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.113329
+ 10         29         29         31      0.1133         31          31      0.0000      0.7450
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.099461
+ 11         28         29         31      0.0995         31          31      0.0000      0.9449
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.112503
+ 12         28         29         31      0.1125         31          31      0.0000      1.1748
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.251317
+ 13         27         29         31      0.2513         31          31      0.0000      1.6849
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.302554
+ 14         28         29         31      0.3026         31          31      0.0000      2.2850
+ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.315278
+ 15         28         29         31      0.3153         31          31      0.0000      2.9149
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 0.330704
+ 16         26         29         31      0.3307         31          31      0.0000      3.5849
+ALPHA 1.2102 MaxIteration 1168  TIMEOUT 0.672891
+ 17         28         29         31      0.6729         31          31      0.0000      4.9350
+ALPHA 1.1816 MaxIteration 1413  TIMEOUT 1.189561
+ 18         29         29         31      1.1896         31          31      0.0000      7.3149
+ALPHA 1.1543 MaxIteration 1669  TIMEOUT 0.750311
+ 19         28         29         31      0.7503         31          31      0.0000      8.8149
+ALPHA 1.1283 MaxIteration 1926  TIMEOUT 1.472395
+ 20         29         29         31      1.4724         31          31      0.0000     11.7649
+ALPHA 1.1034 MaxIteration 2173  TIMEOUT 1.356935
+ 21         29         29         31      1.3569         31          31      0.0000     14.4750
+ALPHA 1.0795 MaxIteration 2397  TIMEOUT 1.539459
+ 22         29         29         31      1.5395         31          31      0.0000     17.5550
+ALPHA 1.0567 MaxIteration 2587  TIMEOUT 1.332010
+ 23         29         29         31      1.3320         31          31      0.0000     20.0050
+>>> p_hat300-2.clq |V| 300 |E| 21928  (#LB 0.0000 29 ---> 29  0.0690  31 <--- 31  0.0000 #UB)  #solve_ime 20.0050 read_time 0.0052 

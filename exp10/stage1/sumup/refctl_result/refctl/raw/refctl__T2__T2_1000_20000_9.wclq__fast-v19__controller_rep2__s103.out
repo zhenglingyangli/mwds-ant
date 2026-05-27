@@ -1,0 +1,30 @@
+>>IBM: |V|=1000 |E|=20000
+>>IBM: The maximum node weight is 3050
+/public/home/acs4vb4pqv/benchmarks/MWDS2026/T2_wclq/T2_1000_20000_9.wclq #seed 103 #alpha 1.900 #timeout 0.100 K=5 RHO=0.05 Q0=0.90 BETA=3.5 AQ_MODE=guarded SAFE_AQ_MIN_GAP=0.050 SAFE_AQ_MIN_NODES=800 AQ_SLOPE_MARGIN=1.05 AQ_MAX_UB_DRIFT=0.25
+[v19] |V|=1000 |E|=20000 density=20.00 USE_ADVANCED=1
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.437956
+ALPHA 1.9000 MaxIteration 500  TIMEOUT 0.948161
+  1       5343       5343       7683      0.9482
+ [Tier-3 Hard] gap=0.4380 density=20.00 |V|=1000 => Heavy RL (K=8, 25%)
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.038127
+  2       5295       5343       9022      0.0381ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.061168
+  3       5391       5391       9117      0.0612ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.087316
+  4       5498       5498       8965      0.0873ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.127384
+  5       5774       5774       9324      0.1274ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.340262
+  6       6087       6087       8924      0.3403ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.645732
+  7       6032       6087       8262      0.6457ALPHA 1.5472 MaxIteration 65  TIMEOUT 1.056173
+  8       6096       6096       8372      1.0562ALPHA 1.5008 MaxIteration 100  TIMEOUT 1.154317
+  9       6080       6096       8001      1.1543ALPHA 1.4571 MaxIteration 150  TIMEOUT 1.487147
+ 10       6124       6124       8324      1.4871ALPHA 1.4158 MaxIteration 218  TIMEOUT 2.518176
+ 11       6090       6124       8054      2.5182 [AQ slope accept] dbs_slope=0.0000 aq_slope=103.9097 aq_gain=781 ub_drift=0.1585
+       7177        7177      1.2800     10.9631
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.532285
+ 12       6004       6124       8126      0.5323       7238        7177      0.0800     12.0331
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.553675
+ 13       6060       6124       8202      0.5537       7238        7177      0.0600     13.1331
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.771524
+ 14       5949       6124       8145      0.7715
+ [LB Done] stag=3 elapsed=69.5% => 6.1s to UB
+       7238        7177      0.3500     19.9631
+>>> T2_1000_20000_9.wclq |V| 1000 |E| 20000  (#LB 0.1462 5343 ---> 6124  0.1719  7177 <--- 7683  0.0659 #UB)  #solve_ime 19.9631 read_time 0.0069 

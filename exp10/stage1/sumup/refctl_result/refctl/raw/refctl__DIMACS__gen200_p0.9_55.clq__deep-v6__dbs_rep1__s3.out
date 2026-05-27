@@ -1,0 +1,86 @@
+With  Parameters CUTOFF 20 SEED 3  ALPHA = 1.900  K=5 RHO=0.05 Q0=0.90 BETA=3.0 AQ_MODE=dbs
+Reading  graph ...  time 0.004777  
+Reducing graph ...  time 0.000202  
+[v6] |V|=200 |E|=17910 density=89.55 USE_ADVANCED=0 SAFE_AQ_MIN_GAP=0.050 DEEP_AQ_RANGE=[800, 5.00, 10.00] structure_blocks_aq=1 AQ_SLOPE_MARGIN=1.15 AQ_MAX_UB_DRIFT=0.20
+#Rd        #LB        #LB*       #UB       #Time        #UB+        #UB*      #Time      #TotalTime
+First Gap  0.200000
+  1          5          5          6      0.0778
+ Switch to DBS-only search, timeout 0.077842....
+ [Online-safe AQ structure guard] |V|=200 density=89.55 outside [800, 5.00, 10.00], disabling AQ
+          6           6      0.0014        0.2185
+ALPHA 1.9000 MaxIteration 3  TIMEOUT 0.077842
+  2          5          5          6      0.0006          6           6      0.0011        0.2202
+ALPHA 1.8304 MaxIteration 5  TIMEOUT 0.001168
+  3          5          5          6      0.0012          6           6      0.0011        0.2226
+ALPHA 1.7658 MaxIteration 9  TIMEOUT 0.002140
+  4          5          5          7      0.0022          6           6      0.0011        0.2271
+ALPHA 1.7056 MaxIteration 15  TIMEOUT 0.003851
+  5          4          5          7      0.0017          6           6      0.0011        0.2306
+ALPHA 1.6493 MaxIteration 25  TIMEOUT 0.002886
+  6          4          5          7      0.0028          6           6      0.0011        0.2362
+ALPHA 1.5966 MaxIteration 41  TIMEOUT 0.004564
+  7          4          5          7      0.0044          6           6      0.0011        0.2452
+ALPHA 1.5472 MaxIteration 65  TIMEOUT 0.007099
+  8          4          5          7      0.0070          6           6      0.0012        0.2593
+ALPHA 1.5008 MaxIteration 100  TIMEOUT 0.010769
+  9          4          5          7      0.0108          6           6      0.0012        0.2812
+ALPHA 1.4571 MaxIteration 150  TIMEOUT 0.016272
+ 10          4          5          7      0.0163          6           6      0.0012        0.3139
+ALPHA 1.4158 MaxIteration 218  TIMEOUT 0.023782
+ 11          4          5          7      0.0225          6           6      0.0011        0.3591
+ALPHA 1.3768 MaxIteration 308  TIMEOUT 0.031796
+ 12          4          5          7      0.0319          6           6      0.0012        0.4230
+ALPHA 1.3399 MaxIteration 424  TIMEOUT 0.043911
+ 13          4          5          7      0.0426          6           6      0.0012        0.5096
+ALPHA 1.3049 MaxIteration 568  TIMEOUT 0.057143
+ 14          4          5          7      0.0572          6           6      0.0011        0.6244
+ALPHA 1.2718 MaxIteration 741  TIMEOUT 0.074707
+ 15          4          5          7      0.0748          6           6      0.0012        0.7740
+ALPHA 1.2402 MaxIteration 942  TIMEOUT 0.095066
+ 16          4          5          7      0.0951          6           6      0.0012        0.9664
+ALPHA 1.2102 MaxIteration 1168  TIMEOUT 0.117949
+ 17          4          5          7      0.1180          6           6      0.0012        1.2027
+ALPHA 1.1816 MaxIteration 1413  TIMEOUT 0.142815
+ 18          4          5          7      0.1428          6           6      0.0012        1.4916
+ALPHA 1.1543 MaxIteration 1669  TIMEOUT 0.168757
+ 19          4          5          7      0.1688          6           6      0.0013        1.8304
+ALPHA 1.1283 MaxIteration 1926  TIMEOUT 0.194906
+ 20          4          5          7      0.1950          6           6      0.0012        2.2218
+ALPHA 1.1034 MaxIteration 2173  TIMEOUT 0.219977
+ 21          4          5          7      0.2201          6           6      0.0012        2.6631
+ALPHA 1.0795 MaxIteration 2397  TIMEOUT 0.242828
+ 22          4          5          7      0.2429          6           6      0.0012        3.1490
+ALPHA 1.0567 MaxIteration 2587  TIMEOUT 0.262206
+ 23          4          5          7      0.2623          6           6      0.0011        3.6736
+ALPHA 1.0349 MaxIteration 2733  TIMEOUT 0.277135
+ 24          4          5          7      0.2772          6           6      0.0012        4.2313
+ALPHA 1.0349 MaxIteration 2828  TIMEOUT 0.286902
+ 25          4          5          7      0.2870          6           6      0.0012        4.8056
+ALPHA 1.0349 MaxIteration 2926  TIMEOUT 0.297022
+ 26          4          5          7      0.2971          6           6      0.0012        5.4020
+ALPHA 1.0349 MaxIteration 3027  TIMEOUT 0.307419
+ 27          4          5          7      0.3075          6           6      0.0012        6.0192
+ALPHA 1.0349 MaxIteration 3132  TIMEOUT 0.318191
+ 28          4          5          7      0.3183          6           6      0.0013        6.6587
+ALPHA 1.0349 MaxIteration 3241  TIMEOUT 0.329345
+ 29          4          5          7      0.3294          6           6      0.0012        7.3187
+ALPHA 1.0349 MaxIteration 3353  TIMEOUT 0.340868
+ 30          4          5          7      0.3410          6           6      0.0012        8.0040
+ALPHA 1.0349 MaxIteration 3469  TIMEOUT 0.352854
+ 31          4          5          7      0.3529          6           6      0.0013        8.7108
+ALPHA 1.0349 MaxIteration 3589  TIMEOUT 0.365179
+ 32          4          5          7      0.3653          6           6      0.0013        9.4417
+ALPHA 1.0349 MaxIteration 3714  TIMEOUT 0.377999
+ 33          4          5          7      0.3780          6           6      0.0013       10.2038
+ALPHA 1.0349 MaxIteration 3843  TIMEOUT 0.391210
+ 34          4          5          7      0.3913          6           6      0.0012       10.9876
+ALPHA 1.0349 MaxIteration 3976  TIMEOUT 0.404907
+ 35          4          5          7      0.4049          6           6      0.0013       11.7996
+ALPHA 1.0349 MaxIteration 4114  TIMEOUT 0.419060
+ 36          4          5          7      0.4191          6           6      0.0012       12.6400
+ALPHA 1.0349 MaxIteration 4257  TIMEOUT 0.433721
+ 37          4          5          7      0.4338          6           6      0.0012       13.5128
+ALPHA 1.0349 MaxIteration 4405  TIMEOUT 0.448922
+ 38          4          5          7      0.4490          6           6      0.0013       19.9989
+>>> gen200_p0.9_55.clq |V| 200 |E| 17910  (#LB 0.0000 5 ---> 5  0.1667  6 <--- 6  0.0000 #UB)  #read_time 0.0048  #reduce_time 0.0002  #solve_time 19.9989  #total_time 20.0039
+ 

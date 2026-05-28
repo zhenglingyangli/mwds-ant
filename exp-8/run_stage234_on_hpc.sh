@@ -6,6 +6,7 @@
 #   bash exp-8/run_stage234_on_hpc.sh
 #
 # Optional environment knobs:
+#   STAGE234_PYTHON=/path/to/python-with-scipy
 #   STAGE234_LP_TIME_LIMIT=30
 #   STAGE234_MILP_TIME_LIMIT=120
 #   STAGE234_LP_MAX_N=1200
@@ -29,6 +30,7 @@ MILP_MAX_N="${STAGE234_MILP_MAX_N:-1200}"
 MILP_MAX_INCIDENCE="${STAGE234_MILP_MAX_INCIDENCE:-50000}"
 MILP_MAX_GAP="${STAGE234_MILP_MAX_GAP:-20}"
 DUMP_ROOT="${EXP8_DUMP_ROOT:-$SCRIPT_DIR}"
+PYTHON_BIN="${STAGE234_PYTHON:-python3}"
 
 require_cmd() {
   if ! command -v "$1" >/dev/null 2>&1; then
@@ -37,29 +39,64 @@ require_cmd() {
   fi
 }
 
-require_cmd python3
+require_cmd "$PYTHON_BIN"
 
 echo "=== exp-8 Stage234 HPC pipeline ==="
 echo "repo     : $REPO_ROOT"
 echo "exp      : $SCRIPT_DIR"
 echo "out      : $OUT_DIR"
 echo "dump root: $DUMP_ROOT"
+echo "python   : $PYTHON_BIN"
 
 echo
 echo "=== 0) Python dependency check ==="
-python3 - <<'PY'
-import scipy  # noqa: F401
-import numpy  # noqa: F401
+if ! "$PYTHON_BIN" - <<'PY'
+import sys
+try:
+    import numpy  # noqa: F401
+    import scipy  # noqa: F401
+except ModuleNotFoundError as exc:
+    print(f"missing Python dependency: {exc}", file=sys.stderr)
+    raise SystemExit(42)
 print("python deps OK: scipy/numpy importable")
 PY
+then
+  cat >&2 <<'EOF'
+
+ERROR: exp-8 Stage234 requires numpy and scipy because Stage2/4 use HiGHS
+through scipy.optimize.linprog/milp.
+
+Use an HPC Python environment with scipy, then rerun one of these forms:
+
+  module avail scipy python anaconda miniconda
+  module load <python-or-conda-module-with-scipy>
+  bash exp-8/run_stage234_on_hpc.sh
+
+or:
+
+  conda activate <env-with-scipy>
+  bash exp-8/run_stage234_on_hpc.sh
+
+or pass a Python explicitly:
+
+  STAGE234_PYTHON=/path/to/python bash exp-8/run_stage234_on_hpc.sh
+
+If the cluster allows user installs:
+
+  python3 -m pip install --user numpy scipy
+  bash exp-8/run_stage234_on_hpc.sh
+
+EOF
+  exit 42
+fi
 
 echo
 echo "=== 1) Build local exp-8 base workspace ==="
-python3 "$SCRIPT_DIR/tools/build_stage234_pipeline.py"
+"$PYTHON_BIN" "$SCRIPT_DIR/tools/build_stage234_pipeline.py"
 
 echo
 echo "=== 2) Run exp-8 Stage2/3/4 certification pass ==="
-python3 - "$SCRIPT_DIR" "$OUT_DIR" "$DUMP_ROOT" \
+"$PYTHON_BIN" - "$SCRIPT_DIR" "$OUT_DIR" "$DUMP_ROOT" \
   "$LP_TIME_LIMIT" "$MILP_TIME_LIMIT" "$LP_MAX_N" "$LP_MAX_INCIDENCE" \
   "$MILP_MAX_N" "$MILP_MAX_INCIDENCE" "$MILP_MAX_GAP" <<'PY'
 from __future__ import annotations

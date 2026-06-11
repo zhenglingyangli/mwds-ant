@@ -66,7 +66,7 @@ selected_dir = exp8 / "selected_instances"
 
 datasets = ["T1", "T2", "UDG", "BHOSLIB", "DIMACS", "DIMACS10", "NDR", "SNAP"]
 
-def family_roots(ds: str) -> list[Path]:
+def family_roots(ds):
     roots = []
     # 1. Explicit root override: /.../MWDS2026
     data_root = os.environ.get("BAL40_DATA_ROOT")
@@ -121,7 +121,7 @@ def family_roots(ds: str) -> list[Path]:
             out.append(r)
     return out
 
-def resolve(ds: str, name: str) -> Path | None:
+def resolve(ds, name):
     for root in family_roots(ds):
         if not root.exists():
             continue

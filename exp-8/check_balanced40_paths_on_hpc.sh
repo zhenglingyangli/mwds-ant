@@ -24,7 +24,7 @@ manifest = json.loads((exp8 / "dataset_manifest.json").read_text())
 selected_dir = exp8 / "selected_instances"
 datasets = ["T1", "T2", "UDG", "BHOSLIB", "DIMACS", "DIMACS10", "NDR", "SNAP"]
 
-def family_roots(ds: str) -> list[Path]:
+def family_roots(ds):
     roots = []
     data_root = os.environ.get("BAL40_DATA_ROOT")
     if data_root:
